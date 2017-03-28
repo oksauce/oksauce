@@ -192,7 +192,8 @@ fieldset{border:0;box-shadow: none;}
 }
 .header .menu li a.active{
 	font-weight: 900;
-	color: red;
+	/*color: red;*/
+	color: black;
 }
 .header .menu li a{
 	display: block;
