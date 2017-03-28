@@ -1,0 +1,16 @@
+# *!robots.txt v1.00.00 | (c) 2017 mrglynthomas.
+
+User-agent: *
+
+Disallow: /app/
+Disallow: /blog/
+Disallow: /fav/
+Disallow: /i/
+Disallow: /pdf/
+
+# Wait 1 second between successive requests.
+Crawl-delay: 1
+
+# Independent of user agent. Links in the sitemap are full URLs using http:// and need to match
+# the protocol of the sitemap.
+Sitemap: http://mrglynthomas.com/sitemap.xml
