@@ -2,31 +2,25 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url> 
-   <loc>http://mrglynthomas.com/</loc> 
+   <loc>http://oksauce.com/</loc> 
    <lastmod>2017-03-19</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.5</priority>
   </url>
   <url> 
-   <loc>http://mrglynthomas.com/about/</loc>  
+   <loc>http://oksauce.com/blog/</loc>  
    <lastmod>2017-03-19</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.5</priority>
   </url>
   <url> 
-   <loc>http://mrglynthomas.com/shop/</loc>  
+   <loc>http://oksauce.com/music/</loc>  
    <lastmod>2017-03-19</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.5</priority>
   </url>
   <url> 
-  <loc>http://mrglynthomas.com/events/</loc>  
-   <lastmod>2017-03-19</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.5</priority>
-  </url>
-  <url> 
-   <loc>http://mrglynthomas.com/contact</loc>  
+  <loc>http://oksauce.com/about/</loc>  
    <lastmod>2017-03-19</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.5</priority>

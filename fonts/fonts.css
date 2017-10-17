@@ -1,0 +1,255 @@
+
+/* Roboto Font * Material Icons * Open Source * Credit(s) : Google * Principal Design Christian Robertson ;
+
+Roboto has a dual nature. It has a mechanical skeleton and the forms are largely
+geometric. At the same time, the font features friendly and open curves. While
+some grotesks distort their letterforms to force a rigid rhythm, Roboto doesn’t
+compromise, allowing letters to be settled into their natural width. This makes
+for a more natural reading rhythm more commonly found in humanist and serif types.
+
+These fonts compliments the content concepts on mrglynthomas.com.  
+
+*/
+
+@font-face {
+  font-family: 'SupriaSans';
+  src: url('/fonts/museosans/SupriaSans-Black.eot');
+  src: url('/fonts/museosans/SupriaSans-Black.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/museosans/SupriaSans-Black.woff2') format('woff2'),
+       url('/fonts/museosans/SupriaSans-Black.woff') format('woff'),
+       url('/fonts/museosans/SupriaSans-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SupriaSans';
+  src: url('/fonts/museosans/SupriaSans-Bold.eot');
+  src: url('/fonts/museosans/SupriaSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/museosans/SupriaSans-Bold.woff2') format('woff2'),
+       url('/fonts/museosans/SupriaSans-Bold.woff') format('woff'),
+       url('/fonts/museosans/SupriaSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SupriaSans';
+  src: url('/fonts/museosans/SupriaSans-Medium.eot');
+  src: url('/fonts/museosans/SupriaSans-Medium.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/museosans/SupriaSans-Medium.woff2') format('woff2'),
+       url('/fonts/museosans/SupriaSans-Medium.woff') format('woff'),
+       url('/fonts/museosans/SupriaSans-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('/fonts/museosans/MuseoSans-900.eot');
+  src: url('/fonts/museosans/MuseoSans-900.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/museosans/MuseoSans-900.woff2') format('woff2'),
+       url('/fonts/museosans/MuseoSans-900.woff') format('woff'),
+       url('/fonts/museosans/MuseoSans-900.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('/fonts/museosans/MuseoSans-700.eot');
+  src: url('/fonts/museosans/MuseoSans-700.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/museosans/MuseoSans-700.woff2') format('woff2'),
+       url('/fonts/museosans/MuseoSans-700.woff') format('woff'),
+       url('/fonts/museosans/MuseoSans-700.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('/fonts/museosans/MuseoSans-500.eot');
+  src: url('/fonts/museosans/MuseoSans-500.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/museosans/MuseoSans-500.woff2') format('woff2'),
+       url('/fonts/museosans/MuseoSans-500.woff') format('woff'),
+       url('/fonts/museosans/MuseoSans-500.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'AvenirNextLTW01Bold';
+    src: url('/fonts/museosans/avenir-next-bold.eot');
+    src: url('/fonts/museosans/avenir-next-bold.eot') format('embedded-opentype'),
+         url('/fonts/museosans/avenir-next-bold.woff') format('woff'),
+         url('/fonts/museosans/avenir-next-bold.ttf') format('truetype'),
+         url('/fonts/museosans/avenir-next-bold.svg#AvenirNextLTW01BoldRegular') format('svg');
+}
+@font-face {
+    font-family: 'AvenirNextLTW01Regular';
+    src: url('/fonts/museosans/avenir-next-regular.eot');
+    src: url('/fonts/museosans/avenir-next-regular.eot') format('embedded-opentype'),
+         url('/fonts/museosans/avenir-next-regular.woff') format('woff'),
+         url('/fonts/museosans/avenir-next-regular.ttf') format('truetype'),
+         url('/fonts/museosans/avenir-next-regular.svg#AvenirNextLTW01RegularRegular') format('svg');
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/Thin/Roboto-Thin.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/Thin/Roboto-Thin.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/Thin/Roboto-Thin.ttf') format("truetype");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/Light/Roboto-Light.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/Light/Roboto-Light.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/Light/Roboto-Light.ttf?v=2.137') format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/Regular/Roboto-Regular.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/Regular/Roboto-Regular.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/Regular/Roboto-Regular.tff?v=2.137') format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/Regular/Roboto-Regular.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/Regular/Roboto-Regular.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/Regular/Roboto-Regular.ttf?v=2.137') format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/Medium/Roboto-Medium.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/Medium/Roboto-Medium.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/Medium/Roboto-Medium.ttf?v=2.137') format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/Black/Roboto-Black.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/Black/Roboto-Black.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/Black/Roboto-Black.ttf?v=2.137') format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/Bold/Roboto-Bold.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/Bold/Roboto-Bold.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/Bold/Roboto-Bold.ttf?v=2.137') format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/Bold/Roboto-Bold.woff2?v=2.137') format("woff2"),
+       url('/fonts/Bold/Roboto-Bold.woff?v=2.137') format("woff"),
+       url('/fonts/Bold/Roboto-Bold.ttf?v=2.137') format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/LightItalic/Roboto-LightItalic.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/LightItalic/Roboto-LightItalic.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/LightItalic/Roboto-LightItalic.ttf?v=2.137') format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/Italic/Roboto-Italic.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/Italic/Roboto-Italic.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/Italic/Roboto-Italic.ttf?v=2.137') format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/Italic/Roboto-Italic.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/Italic/Roboto-Italic.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/Italic/Roboto-Italic.ttf?v=2.137') format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/MediumItalic/Roboto-MediumItalic.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/MediumItalic/Roboto-MediumItalic.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/MediumItalic/Roboto-MediumItalic.ttf?v=2.137') format("truetype");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/ThinItalic/Roboto-ThinItalic.woff2?v=2.137') format("woff2"), 
+       url('/fonts/roboto/ThinItalic/Roboto-ThinItalic.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/Thin/Roboto-ThinItalic.ttf?v=2.137') format("truetype");
+  font-weight: 100;
+  font-style: italic; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/BlackItalic/Roboto-BlackItalic.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/BlackItalic/Roboto-BlackItalic.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/BlackItalic/Roboto-BlackItalic.ttf?v=2.137') format("truetype");
+  font-weight: 900;
+  font-style: italic; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/BoldItalic/Roboto-BoldItalic.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/BoldItalic/Roboto-BoldItalic.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/BoldItalic/Roboto-BoldItalic.ttf?v=2.137') format("truetype");
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/roboto/BoldItalic/Roboto-BoldItalic.woff2?v=2.137') format("woff2"),
+       url('/fonts/roboto/BoldItalic/Roboto-BoldItalic.woff?v=2.137') format("woff"),
+       url('/fonts/roboto/BoldItalic/Roboto-BoldItalic.ttf?v=2.137') format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/material/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('/fonts/material/MaterialIcons-Regular.woff2') format('woff2'),
+       url('/fonts/material/MaterialIcons-Regular.woff') format('woff'),
+       url('/fonts/material/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;  /* Preferred icon size */
+  /* display: inline-block; */
+  display: block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

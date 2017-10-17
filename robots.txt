@@ -2,10 +2,13 @@
 
 User-agent: *
 
-Disallow: /app/
 Disallow: /blog/
-Disallow: /fav/
-Disallow: /i/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /ico/
+Disallow: /images/
+Disallow: /img/
+Disallow: /js/
 Disallow: /pdf/
 
 # Wait 1 second between successive requests.
@@ -13,4 +16,4 @@ Crawl-delay: 1
 
 # Independent of user agent. Links in the sitemap are full URLs using http:// and need to match
 # the protocol of the sitemap.
-Sitemap: http://mrglynthomas.com/sitemap.xml
+Sitemap: http://oksauce.com/sitemap.xml
