@@ -385,7 +385,7 @@ footer .social {
 
 .my4 { margin-top: 1.667rem; margin-bottom: 1.667rem }
 
-.blackhead {background-color: black; color: white; margin-left: 1px; padding-top: 1px;font-weight: 600;}
+.blackhead {background-color: black; color: white; margin-left: 1px; padding-top: 1px;font-weight: 600;text-decoration: none;}
 .redhead {background-color: red; color: white; margin-left: 1px; font-weight: 800;}
 
 h1,
