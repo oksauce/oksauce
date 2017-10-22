@@ -1169,6 +1169,7 @@ article h1 {
     margin-left: .8em;
     margin-right: .8rem;
     margin-bottom: .85rem;
+    letter-spacing: 0.025rem;
 }
 
 .post_date {
