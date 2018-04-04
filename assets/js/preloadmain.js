@@ -17,7 +17,6 @@ $('div.zn1').css({'background-image': 'url(images/' + arrayimg[Math.floor(Math.r
 
 });
 */
-
 /*
 window.onbeforeunload = function(e) {
    var myImages = '';
@@ -27,8 +26,9 @@ window.onbeforeunload = function(e) {
 };
 */
 
-   var myImages = new Array('vertical-vinyl-bw-1.jpeg');
 
+
+var myImages = new Array('vertical-vinyl-1.jpeg');
 
 $(window).load(function() {
 
@@ -47,7 +47,9 @@ $(window).load(function() {
         //$('div.zn1').fadeOut(2000);
         //$('div.zn1').css({'background-image': 'none'});
         //setTimeout(function () {
-            $('div.zn1').css('background-image', random);
-            //$('div.zn1').fadeIn(2000);
+          $('div.zn1').css('background-image', random);
+        //$('div.zn1').fadeIn(2000);
         //}, 2000);
     }
+
+

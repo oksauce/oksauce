@@ -17,7 +17,6 @@ $('div.zn1').css({'background-image': 'url(images/' + arrayimg[Math.floor(Math.r
 
 });
 */
-
 /*
 window.onbeforeunload = function(e) {
    var myImages = '';
@@ -27,7 +26,7 @@ window.onbeforeunload = function(e) {
 };
 */
 
-var myImages = new Array('oksauce-1.jpeg');
+var myImages = new Array('oksauce-bw.jpeg');
 
 $(window).load(function() {
 

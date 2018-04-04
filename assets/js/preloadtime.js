@@ -17,7 +17,6 @@ $('div.zn1').css({'background-image': 'url(images/' + arrayimg[Math.floor(Math.r
 
 });
 */
-
 /*
 window.onbeforeunload = function(e) {
    var myImages = '';

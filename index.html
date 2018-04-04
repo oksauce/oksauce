@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- Ok Sauce : Main HTML : 6th Oct 2017 -->
+<!-- Ok Sauce : Main HTML : 1st April 2018 -->
 
 <!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
@@ -15,14 +15,14 @@
 
 <title>OK Sauce</title>
 
-<meta id="head-description" name="description" content="Artist, Creative who builds gadget pictures and other stuff" />
-<meta property="og:description" name="og:description" content="Artist, Creative who builds gadget pictures and other stuff" />
-<meta name="twitter:description" content="Artist, Creative who builds gadget pictures and other stuff">
-<meta id="head-keywords" name="keywords" content="Artist, Creative who builds gadget pictures and other stuff" />
+<meta id="head-description" name="description" content="artist, creative who builds gadget pictures and other stuff" />
+<meta property="og:description" name="og:description" content="artist, creative who builds gadget pictures and other stuff" />
+<meta name="twitter:description" content="artist, creative who builds gadget pictures and other stuff">
+<meta id="head-keywords" name="keywords" content="artist, creative who builds gadget pictures and other stuff" />
 
-<meta name="author" content="Glyn Thomas">
-<meta name="description" content="Glyn Thomas Artist Creative">
-<meta name="keywords" content="British, Art, Creative">
+<meta name="author" content="slogan myth">
+<meta name="description" content="slogan myth glyn thomas artist creative">
+<meta name="keywords" content="british, art, creative">
 
 <meta name="twitter:title" content="" />
 <meta name="twitter:image" content="/assets/logo/logo-big.png" />
@@ -32,18 +32,17 @@
 <meta property="og:type" name="og:type" content="website" />
 <meta property="fb:app_id" content="" />
 
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="/ico/favicon-32x32.png" sizes="32x32">
-<link rel="manifest" href="/ico/manifest.json">
-<link rel="mask-icon" href="/ico/safari-pinned-tab.svg" color="#000000">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/ico/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/ico/favicon-16x16.png">
+<link rel="manifest" href="/assets/ico/manifest.json">
+<link rel="mask-icon" href="/assets/ico/safari-pinned-tab.svg" color="#ff0000">
 <meta name="theme-color" content="#ffffff">
 
 <link rel="shortcut icon" href="/ico/favicon.png?v1.010" type="image/x-icon" />
 
 <link rel="stylesheet" href="/fonts/fonts.css"></link>
-<link rel="stylesheet" href="/css/global.css"></link>
+<link rel="stylesheet" href="/assets/css/index.css"></link>
 
 <!--
 <script type="text/javascript">
@@ -67,30 +66,77 @@ _gaq.push(['_trackPageview']);
 
 <header class="bg-white clearfix">
 <div class="content clearfix relative">
+<a href="/"  class="v-centre col">
+<div class="mr mx4"><span class="blackok" style="font-size: 15px;">&nbsp;OK&nbsp;</span>&nbsp;<span class="greyhead">&nbsp;sauce&nbsp;</span></div>
+</a>
+<div class="col-right my3 px4">
 
-<!-- <div id="nav" class="content clearfix relative"> -->
-<div id="nav">
-
-<!-- <a id="monogram" href="/about.html" class="v-centre col"> -->
-<a id="monogram" href="/about.html">
-
-<i class="mx4 material-icons md-48" style="color:red;">gesture</i></a>
-
-<!-- <div class="col-right my3 px4"> -->
-
-<!-- <div class="disclosure key-bind cursor-pointer block relative center col col-6 " data-bind="content-1"> -->
-
-<div class="icons" >
-
-<a class="current" href="/music.html"><i class="material-icons md-36">headset</i></a> <!-- music collections -->
-<!-- <a class="current" href="/subscribe.html"><i class="material-icons md-36">favorite_border</i></a> subscribe ? -->
-<a class="current" href="https://soundcloud.com/oksauce" target="_blank"><i class="material-icons md-36">cloud_queue</i></a> <!-- soundcloud account -->
+<div class="disclosure key-bind cursor-pointer block relative center col col-6 " data-bind="content-1">
+<i class="material-icons center" style="color:;">menu</i>
 
 </div>
 
-<!-- </div> -->
+</div>
 
-<!-- <a id="monogram" href="/about.html"><i class="material-icons md-48" style="color:red;">gesture</i></a> -->
+<div class="content-1 hide">
+<div class="absolute clearfix top-0 bottom-0 right-0 col-12 sm-col-7 md-col-4 height-100">
+
+<div class="disclosure cursor-pointer sm-show fixed top-0 left-0 right-0 bottom-0 opacity-4 bg-black z3" data-bind="content-1"></div>
+
+<div class="fixed top-0 bottom-0 height-100 col-12 z3" style="background-color:black;"></div>
+<div class="relative right-0 top-0 bottom-0 animate z3">
+<ul style="margin-top: calc(6rem - 3px);font-weight:600;" class="nav m0 list-reset mx4 mt7 pt3">
+<li>
+<a class="white" href="/">
+<div class="py3">Home</div>
+</a>
+</li><li>
+
+<a class="white" href="http://soundcloud.com/oksauce" target="_blank">
+<div class="py3">Music</div>
+</a>
+</li><li>
+
+<!--
+<a class="white" href="/">
+<div class="py3">Subscribe to news</div>
+</a>
+</li><li>
+-->
+<a class="white" href="/privacy">
+<div class="py3">Privacy</div>
+</a>
+</li><li>
+<a class="white" href="/terms-conditions">
+<div class="py3">Terms &amp; Conditions</div>
+</a>
+
+</li>
+</ul>
+</div>
+
+<div class="absolute z3 top-0 right-0">
+<div class="inline-block mt3 mr4 disclosure cursor-pointer block relative center" data-bind="content-1">
+
+<i class="material-icons center" style="color:white;">close</i>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="content-2 hide">
+
+<div class="absolute clearfix top-0 bottom-0 right-0 col-12 sm-col-7 md-col-4 height-100">
+<div class="disclosure cursor-pointer sm-show fixed top-0 left-0 right-0 bottom-0 opacity-4 bg-black z3" data-bind="content-2"></div>
+<div class="fixed top-0 bottom-0 height-100 col-12 z3" style="background-color:red;"></div>
+
+</div>
+
+</div>
+</div>
+</div>
 
 </header>
 </div>
@@ -101,44 +147,32 @@ _gaq.push(['_trackPageview']);
 <!-- /.section -->
 <!-- <div class="col col-12 sm-col-6"> -->
 
-<div class="mb40px bg-white clearfix">
+<div class="mb40px bg-slate clearfix">
+<!-- <div class="limit-line-width-43"> -->
+<div class="p3">
 
-<div id="blog">
+<!-- <h2 class="h4 m0"> -->
+<h2 class="h4 mb3">
 
-<article class="published">
+<span class="blackhead">&nbsp;news&nbsp;</span>&nbsp;<span class="greyhead">&nbsp;update&nbsp;</span>
 
-<!-- <h2 class="h4 mb3"> -->
-<h1>
-<a id="discussions">
-<span class="redhead">&nbsp;Discussions&nbsp;</span>
-</a>
-</h1>
-<!-- </h2> -->
+</h2>
+<h3 class="h1 mt2">
+<!-- <h3 class="h3 mt2 mb2"> -->
+<!-- <a class="redhead" href="/" target="_blank">&nbsp;experimental time pieces&nbsp;</a> -->
+</h3>
 
-<div class="post_content clearfix"> 
-
-<!-- <p> -->
-<img src="/img/discussions-1.jpeg" width="912" height="299" title="" alt="" />
-
-<!-- </p> -->
-
-<p><span class="blackhead">&nbsp;2017&nbsp;</span></p>
-
-<p>Not much to say right now, have guitar, laptop and hope to make some interesting sounds between building stuff at <a href="http://mrglynthomas.com" target="_blank">mrglynthomas.com</a> these are creative journeys full of experimentation and maybe some collaboration, somethings may work but a lot of things probably won't!</p>
-
-<p class="post_date"><a onclick="window.location.hash='discussions';"><span class="redhead">&nbsp;Aug 22nd, 2017&nbsp;</span></a></p>
-
-<!-- put this section in last artical for home page when you have something more to say ! -->
-<ul class="pagination">
-<li class="left_arrow"><a href="/"><i class="material-icons md-36">skip_previous</i></a></li>
-<li class="right_arrow"><a href="/"><i class="material-icons md-36">skip_next</i></a></li>
-<!-- <li style="clear:both"></li> -->
-</ul> 
+<p>Currently creating music for a series of experimental time pieces, see <a class="border-bottom border-blue" href="https://www.instagram.com/sloganmyth" target="_blank">instagram</a> for build stage posts.</p>
 
 </div>
-</article>
+<!-- <a class="block" href="/2017/experiments/time" target="_blank">
+<img src="/cache/images/xxx.jpg" alt="" class="object-fit block"> -->
 
+<!-- <a href="/experiments/time" target="_blank"> -->
+<!-- <img src="/images/time-1.jpeg" alt="" class="object-fit"> -->
+<!-- </a> -->
 </div>
+
 </div>
 <div class="col col-12"> 
 <div class="sm-ml1px">
@@ -157,29 +191,28 @@ _gaq.push(['_trackPageview']);
 <div style="margin-top:4%;margin-bottom:4%"></div>
 
 <footer class="clearfix container">
-
-<!-- <div class="icons center"> -->
 <div class="center">
 <div class="social">
 <ul class="social-icons">
 
-<li><a href="mailto:info@mrglynthomas.com"><i class="material-icons md-36" style="color:red;">drafts</i></a></li>
-<li><a href="https://www.facebook.com/mrglynthomas" target="_blank"><i class="material-icons md-36" style="color:red;">face</i></a>
-</li><li><a href="https://www.instagram.com/mrglynthomas" target="_blank"><i class="material-icons md-36" style="color:red;">camera_alt</i></a>
-</li><li><a href="https://www.youtube.com/channel/UC457wAty6JkHERFQSEWsm9Q" target="_blank"><i class="material-icons md-36" style="color:red;">play_circle_filled</i></a>	
-</li><li><a href="https://twitter.com/mrglynthomas" target="_blank"><i class="material-icons md-36" style="color:red;">gesture</i></a></li>
+<li><a class="border-bottom border-blue" href="mailto:hello@sloganmyth.com">contact</a></li>
+<li><a class="border-bottom border-blue" href="https://www.instagram.com/sloganmyth" target="_blank">instagram</a></li>
+<li><a class="border-bottom border-blue" href="http://soundcloud.com/oksauce" target="_blank">music</a></li>
+<li><a class="border-bottom border-blue" href="https://twitter.com/sloganmyth" target="_blank">tweets</a></li>
        
 </ul>
+
 </div>
+
 </div>
 </footer>
-
-<script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
 <!-- <script type="text/javascript" src="/js/deferrals.js"></script> -->
-<script type="text/javascript" src="/js/index.js"></script>
-<script type="text/javascript" src="/js/html5shiv.js"></script>
-<script type="text/javascript" src="/js/nav.js"></script>
-<script type="text/javascript" src="/js/preloadmain.js"></script> 
+<!-- <script type="text/javascript" src="/js/nav.js"></script> -->
+
+<script type="text/javascript" src="/assets/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/html5shiv.js"></script>
+<script type="text/javascript" src="/assets/js/preloadmain.js"></script>
 
 </body>
 </html>

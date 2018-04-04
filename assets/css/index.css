@@ -112,6 +112,8 @@ html {
 
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /**
@@ -139,7 +141,7 @@ figure,
 footer,
 header,
 main, /* 2 */
-menu,
+b,
 nav,
 section,
 summary { /* 1 */
@@ -550,8 +552,18 @@ header a {text-decoration: none}
 .viewer-position {font-size: 1.4rem; font-weight: 500; color:red;}
 
 .redneck {background-color: red; color:white; font-weight: 600;}
-.blackhead {background-color: black; color: white; margin-left: 1px; padding-top: 1px; font-weight: 500; font-size: 1.53rem; text-decoration: none}
+
+.redhead {background-color: red; color:white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 1px; font-weight: 500;font-size: 1.53rem; text-decoration: none; border-radius: 2px;}
+
+.blackok {background-color: #000000; color: white; margin-left: 1px; padding-top: 4px; padding-bottom: 3px; font-weight: 500; font-size: 1.53rem; text-decoration: none; border-radius: 2px;}
+
+.blackhead {background-color: #000000; color: white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 3px; margin-bottom:2px; font-weight: 500; font-size: 1.53rem; text-decoration: none; border-radius: 2px;}
+
+.greyhead {background-color: #e3e7ea; color: white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 3px; font-weight: 500; font-size: 1.53rem; text-decoration: none; border-radius: 2px;}
+
+
 .twit {text-decoration: underline;text-decoration-color:#1da1f2;}
+
 .face {text-decoration: underline;text-decoration-color:#1d2129;}
 
 /* Basscss Typography */
@@ -734,7 +746,7 @@ p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53;}
 .ml4 { margin-left: 1.667rem }
 
 /* .mx4 { margin-left: 1.667rem; margin-right: 1.667rem } */
-.mx4 { margin-left: 1.3rem; margin-right: 1.667rem }
+.mx4 { margin-left: 1.2rem; margin-right: 1.667rem }
 
 .my4 { margin-top: 1.667rem; margin-bottom: 1.667rem }
 
@@ -1912,13 +1924,19 @@ p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53;}
 
 /* Basscss Background Colors */
 
+.bg-insta { background-color: #7633da }
+
 .bg-black  { background-color: #111111 }
+
+.bg-bluck  { background-color: #23282d }
 
 .bg-gray   { background-color: #AAAAAA }
 
 .bg-silver { background-color: #DDDDDD }
 
 .bg-white  { background-color: #ffffff }
+
+.bg-slate  { background-color: #f1f3f4 }
 
 .bg-aqua  { background-color: #7FDBFF }
 
@@ -3199,12 +3217,12 @@ strong > em {
 }
 
 a {
-    /*color: #1e1e1e;*/
-    color: red;
-    text-decoration: underline;
+    color: #1e1e1e;
+    /*color: red;*/
+    text-decoration: none;
     -webkit-backface-visibility: hidden;
 	  -webkit-perspective: 1000;
-    font-weight: 500;
+    /*font-weight: 500;*/
     font-size: 1.45rem;
 }
 
@@ -3232,12 +3250,6 @@ p a {
 
 i {
   font-size: 1.3rem;
-}
-
-.redhead {
-    background-color: red;
-    color:white;
-    font-weight: 800;
 }
 
 .mr {
@@ -3680,7 +3692,6 @@ ul:not(.list-reset) li:before{
 */
 
 
-
 footer {
     background: white;
     /* padding: 10px 0;*/
@@ -3694,7 +3705,7 @@ footer .social {
 }
 
 div.icons {
-    /* font-size: 1.5em; */
+    font-size: 1.5em;
     margin: 0 .5em 0 0;
     display: flex;
     min-width: 0;
@@ -3702,11 +3713,13 @@ div.icons {
     align-items: flex-end
 }
 
-.social-icons li:nth-child(1) {margin-right: 20px;}
-.social-icons li:nth-child(2) {margin-right: 20px;}
-.social-icons li:nth-child(3) {margin-right: 20px;}
-.social-icons li:nth-child(4) {margin-right: 20px;}
-.social-icons li:nth-child(5) {margin-right: 11px;}
+/*
+.social-icons li:nth-child(1) {margin-right: 5px;}
+.social-icons li:nth-child(2) {margin-right: 5px;}
+.social-icons li:nth-child(3) {margin-right: 5px;}
+.social-icons li:nth-child(4) {margin-right: 5px;}
+.social-icons li:nth-child(5) {margin-right: 5px;}
+*/
 
 /*
 .social-icons li {
@@ -3720,10 +3733,10 @@ div.icons {
   top:0;
   transition:all .2s;
   display:inline-block;
-  margin-right: 11px;
-  /*margin-left: 5px;*/
+  margin-right: 6px;
+  margin-left: 0px;
 }
-
+/*
 .social li .ico.instagram{
   background-position:-40px 0
 }
@@ -3743,7 +3756,7 @@ div.icons {
   text-align: left;
   background:url(/ico/social.png) no-repeat
 }
-
+*/
 
 body a img{
   font-size: 0;
