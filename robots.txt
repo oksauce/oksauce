@@ -1,4 +1,4 @@
-# *!robots.txt v1.00.00 | (c) 2017 mrglynthomas.
+# *!robots.txt v1.00.00 | (c) 2018 oksauce.
 
 User-agent: *
 
