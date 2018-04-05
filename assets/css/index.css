@@ -553,14 +553,13 @@ header a {text-decoration: none}
 
 .redneck {background-color: red; color:white; font-weight: 600;}
 
-.redhead {background-color: red; color:white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 1px; font-weight: 500;font-size: 1.53rem; text-decoration: none; border-radius: 2px;}
+.redhead {background-color: red; color:white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 1px; font-weight: 500;font-size: 1.53rem; text-decoration: none; border-radius: 1px;}
 
-.blackok {background-color: #000000; color: white; margin-left: 1px; padding-top: 4px; padding-bottom: 3px; font-weight: 500; font-size: 1.53rem; text-decoration: none; border-radius: 2px;}
+.blackok {background-color: #000000; color: white; margin-left: 1px; padding-top: 4px; padding-bottom: 3px; font-weight: 500; font-size: 1.53rem; text-decoration: none; border-radius: 1px;}
 
-.blackhead {background-color: #000000; color: white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 3px; margin-bottom:2px; font-weight: 500; font-size: 1.53rem; text-decoration: none; border-radius: 2px;}
+.blackhead {background-color: #000000; color: white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 3px; margin-bottom:2px; font-weight: 500; font-size: 1.53rem; text-decoration: none; border-radius: 1px;}
 
-.greyhead {background-color: #e3e7ea; color: white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 3px; font-weight: 500; font-size: 1.53rem; text-decoration: none; border-radius: 2px;}
-
+.greyhead {background-color: #e3e7ea; color: white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 3px; font-weight: 500; font-size: 1.53rem; text-decoration: none; border-radius: 1px;}
 
 .twit {text-decoration: underline;text-decoration-color:#1da1f2;}
 
