@@ -951,7 +951,7 @@ $.extend($.easing, {
 
 module.exports.init = function () {
 
-	console.log('here');
+	console.log('hello :)');
 
 	$('.carousel').Carousel();
 	// $('.show-hide').Expanda();
