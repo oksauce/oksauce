@@ -547,25 +547,27 @@ textarea {
 
 /* Basscss Highlights */
 
+header {height:70px;}
+
 header a {text-decoration: none}
 
 .viewer-position {font-size: 1.4rem; font-weight: 500; color:red;}
 
 .redneck {background-color: red; color:white; font-weight: 600;}
 
-.redhead {background-color: red; color:white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 1px; font-weight: 500;font-size: 1.53rem; text-decoration: none; border-radius: 1px;}
+.redhead {background-color: red; color:white; margin-left: 2px; padding-left: 2px; margin-right: 2px; padding-top: 0.5px; padding-right: 2px; padding-bottom: 1px; font-weight: 500;font-size: 1.53rem; text-decoration: none; border-radius: 1px;}
 
-.blackok {background-color: #000000; color: white; margin-left: 1px; padding-top: 4px; padding-bottom: 3px; font-weight: 500; font-size: 1.53rem; text-decoration: none; border-radius: 1px;}
+.blackok {background-color: #000000; color: white; margin-left: 1px; padding-top: 4px; padding-left: 2px; padding-right: 2px; padding-bottom: 3px; font-weight: 500; font-size: 1.53rem; text-decoration: none; border-radius: 1px;}
 
-.redhead {background-color: red; color:white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 2px; font-weight: 600;font-size: 1.34rem; text-decoration: none}
+.redhead {background-color: red; color:white; margin-left: 1px; padding-top: 0.5px; padding-left: 2px; padding-right: 2px; padding-bottom: 2px; font-weight: 600;font-size: 1.34rem; text-decoration: none}
 
-.blackhead {background-color: #000000; color: white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 3px; font-weight: 600; font-size: 1.34rem; text-decoration: none; border-radius: 1px;}
+.blackhead {background-color: #000000; color: white;  margin-left:1px; padding-top: 0.5px; padding-left: 2px; padding-right: 2px; padding-bottom: 3px; font-weight: 600; font-size: 1.34rem; text-decoration: none; border-radius: 1px;}
 
-.orangehead {background-color: orange; color: white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 3px; font-weight: 600; font-size: 1.34rem; text-decoration: none; border-radius: 1px;}
+.orangehead {background-color: orange; color: white; margin-left: 1px; padding-top: 0.5px; padding-left: 2px; padding-right: 2px; padding-bottom: 3px; font-weight: 600; font-size: 1.34rem; text-decoration: none; border-radius: 1px;}
 
-.greenhead {background-color: green; color: white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 3px; font-weight: 600; font-size: 1.34rem; text-decoration: none; border-radius: 1px;}
+.greenhead {background-color: green; color: white; margin-left: 1px; padding-top: 0.5px; padding-left: 2px; padding-right: 2px; padding-bottom: 3px; font-weight: 600; font-size: 1.34rem; text-decoration: none; border-radius: 1px;}
 
-.purplehead {background-color: purple; color: white; margin-left: 1px; padding-top: 0.5px; padding-bottom: 3px; font-weight: 600; font-size: 1.34rem; text-decoration: none; border-radius: 1px;}
+.purplehead {background-color: purple; color: white; margin-left: 1px; padding-top: 0.5px; padding-left: 2px; padding-right: 2px; padding-bottom: 3px; font-weight: 600; font-size: 1.34rem; text-decoration: none; border-radius: 1px;}
 
 .greyhead {background-color: #e3e7ea; color: white; padding-bottom: 2.5px; font-weight: 500; font-size: 1.53rem; text-decoration: none; border-radius: 1px;}
 
@@ -679,7 +681,7 @@ header a {text-decoration: none}
 
 /* Basscss Margin */
 
-p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53;}
+p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53; font-weight: 500;}
 
 .p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53;}
 
@@ -730,7 +732,7 @@ p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53;}
 
 .m3  { margin: 1.25rem }
 
-.mt3 { margin-top: 1.25rem }
+.mt3 { margin-top: 2rem }
 
 .mr3 { margin-right: 1.25rem }
 
@@ -740,20 +742,22 @@ p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53;}
 
 .mx3 { margin-left: 1.25rem; margin-right: 1.25rem }
 
-.my3 { margin-top: 1.25rem; margin-bottom: 1.25rem }
+.my3 { margin-top: 1.88rem; margin-bottom: 1.88rem }
 
 .m4  { margin: 1.667rem }
 
 .mt4 { margin-top: 1.667rem }
 
-.mr4 { margin-right: 1.667rem }
+/*.mr4 { margin-right: 1.667rem }*/
+
+.mr4 { margin-right: 3.5rem;}
 
 .mb4 { margin-bottom: 1.667rem }
 
 .ml4 { margin-left: 1.667rem }
 
 /* .mx4 { margin-left: 1.667rem; margin-right: 1.667rem } */
-.mx4 { margin-left: 1.2rem; margin-right: 1.667rem }
+.mx4 { margin-left: 2.2rem; margin-right: 1.667rem }
 
 .my4 { margin-top: 1.667rem; margin-bottom: 1.667rem }
 
@@ -824,8 +828,8 @@ p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53;}
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   */
-  padding-left: 1.20rem;
-  padding-right: 1.20rem;
+  padding-left: 2.30rem;
+  padding-right: 2.30rem;
   padding-bottom: 1.25rem;
 
  }
@@ -838,7 +842,7 @@ p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53;}
 
 .pl3 { padding-left: 1.25rem }
 
-.py3 { padding-top: 1.25rem; padding-bottom: 1.25rem; font-weight: 600 }
+.py3 { padding-top: 1.25rem; padding-bottom: 1.25rem; font-weight: 500 }
 
 .px3 { padding-left: 1.25rem; padding-right: 1.25rem }
 
@@ -857,7 +861,7 @@ p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53;}
 .py4 { padding-top: 1.667rem; padding-bottom: 1.667rem }
 
 /*.px4 { padding-left: 1.667rem; padding-right: 1.667rem }*/
-.px4 { padding-left: 1.667rem; padding-right: 1.3rem }
+.px4 { padding-left: 1.667rem; padding-right: 3.5rem }
 
 /* Basscss Grid */
 
@@ -1943,6 +1947,8 @@ p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53;}
 
 .bg-white  { background-color: #ffffff }
 
+.bg-grey   {background-color: #eeeceb }
+
 .bg-slate  { background-color: #f1f3f4 }
 
 .bg-aqua  { background-color: #7FDBFF }
@@ -1983,7 +1989,7 @@ p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53;}
 
 .border-aqua  { border-color: #7FDBFF }
 
-.border-blue  { border-color: #0000ff }
+.border-blue  { /*border-color: #0000ff*/ border-color: #e0e0e0 }
 
 .border-navy  { border-color: #001F3F }
 
@@ -3038,7 +3044,8 @@ button, .btn {
 
 .v-centre {
     position: absolute;
-    top: 50%;
+    /*top: 50%;*/
+    top: 47%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -3109,7 +3116,7 @@ button, .btn {
 }
 
 .bg-grey {
-    background-color: #c2c2c2;
+    background-color: #eeeceb;
 }
 
 .bg-grey-001 {
@@ -3156,6 +3163,10 @@ button, .btn {
 
 .opacity-4 {
     opacity:0.4;
+}
+
+.opacity-6 {
+    opacity:0.6;
 }
 
 .opacity-7 {
@@ -3224,7 +3235,8 @@ strong > em {
 }
 
 a {
-    color: #1e1e1e;
+    /*color: #1e1e1e;*/
+    color: #374042;
     /*color: red;*/
     text-decoration: none;
     -webkit-backface-visibility: hidden;
