@@ -681,7 +681,7 @@ header a {text-decoration: none}
 
 /* Basscss Margin */
 
-p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53; font-weight: 500;}
+p {font-size: 1.53rem; letter-spacing: 0.01rem; font-weight: 400}
 
 .p {font-size: 1.53rem; letter-spacing: 0.01rem; line-height: 1.53;}
 
@@ -3165,12 +3165,24 @@ button, .btn {
     opacity:0.4;
 }
 
+.opacity-5 {
+    opacity:0.5;
+}
+
 .opacity-6 {
     opacity:0.6;
 }
 
 .opacity-7 {
     opacity: 0.7;
+}
+
+.opacity-8 {
+    opacity: 0.8;
+}
+
+.opacity-9 {
+    opacity: 0.9;
 }
 
 .list-zebra > div {
@@ -3712,10 +3724,11 @@ ul:not(.list-reset) li:before{
 
 
 footer {
-    background: white;
+    /*background: white;*/
     /* padding: 10px 0;*/
     padding: 1px 0;
-    color: #fff;
+    color: #000;
+    opacity:4;
 }
 
 
