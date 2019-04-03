@@ -36,7 +36,7 @@ WebMIDI.host = (function(document)
 	
 	gitHubButtonClick = function()
 	{
-		var url = "https://github.com/notator/WebMIDISynthHost";
+		var url = "https://github.com/oksauce/oksauce";
 		openInNewTab(url);
 	},
 
@@ -1109,7 +1109,7 @@ WebMIDI.host = (function(document)
 			// Do the following for each available SoundFont type.
 			if(originName === "Arachno Version 1.0")
 			{
-				sf2OriginPathBase = "http://oksauce.io/soundFonts/Arachno/Arachno1.0selection-";
+				sf2OriginPathBase = "http://oksauce.com/soundFonts/Arachno/Arachno1.0selection-";
 				sf2SelectOptions = [];
 
 				so = document.createElement("option");
