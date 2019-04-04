@@ -1,4 +1,4 @@
-# julayn tomas ^glyn thomas - creative, hacker, electronica
+# julayn tomas ^glyn thomas - hacker, electronica
 
 simple website, built website at http://oksauce.com
 
