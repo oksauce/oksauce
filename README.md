@@ -1,5 +1,5 @@
 # julayn tomas ^glyn thomas - creative, hacker, electronica
 
-This is another personal website. A simple custom built website at http://oksauce.com
+simple website, built website at http://oksauce.com
 
-Built with love.
+built with love
