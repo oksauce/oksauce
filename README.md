@@ -2,4 +2,4 @@
 
 simple website, built website at http://oksauce.com
 
-built with love
+made with love
