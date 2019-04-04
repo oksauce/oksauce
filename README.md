@@ -1,5 +1,5 @@
 # julayn tomas ^glyn thomas ~ electronica
 
-simple website, built website at http://oksauce.com
+simple website @ http://oksauce.com
 
 made with love
