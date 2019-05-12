@@ -1,4 +1,4 @@
-/* style | style.css v1.0.20 | (c) 2019 julayn | julayn.com */
+/* style | style.css v1.0.20 | (c) 2019 julayn | oksauce.com */
 
 /* based on vimeoplayer - v3.8.4 - 2019-01-16 */
 
@@ -156,10 +156,10 @@ pre {
 
 .f1-title {
   margin-bottom: 1.6rem;
-  /*font-size: 2.8rem;*/
+  font-size: 2.8rem;
   font-weight: 400;
   /*text-transform: uppercase;*/
-  letter-spacing: -2px;
+  letter-spacing: 1px;
   /*font-family: 'Roboto Condensed';*/
   color: #333333;
 }
@@ -204,9 +204,16 @@ pre {
 /* UI Text */
 
 .ui-text {
-  letter-spacing: 0.1px;
+  letter-spacing: 1px;
   /*text-transform: uppercase;*/
   font-weight: 500;
+}
+
+.ui-text-last {
+  letter-spacing: 1px;
+  /*text-transform: uppercase;*/
+  font-weight: 500;
+  color: black !important;
 }
 
 .ui-order {
@@ -223,10 +230,10 @@ pre {
   margin-bottom: 12px;
   /*font-size: 11.8px;*/
 
-  /*border-bottom: 1px solid #e0e0e0;*/
-  border-bottom: 1px solid rgba(255,255,255,1);
-  /*color: #443e3c;*/
-  color: black;
+  border-bottom: 1px solid #e0e0e0;
+  /*border-bottom: 1px solid rgba(255,255,255,1);*/
+  color: #443e3c;
+  /*color: black;*/
   text-decoration: none;
 }
 
@@ -431,7 +438,7 @@ pre {
   /*padding-top: 4rem;*/
   padding-top: 1.1rem;
   /*padding-left: 4rem;*/
-  /*padding-left: 2rem;*/
+  padding-left: 2.2rem;
   padding-right: 2rem;
   /*padding-bottom: 4rem;*/
   padding-bottom: 1.5rem;
@@ -498,7 +505,7 @@ pre {
   position: static;
   width: 90px;
   font-size: 15px;
-  letter-spacing: 0.1px;
+  letter-spacing: 1px;
 }
 
 .site-logo:hover{
@@ -581,7 +588,7 @@ pre {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  /*background-color: #ececec;*/
+  background-color: #ececec;
   /*background-color: rgba(196,196,196,0.40);*/
 }
 
@@ -630,7 +637,7 @@ pre {
 
 .docs-nav a{
   font-size: 12px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   /*text-transform: uppercase;*/
   font-weight: 400;
   text-transform: uppercase;
@@ -645,7 +652,7 @@ pre {
 
 .docs-nav-biblio a{
   font-size: 14px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   font-weight: 500;
   /*text-transform: uppercase;*/
   display: inline-block;
@@ -661,9 +668,9 @@ pre {
   display: none;
   /*padding: 2rem 4rem;*/
   padding: 2rem 2rem;
-  /*background-color: #ececec;*/
+  background-color: #ececec;
   /*background-color: rgba(196,196,196,0.40);*/
-  border-top: 1px solid rgba(176,176,176,1);
+  border-top: 1px solid rgba(176,176,176,0.1);
 }
 
 .mobile-footer.biblio-footer{
@@ -856,7 +863,7 @@ hr {
   .mobile-header {
     display: block;
     padding: 0.5rem 2rem;
-    /*background-color: #ececec;*/
+    background-color: #ececec;
     /*background-color: rgba(196,196,196,0.40);*/
     /*border-bottom: 0.5px solid rgba(213,213,213,0.8);*/
   }
@@ -916,24 +923,24 @@ hr {
   .mobile-nav-link {
     display: block;
     padding-left: 2rem;
-    /*background-color: #ececec;*/
+    background-color: #ececec;
     /*border-top: 1px solid rgba(213,213,213,0.5);*/
-    border-top: 1px solid rgba(176,176,176,1);
+    border-top: 1px solid rgba(176,176,176,0.1);
     font-size: 14px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     /*text-transform: uppercase;*/
   }
 
   .mobile-nav-link-last {
     display: block;
     padding-left: 2rem;
-    /*background-color: #ececec;*/
+    background-color: #ececec;
     /*border-bottom: 1px solid rgba(213,213,213,0.5);*/
     /*border-bottom: 1px solid #666666;*/
-    border-top: 1px solid rgba(176,176,176,1);
+    border-top: 1px solid rgba(176,176,176,0.1);
     /*border-top: 1px solid rgba(213,213,213,0.5);*/
     font-size: 14px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     /*text-transform: uppercase;*/
   }
 
@@ -1022,9 +1029,9 @@ hr {
     padding-left: 2rem;
     /*background-color: #ececec;*/
     color: black;
-    font-size: 12px;
+    /*font-size: 12px;*/
     letter-spacing: 1px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
   }
   .mobile-nav-link-last {
     display: block;
@@ -1032,9 +1039,9 @@ hr {
     /*background-color: #ececec;*/
     /*background-color: #ffffff;*/
     /*border-bottom: 1px solid rgba(206,206,214,0.5);*/
-    font-size: 12px;
+    /*font-size: 12px;*/
     letter-spacing: 1px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
   }
   .mobile-footer {
     padding-right: 2.5rem;
