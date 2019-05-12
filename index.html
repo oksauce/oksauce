@@ -25,6 +25,22 @@ $(document).ready(function(){
   cuePoint(0);
   cleanURL();
 });
+
+var Webflow = Webflow || [];
+Webflow.push(function () {
+  
+  // Find example element
+  var $element = $('.site-content');
+  var $parent = $element.parent();
+  
+  // Listen for optimized resize event
+  Webflow.resize.on(function () {
+    
+    // Do something with element on resize
+    $element.height($parent.height());
+    
+  });
+});
 </script>
 
 </head>
