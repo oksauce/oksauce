@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--/*! biblio | index.html v1.0.18 | (c) 2019 julayn | oksauce.com */-->
+<head>
+<meta charset="utf-8">
+<title>julayn</title>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<link href="/css/syntax.css" rel="stylesheet" type="text/css">
+<link href="" rel="shortcut icon" type="image/x-icon">
+
+<link href="/css/player.css" rel="stylesheet" type="text/css">
+<link href="/css/mail.css" rel="stylesheet" type="text/css">
+
+<style>h1, h2, h3, h4 {font-weight: 500; letter-spacing: 1px;}</style>
+
+<script src="/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="/js/webflow.js" type="text/javascript"></script>
+<script src="/js/jquery.fitvids.js" type="text/javascript"></script>
+
+<script>
+$(document).ready(function(){
+  $(".site-content").fitVids();
+  cleanURL();
+});
+</script>
+
+</head>
+
+<body>
+<div class="site-restraint">
+
+<div class="site-container">
+<div data-collapse="medium" data-animation="default" data-duration="400" class="mobile-header w-nav">
+
+<div class="mobile-header-container">
+
+<nav role="navigation" class="mobile-nav w-nav-menu">
+
+<a href="http://julayn.com/biblio" class="mobile-nav-link w-nav-link">biblio</a>
+<!-- <a href="/lab/index.html" class="ui-text ui-link">laboratory</a> -->
+<a href="http://julayn.com/about" class="mobile-nav-link mobile-nav-link-last w-nav-link">about</a>
+
+</nav>
+
+<a href="http://julayn.com" class="site-logo w-nav-brand">julayn</a>
+</div>
+
+<div class="mobile-menu-container w-container">
+<div class="mobile-menu-btn w-nav-button">
+<div class="menu-icon">☰</div>
+</div>
+</div>
+
+</div>
+<div data-collapse="medium" data-animation="default" data-duration="400" class="docs-header w-nav">
+
+<div class="docs-header-container">
+<nav role="navigation" class="mobile-nav w-nav-menu docs-nav-biblio">
+<!-- <a href="/biblio/index.html" class="mobile-nav-link w-nav-link">biblio</a> -->
+<a href="http://julayn.com/biblio" class="ui-text ui-link-biblio w--current">biblio</a>
+<!-- <a href="/lab/index.html" class="ui-text ui-link">lab</a> -->
+<a href="http://julayn.com/about" class="ui-text ui-link-biblio w--current">about</a>
+<!-- <a href="/about/index.html" class="mobile-nav-link w-nav-link">about</a> -->
+</nav>
+
+<a href="/" class="site-logo w-nav-brand">julayn</a>
+</div>
+</div>
+<div class="center-wrapper page-content">
+
+<div class="col-flex site-content-docs page-container-docs">
+              
+<h1>julayn biblio</h1>
+
+<h2 id="luck"><a href="/#luck" class="ui-link-biblio-underline">luck</a></h2>
+
+<p>seemingly half imagined, exploring the silence of noticing change, luck slowly moves small egg like balls into view, rocking back and forth almost hidden, rolling into view, giving birth to moments of time</p>
+
+<p>12 hours, 4 hours in each row, white balls move in a wave like fashion to produce random patterns, each row is independently controlled, slipping in and out of past patterns, over time patterns of movement are near to perfect random</p>
+
+<p>first prototype examines perfect randomness, perfect luck, this theme will continue to be explored in future projects
+<p>
+
+<h2 id="moment"><a href="/#moment" class="ui-link-biblio-underline">moment</a></h2>
+
+<p>a mechanical heart with red veins leaking to light bulbs which flicker between the years of young and old, carrying moments of being, numbers of light represent years dimming into the past,  now only a few are strong enough to be noticed, the red light signals change</p>
+
+<p>organized in rows of 7 to represent 7 years, a time of regeneration, with 10 columns a 70 year life, 3 score and 10, 3 configuration switches highlight years of bitter sweet times<p>
+
+<p>each year light is on for only a second and soon the red light will dominate signaling change, a chance for new beginnings<p>   
+<h2><a href="/about" class="ui-link-biblio-underline">?</a></h2>
+
+<p><a href="/about" class="ui-link-biblio-underline">about</a> page contains further information, however, if you have an interesting question feel free to contact me via <a href="https://www.instagram.com/julayntomas/instagram" class="ui-link-biblio-underline" target="_blank">instagram</a> or <a href="https://twitter.com/julayntomas/" class="ui-link-biblio-underline" target="_blank">twitter</a></p>
+
+
+</div><!--.site-content-->
+</div><!--.f-grid-->
+
+<div class="mobile-footer biblio-footer">
+<div class="center-wrapper">
+<ul class="link-list">
+<li class="link-list-item"><a href="https://twitter.com/julayntomas" class="ui-text ui-link ui-link-mm">@julayntomas</a>
+<!-- ui-link-sm w-nav-brand-color -->
+</li>
+<!-- <li class="link-list-item"><a href="mailto:info@julayn.com" class="ui-text ui-link ui-link-sm">Info@julayn.com</a></li> -->
+
+</div>
+</li>
+</ul>
+</div>
+
+</div>
+</div><!--.site-container-->
+</div><!--.site-restraint-->
+
+<script type="text/javascript">
+
+function cleanURL() {
+ // clean URL back from social url shares, see https://stackoverflow.com/
+ // questions/22753052/remove-url-parameters-without-refreshing-page
+ if ((location.hash.replace('#','')) != '') {
+      location.hash = '';
+      window.history.replaceState(null, null, window.location.pathname);
+ }
+}
+
+</script>
+  
+<script src="/js/screenfull.js" type="text/javascript"></script> 
+
+</body>
+</html>
