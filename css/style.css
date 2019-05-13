@@ -157,10 +157,10 @@ pre {
 .f1-title {
   /*margin-bottom: 1.6rem;*/
   /*font-size: 1.8rem;*/
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  /*font-family: 'Roboto Condensed';*/
-  color: #333333;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: 'Roboto Condensed';
+  color: #555555;
 }
 
 .f1.measure {
