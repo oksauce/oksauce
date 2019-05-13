@@ -66,8 +66,8 @@ html {
 }
 
 body {
-  /* font-family: 'Roboto', sans-serif;*/
-  font-family: Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  /*font-family: Helvetica, sans-serif;*/
   font-size: 15px;
   line-height: 1.55rem;
   /*color: #443e3c;*/
@@ -159,7 +159,7 @@ pre {
   /*font-size: 1.8rem;*/
   font-weight: 600;
   letter-spacing: 0.5px;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto';
   color: #555555;
 }
 
@@ -173,7 +173,7 @@ pre {
   font-size: 1.4rem;
   line-height: 1.55;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .f2-subhead {
