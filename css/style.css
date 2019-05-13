@@ -160,7 +160,7 @@ pre {
   font-weight: 600;
   letter-spacing: 0.5px;
   font-family: 'Roboto';
-  color: #444444;
+  color: #333333;
 }
 
 .f1.measure {
@@ -170,9 +170,10 @@ pre {
 .f2 {
   margin-top: 0px;
   margin-bottom: 1.5rem;
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   line-height: 1.55;
   letter-spacing: 1px;
+  color: #333333;
   /*text-transform: uppercase;*/
 }
 
@@ -209,7 +210,6 @@ pre {
 }
 
 .ui-text-last {
-  letter-spacing: -0.5px;
   /*text-transform: uppercase;*/
   font-weight: 500;
   color: black !important;
@@ -724,6 +724,7 @@ hr {
   clear: both;
 }
 .w-nav-brand {
+  font-family: 'Roboto';
   position: relative;
   float: left;
   text-decoration: none;
