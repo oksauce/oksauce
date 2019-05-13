@@ -435,12 +435,12 @@ pre {
   display: block;
   /*padding: 4rem;*/
   /*padding-top: 4rem;*/
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   /*padding-left: 4rem;*/
   padding-left: 2.2rem;
   padding-right: 2rem;
   /*padding-bottom: 4rem;*/
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
