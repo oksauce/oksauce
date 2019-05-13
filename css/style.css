@@ -82,6 +82,8 @@ p {
   color: #111111;
 }
 
+.sauce {color: rgba(255, 0, 0, 0.55);}
+
 .container .p, .container p {
     margin: 0;
     margin-top: 0px;
