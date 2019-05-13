@@ -209,7 +209,7 @@ pre {
 }
 
 .ui-text-last {
-  letter-spacing: 1.2px;
+  letter-spacing: -0.5px;
   /*text-transform: uppercase;*/
   font-weight: 500;
   color: black !important;
