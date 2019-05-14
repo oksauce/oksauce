@@ -1029,7 +1029,7 @@ hr {
 
   .f1-title {
     font-weight: 600;
-    letter-spacing: 0.2px;
+    letter-spacing: -0.2px;
     font-family: 'Roboto';
     color: #333333;
   }
