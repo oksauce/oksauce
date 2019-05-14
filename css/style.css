@@ -76,8 +76,8 @@ body {
 
 p {
   max-width: 26rem;
-  margin-bottom: 1rem;
-  /*font-size: 0.9rem;*/
+  /*margin-bottom: 1rem;*/
+  font-size: 1rem;
   line-height: 1.7;
   color: #111111;
 }
