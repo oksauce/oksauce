@@ -884,7 +884,7 @@ hr {
 
   .mobile-header {
     display: block;
-    padding: 0.5rem 2rem;
+    padding: 0.45rem 2rem;
     background-color: #eeeceb;
     /*background-color: rgba(196,196,196,0.40);*/
     /*border-bottom: 0.5px solid rgba(213,213,213,0.8);*/
@@ -961,7 +961,7 @@ hr {
     /*border-bottom: 1px solid #666666;*/
     border-top: 1px solid rgba(176,176,176,0.1);
     /*border-top: 1px solid rgba(213,213,213,0.5);*/
-    font-size: 14px;
+    font-size: 1rem;
     letter-spacing: 1px;
     /*text-transform: uppercase;*/
   }
