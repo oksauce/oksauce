@@ -210,20 +210,20 @@ pre {
 .ui-text {
   letter-spacing: 0.5px;
   /*text-transform: uppercase;*/
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .ui-text-last {
-  font-size: 1.288rem;
+  font-size: 1.1rem;
   letter-spacing: 0.5px;
   font-variant: small-caps;
-  font-weight: 500;
+  /*font-weight: 500;*/
   text-decoration: none;
   color: black;
 }
 
 .ui-text-last-at {
-  font-size: 0.85rem;
+  font-size: 0.80rem;
   letter-spacing: 0.5px;
   font-variant: small-caps;
   font-weight: 500;
@@ -519,14 +519,14 @@ pre {
 .site-logo {
   position: static;
   width: 90px;
-  font-size: 1.288rem;
+  font-size: 1.1rem;
   letter-spacing: 0.5px;
   font-variant: small-caps;
-  font-weight: 500;
+  /*font-weight: 500;*/
 }
 
 .o {
-  font-size: 1.12rem;
+  font-size: 1rem;
   font-variant: small-caps;
   font-weight: 500;
 }
