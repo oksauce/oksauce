@@ -505,8 +505,12 @@ pre {
 .site-logo {
   position: static;
   width: 90px;
-  font-size: 15px;
+  font-size: 1rem;
   letter-spacing: 0.5px;
+}
+
+.o {
+  font-size: 1rem;
 }
 
 .site-logo:hover{
