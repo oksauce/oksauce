@@ -216,7 +216,17 @@ pre {
   letter-spacing: 0.5px;
   font-variant: small-caps;
   font-weight: 500;
-  color: black !important;
+  text-decoration: none;
+  color: black;
+}
+
+.ui-text-last-at {
+  font-size: 1.288rem;
+  letter-spacing: 0.5px;
+  font-variant: small-caps;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
 }
 
 .ui-order {
