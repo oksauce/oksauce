@@ -985,12 +985,6 @@ hr {
     border-bottom: 1px solid #2b57d4;
   }
 
-  .f1-title {
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    font-family: 'Roboto';
-    color: #333333;
-  }
 }
 
 @media (max-width: 516px) {
@@ -1018,7 +1012,7 @@ hr {
 
   .f1-title {
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
     font-family: 'Roboto';
     color: #333333;
   }
@@ -1094,7 +1088,7 @@ hr {
 
   .f1-title {
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
     font-family: 'Roboto';
     color: #333333;
   }
