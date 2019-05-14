@@ -212,7 +212,9 @@ pre {
 }
 
 .ui-text-last {
-  /*text-transform: uppercase;*/
+  font-size: 1.288rem;
+  letter-spacing: 0.5px;
+  font-variant: small-caps;
   font-weight: 500;
   color: black !important;
 }
@@ -304,10 +306,7 @@ pre {
 }
 
 .ui-text.ui-link.ui-link-mm {
-  font-size: 1.288rem;
-  letter-spacing: 0.5px;
-  font-variant: small-caps;
-  font-weight: 500;
+  font-size: 1rem;
 }
 
 .ui-text.ui-link.ui-link-sm.w-nav-brand-color {
