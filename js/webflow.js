@@ -2652,13 +2652,12 @@
                                         u = D.getQuerySelector(a);
                                     e[u] || (o !== L.f && o !== L.k || (e[u] = !0, n += u + "{cursor: pointer;touch-action: manipulation;}"))
                                 }
+                            try {
                                 if (n) {
                                     var c = document.createElement("style");
-                                    c.textContent = n, 
-                                    try {
-                                    document.body.appendChild(c)
-                                	} catch(err) {}
-                                }
+                                    c.textContent = n, document.body.appendChild(c)
+                                	} 
+                                } catch(err) {}
                             }(r);
                             var o = e.types,
                                 a = e.handler,
