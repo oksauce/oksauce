@@ -215,11 +215,12 @@ pre {
 
 .ui-text-last {
   font-size: 1.1rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.7px;
   font-variant: small-caps;
   /*font-weight: 500;*/
   text-decoration: none;
-  color: black;
+  color: #333333;
+  /*color: black;*/
 }
 
 .ui-text-last-at {
@@ -322,11 +323,11 @@ pre {
 
 .ui-text.ui-link.ui-link-mm {
   font-size: 1rem;
+  letter-spacing: 0.7px;
 }
 
 .ui-text.ui-link.ui-link-sm.w-nav-brand-color {
-  /*color: #333333; original brand color*/
-  color: black;
+  color: #333333;
 }
 
 .ui-text.ui-link.ui-link-sm.w-nav-brand-color:hover {
@@ -344,6 +345,7 @@ pre {
   margin-right: 1.5rem;
   padding-bottom: 2px;
   font-size: 1rem;
+  letter-spacing: 0.7px;
 }
 
 .ui-text.ui-link.close-btn {
@@ -523,7 +525,7 @@ pre {
   position: static;
   width: 90px;
   font-size: 1.1rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   font-variant: small-caps;
   /*font-weight: 500;*/
 }
@@ -592,7 +594,7 @@ pre {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  /*background-color: #ececec;*/
+  background-color: #ececec;
   height: 100vh;
   overflow: hidden;
 }
@@ -614,7 +616,7 @@ pre {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-color: #eeeceb;
+  background-color: #ececec;
   /*background-color: rgba(196,196,196,0.40);*/
 }
 
@@ -650,7 +652,7 @@ pre {
   display: block;
   /*padding: 0.5rem 2rem;*/
   padding: 1.4rem 2rem;
-  background-color: #eeeceb;
+  background-color: #ececec;
   /*background-color: rgba(196,196,196,0.40);*/
 }
 
@@ -694,7 +696,7 @@ pre {
   display: none;
   /*padding: 2rem 4rem;*/
   padding: 2rem 2rem;
-  background-color: #eeeceb;
+  background-color: #ececec;
   /*background-color: rgba(196,196,196,0.40);*/
   border-top: 1px solid rgba(176,176,176,0.1);
 }
@@ -755,8 +757,8 @@ hr {
   position: relative;
   float: left;
   text-decoration: none;
-  /*color: #333333;*/
-  color: black;
+  color: #333333;
+  /*color: black;*/
 }
 .w-nav-link {
   position: relative;
@@ -890,7 +892,7 @@ hr {
   .mobile-header {
     display: block;
     padding: 0.45rem 2rem;
-    background-color: #eeeceb;
+    background-color: #ececec;
     /*background-color: rgba(196,196,196,0.40);*/
     /*border-bottom: 0.5px solid rgba(213,213,213,0.8);*/
   }
@@ -950,7 +952,7 @@ hr {
   .mobile-nav-link {
     display: block;
     padding-left: 2rem;
-    background-color: #eeeceb;
+    background-color: #ececec;
     /*border-top: 1px solid rgba(213,213,213,0.5);*/
     border-top: 1px solid rgba(176,176,176,0.1);
     font-size: 1rem;
@@ -961,7 +963,7 @@ hr {
   .mobile-nav-link-last {
     display: block;
     padding-left: 2rem;
-    background-color: #eeeceb;
+    background-color: #ececec;
     /*border-bottom: 1px solid rgba(213,213,213,0.5);*/
     /*border-bottom: 1px solid #666666;*/
     border-top: 1px solid rgba(176,176,176,0.1);
