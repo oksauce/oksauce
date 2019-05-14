@@ -2654,7 +2654,10 @@
                                 }
                                 if (n) {
                                     var c = document.createElement("style");
-                                    c.textContent = n, document.body.appendChild(c)
+                                    c.textContent = n, 
+                                    try {
+                                    document.body.appendChild(c)
+                                	} catch(err) {}
                                 }
                             }(r);
                             var o = e.types,
@@ -3486,7 +3489,7 @@
         }, function(t, e, n) {
             var r = window.$,
                 i = n(47) && r.tram;
-                
+
 /*!
  * Webflow._ (aka) Underscore.js 1.6.0 (custom build)
  * _.each
