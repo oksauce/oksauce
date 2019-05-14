@@ -63,6 +63,8 @@ img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-ms-text-
 
 html {
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "kern" 1;
 }
 
 body {
@@ -176,6 +178,7 @@ pre {
   line-height: 1.55;
   letter-spacing: 1px;
   color: #333333;
+  font-weight: 400;
   /*text-transform: uppercase;*/
 }
 
