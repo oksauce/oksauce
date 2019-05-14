@@ -505,14 +505,16 @@ pre {
 .site-logo {
   position: static;
   width: 90px;
-  font-size: 1.3rem;
+  font-size: 1.288rem;
   letter-spacing: 0.5px;
   font-variant: small-caps;
+  font-weight: 500;
 }
 
 .o {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-variant: small-caps;
+  font-weight: 500;
 }
 
 .site-logo:hover{
@@ -1088,7 +1090,7 @@ hr {
 
   .f1-title {
     font-weight: 600;
-    letter-spacing: 0.2px;
+    letter-spacing: -0.2px;
     font-family: 'Roboto';
     color: #333333;
   }
