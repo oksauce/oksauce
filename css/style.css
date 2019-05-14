@@ -219,7 +219,7 @@ pre {
   font-variant: small-caps;
   /*font-weight: 500;*/
   text-decoration: none;
-  color: #333333;
+  color: #555555;
   /*color: black;*/
 }
 
@@ -527,13 +527,13 @@ pre {
   font-size: 1.1rem;
   letter-spacing: 0.3px;
   font-variant: small-caps;
-  /*font-weight: 500;*/
+  font-weight: 400;
 }
 
 .o {
   font-size: 1rem;
   font-variant: small-caps;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .site-logo:hover{
@@ -757,7 +757,7 @@ hr {
   position: relative;
   float: left;
   text-decoration: none;
-  color: #555555;
+  color: #666666;
   /*color: black;*/
 }
 .w-nav-link {
