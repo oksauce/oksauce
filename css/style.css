@@ -512,7 +512,7 @@ pre {
   display: block;
   /*width: 100%;*/
   /*padding: 2rem 4rem;*/
-  padding-top: 1.44rem;
+  padding-top: 1.40rem;
   padding-right: 2rem;
   /*padding-left: 4rem;*/
   padding-left: 2rem;
@@ -757,7 +757,7 @@ hr {
   position: relative;
   float: left;
   text-decoration: none;
-  color: #333333;
+  color: #555555;
   /*color: black;*/
 }
 .w-nav-link {
