@@ -304,7 +304,10 @@ pre {
 }
 
 .ui-text.ui-link.ui-link-mm {
-  font-size: 15px;
+  font-size: 1.288rem;
+  letter-spacing: 0.5px;
+  font-variant: small-caps;
+  font-weight: 500;
 }
 
 .ui-text.ui-link.ui-link-sm.w-nav-brand-color {
@@ -326,7 +329,7 @@ pre {
 .ui-text.ui-link.ui-link-sm {
   margin-right: 1.5rem;
   padding-bottom: 2px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .ui-text.ui-link.close-btn {
@@ -512,7 +515,7 @@ pre {
 }
 
 .o {
-  font-size: 1.2rem;
+  font-size: 1.12rem;
   font-variant: small-caps;
   font-weight: 500;
 }
