@@ -757,8 +757,7 @@ hr {
   position: relative;
   float: left;
   text-decoration: none;
-  color: #666666;
-  /*color: black;*/
+  color: #222222;
 }
 .w-nav-link {
   position: relative;
