@@ -64,12 +64,11 @@ img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-ms-text-
 html {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  -webkit-font-feature-settings: "kern" 1;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  /*font-family: Helvetica, sans-serif;*/
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.55rem;
   /*color: #443e3c;*/
