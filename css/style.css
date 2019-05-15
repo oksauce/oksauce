@@ -206,19 +206,21 @@ pre {
 .ui-text {
   letter-spacing: 1px;
   /*text-transform: uppercase;*/
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .ui-text-last{
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-decoration: none;
   font-weight: 400;
-  color: black;
+  color: #333333;
 }
 
 .ui-text-last-at {
-  font-size: 0.70rem;
+  font-family: helvetica;
+  font-size: 0.80rem;
   font-weight: 500;
+  /*color: #333333;*/
   color: black;
 }
 
@@ -510,8 +512,8 @@ pre {
 .site-logo {
   position: static;
   width: 90px;
-  font-size: 15px;
-  letter-spacing: 1px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 
 .site-logo:hover{
@@ -734,8 +736,7 @@ hr {
   position: relative;
   float: left;
   text-decoration: none;
-  /*color: #333333;*/
-  color: black;
+  color: #333333;
 }
 .w-nav-link {
   position: relative;
