@@ -224,7 +224,7 @@ pre {
   color: black;
 }
 
-a.ui-text-last.ui-text-last-at:hover {
+a .ui-text-last:hover {
   color:red;
 }
 
