@@ -209,11 +209,15 @@ pre {
   font-weight: 400;
 }
 
-.ui-text-last{
+.ui-text-last {
   letter-spacing: 0.5px;
   text-decoration: none;
   font-weight: 400;
   color: #333333;
+}
+
+.ui-text-last:hover{
+  color:red;
 }
 
 .ui-text-last-at {
@@ -224,14 +228,8 @@ pre {
   color: black;
 }
 
-a .ui-text-last:hover {
-  color:red;
-}
-
 .ui-order {
-
   max-width:280px;
-
 }
 
 .ui-link {
@@ -274,8 +272,7 @@ a .ui-text-last:hover {
 }
 
 .ui-link-text{
- /*padding-bottom: 3px;
- display:inline-block;*/
+ /*padding-bottom: 3px;display:inline-block;*/
  /*border-bottom: 1px solid rgba(213,213,213,0.8);*/
 }
 
