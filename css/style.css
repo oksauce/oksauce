@@ -711,6 +711,11 @@ hr {
   margin-bottom: 10px;
 }
 
+.float-right {
+  float:right;
+  margin-top: -50px;
+}
+
 .link-list-item-2 {
   list-style-type: none;
   padding-top: 0.5rem;
