@@ -218,10 +218,14 @@ pre {
 
 .ui-text-last-at {
   font-family: helvetica;
-  font-size: 0.80rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  /*color: #333333;*/
+  letter-spacing: -0.5px;
   color: black;
+}
+
+a .ui-text-last-at:hover {
+  color:red;
 }
 
 .ui-order {
