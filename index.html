@@ -112,7 +112,7 @@ $(document).ready(function(){
 
 <script>
 
-var srcvid = document.getElementById("src0");
+var srcvid = document.getElementById("video0");
 var bloburl;
 var url = "/video/luck.mp4";
 
@@ -126,10 +126,10 @@ xhr.onload = function(oEvent) {
 
     var blob = new Blob([oEvent.target.response], {type: "video/mp4"});
 
-    // video.src = URL.createObjectURL(blob);
+    video.src = URL.createObjectURL(blob);
 
-    bloburl = webkitURL.createObjectURL(blob);
-    srcvid.setAttribute("src", bloburl);
+    //bloburl = webkitURL.createObjectURL(blob);
+    //srcvid.setAttribute("src", bloburl);
 
     //video.play()  if you want it to play on load
 };
@@ -137,6 +137,10 @@ xhr.onprogress = function(oEvent) {
     if (oEvent.lengthComputable) {
         var percentComplete = oEvent.loaded/oEvent.total;
          console.log('progress: ', percentComplete);
+         if (percentComplete) {
+         	console.log('done');
+
+         }
         // do something with this
     }
 }
@@ -187,7 +191,7 @@ $(document).ready(function(){
 
 <!-- video files -->
 
-<source id="src0" src="/video/luck.mp4" type="video/mp4" size="1080">
+<source src="/video/luck.mp4" type="video/mp4" size="1080">
 
 <!-- fallback for browsers that don't support the <video> element -->
 <a href="/video/luck.mp4" download>Download</a>
