@@ -112,7 +112,7 @@ $(document).ready(function(){
 
 <script>
 
-var video = document.getElementById("0src")
+var video = document.getElementById("videosrc0")
 
 var url = "/video/luck.mp4"
 
@@ -125,7 +125,8 @@ xhr.onload = function(oEvent) {
     var blob = new Blob([oEvent.target.response], {type: "video/mp4"});
 
     // video.src = URL.createObjectURL(blob);
-    source.src = URL.createObjectURL(blob);
+
+     video.src = URL.createObjectURL(blob);
 
     //video.play()  if you want it to play on load
 };
@@ -151,7 +152,7 @@ xhr.send();
 
 <!-- video files -->
 
-<source id="0src" src="/video/luck.mp4" type="video/mp4" size="1080">
+<source id="videosrc0" src="/video/luck.mp4" type="video/mp4" size="1080">
 
 <!-- fallback for browsers that don't support the <video> element -->
 <a href="/video/luck.mp4" download>Download</a>
