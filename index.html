@@ -124,7 +124,8 @@ xhr.onload = function(oEvent) {
 
     var blob = new Blob([oEvent.target.response], {type: "video/mp4"});
 
-    video.src = URL.createObjectURL(blob);
+    // video.src = URL.createObjectURL(blob);
+    source.src = URL.createObjectURL(blob);
 
     //video.play()  if you want it to play on load
 };
