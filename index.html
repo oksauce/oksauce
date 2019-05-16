@@ -113,7 +113,7 @@ $(document).ready(function(){
 <script>
 
 var srcvid = document.getElementById("video0");
-var bloburl;
+var vidurl = "/video/luck.mp4";
 var url = "/video/luck.mp4";
 
 var xhr = new XMLHttpRequest();
@@ -126,7 +126,9 @@ xhr.onload = function(oEvent) {
 
     var blob = new Blob([oEvent.target.response], {type: "video/mp4"});
 
-    video.src = URL.createObjectURL(blob);
+    //video.src = URL.createObjectURL(blob);
+
+    vidurl = URL.createObjectURL(blob);
 
     //bloburl = webkitURL.createObjectURL(blob);
     //srcvid.setAttribute("src", bloburl);
@@ -187,7 +189,7 @@ $(document).ready(function(){
 
 <!-- <video id="video0" preload="auto" controls crossorigin playsinline poster="/vcover/luck.jpg" class="player"> -->
 
-<video id="video0" preload="auto" controls crossorigin playsinline poster="/vcover/luck.jpg" class="player">
+<video id="video0" preload="auto" controls crossorigin playsinline poster="/vcover/luck.jpg" class="player" src="'+vidurl+'">
 
 <!-- video files -->
 
