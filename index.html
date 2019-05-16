@@ -110,9 +110,44 @@ $(document).ready(function(){
 <div class="vp-video">
 <div id="luck" class="vp-telecine vp-telecine-cover" value="luck">
 
+<script>
+
+var video = document.getElementById("video0")
+
+var url = "/video/luck.mp4"
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", url, true);
+xhr.responseType = "arraybuffer";
+
+xhr.onload = function(oEvent) {
+
+    var blob = new Blob([oEvent.target.response], {type: "video/mp4"});
+
+    video.src = URL.createObjectURL(blob);
+
+    //video.play()  if you want it to play on load
+};
+
+xhr.onprogress = function(oEvent) {
+
+    if (oEvent.lengthComputable) {
+        var percentComplete = oEvent.loaded/oEvent.total;
+         console.log('progress: ', percentComplete);
+        // do something with this
+    }
+}
+
+xhr.send();
+
+</script>
+
+
+
 <video id="video0" preload="auto" controls crossorigin playsinline poster="/vcover/luck.jpg" class="player">
 
 <!-- video files -->
+
 
 <source src="/video/luck.mp4" type="video/mp4" size="1080">
 
