@@ -111,36 +111,66 @@ $(document).ready(function(){
 <div id="luck" class="vp-telecine vp-telecine-cover" value="luck">
 
 <script>
-
+/*
 var srcvid = document.getElementById("src0")
-
 var url = "/video/luck.mp4"
-
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url, true);
 xhr.responseType = "arraybuffer";
-
 xhr.onload = function(oEvent) {
-
     var blob = new Blob([oEvent.target.response], {type: "video/mp4"});
-
     // video.src = URL.createObjectURL(blob);
-
     srcvid.setAttribute("src",URL.createObjectURL(blob));
-
     //video.play()  if you want it to play on load
 };
-
 xhr.onprogress = function(oEvent) {
-
     if (oEvent.lengthComputable) {
         var percentComplete = oEvent.loaded/oEvent.total;
          console.log('progress: ', percentComplete);
         // do something with this
     }
 }
-
 xhr.send();
+*/
+
+$(document).ready(function(){
+      // The video_length_round variable is video specific.
+      // In this example the video is 10.88 seconds long, rounded up to 11.
+      var video_length_round = 11;
+
+      var video = document.getElementById('video0');
+      var mp4Source = document.getElementById('src0');
+
+      // Ensure home_video_element present on page
+      if(typeof video !== 'undefined'){
+
+        // Ensure video element has an mp4Source, if so then update video src
+        if(typeof mp4Source !== 'undefined'){
+          $(mp4Source).attr('src', '/video/luck.mp4');
+        }
+
+        video.load();
+
+        // Ensure video is fully buffered before playing
+        video.addEventListener("canplay", function() {
+          this.removeEventListener("canplay", arguments.callee, false);
+
+          if(Math.round(video.buffered.end(0)) >= video_length_round){
+            // Video is already loaded
+            this.play();
+
+          } else {
+            // Monitor video buffer progress before playing
+            video.addEventListener("progress", function() {
+              if(Math.round(video.buffered.end(0)) == video_length_round){
+                this.removeEventListener("progress", arguments.callee, false);
+                video.play();
+              }
+            }, false);
+          }
+        }, false);
+      }
+    });
 
 </script>
 
