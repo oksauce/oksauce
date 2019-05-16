@@ -113,7 +113,7 @@ $(document).ready(function(){
 <script>
 
 var srcvid = document.getElementById("video0");
-var vidurl = "/video/luck.mp4";
+
 var url = "/video/luck.mp4";
 
 var xhr = new XMLHttpRequest();
@@ -128,7 +128,7 @@ xhr.onload = function(oEvent) {
 
     //video.src = URL.createObjectURL(blob);
 
-    vidurl = URL.createObjectURL(blob);
+    document.getElementById("src0").src = URL.createObjectURL(blob);
 
     //bloburl = webkitURL.createObjectURL(blob);
     //srcvid.setAttribute("src", bloburl);
@@ -139,7 +139,7 @@ xhr.onprogress = function(oEvent) {
     if (oEvent.lengthComputable) {
         var percentComplete = oEvent.loaded/oEvent.total;
          console.log('progress: ', percentComplete);
-         if (percentComplete) {
+         if (percentComplete == 1) {
          	console.log('done');
 
          }
@@ -189,11 +189,11 @@ $(document).ready(function(){
 
 <!-- <video id="video0" preload="auto" controls crossorigin playsinline poster="/vcover/luck.jpg" class="player"> -->
 
-<video id="video0" preload="auto" controls crossorigin playsinline poster="/vcover/luck.jpg" class="player" src="'+vidurl+'">
+<video id="video0" preload="auto" controls crossorigin playsinline poster="/vcover/luck.jpg" class="player" >
 
 <!-- video files -->
 
-<source src="/video/luck.mp4" type="video/mp4" size="1080">
+<source id="src0" src="/video/luck.mp4" type="video/mp4" size="1080">
 
 <!-- fallback for browsers that don't support the <video> element -->
 <a href="/video/luck.mp4" download>Download</a>
