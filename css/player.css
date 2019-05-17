@@ -6040,15 +6040,15 @@ video.player.site-load {
 
 @media (max-width: 599px) and (orientation: landscape) {
 
-.play:hover {background-color: transparent;}
-.pause-icon:hover {background-color:transparent;}
+.play:hover {background: rgba(23, 35, 34, .75);}
+.pause-icon:hover {background: rgba(23, 35, 34, .75);}
 
 }
 
 @media (max-width: 599px) and (orientation: portrait) {
 
-.play:hover {background-color: transparent;}
-.pause-icon:hover {background-color:transparent;}
+.play:hover {background: rgba(23, 35, 34, .75);}
+.pause-icon:hover {background: rgba(23, 35, 34, .75);}
 
 }
 
