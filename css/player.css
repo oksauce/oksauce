@@ -6043,12 +6043,18 @@ video.player.site-load {
 .play:hover {background: rgba(23, 35, 34, .75);}
 .pause-icon:hover {background: rgba(23, 35, 34, .75);}
 
+.playover {fill: #fff;}
+.play-icon .playover {fill: #fff;}
+
 }
 
 @media (max-width: 599px) and (orientation: portrait) {
 
 .play:hover {background: rgba(23, 35, 34, .75);}
 .pause-icon:hover {background: rgba(23, 35, 34, .75);}
+
+.playover {fill: #fff;}
+.play-icon .playover {fill: #fff;}
 
 }
 
