@@ -1036,7 +1036,8 @@ body:not(.showfocus) .player svg {
 
 .player .vp-controls .replay-icon {
     margin: 0 auto;
-    padding-top: .2em
+    /*padding-top: .2em*/
+    padding-top: .1em;
 }
 
 .player .vp-controls .replay-icon svg {
