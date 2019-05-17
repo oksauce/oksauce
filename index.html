@@ -118,7 +118,7 @@ var xhr = new XMLHttpRequest();
 xhr.open("GET", url, true);
 xhr.responseType = "arraybuffer";
 
-function createWorker(oEvent, target, url) {
+function createWorker(oEvent, url) {
   var worker = null;
   try {
     worker = new Worker(url);
@@ -137,13 +137,13 @@ function createWorker(oEvent, target, url) {
 
 xhr.onload = function(oEvent) {
     
-    createWorker(oEvent, target, url);
+    createWorker(oEvent, url);
 
     // var blob = new Blob([oEvent.target.response], {type: "video/mp4"});
 
 // *** video.src = URL.createObjectURL(blob);
 
-    document.getElementById("src0").src = createWorker(oEvent, target, url);
+    document.getElementById("src0").src = createWorker(oEvent, url);
     
     // document.getElementById("src0").src = URL.createObjectURL(blob);
 
