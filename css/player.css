@@ -6043,9 +6043,9 @@ video.player.site-load {
 .play:hover {background: rgba(23, 35, 34, .75);}
 .pause-icon:hover {background: rgba(23, 35, 34, .75);}
 
-.playover {fill: #fff; background: rgba(23, 35, 34, .75);}
-.play-icon .playover {fill: #fff; background: rgba(23, 35, 34, .75);}
-.pause-icon .playover {fill: #fff; background: rgba(23, 35, 34, .75);}
+.playover {fill: #fff;}
+.play-icon .playover {fill: #fff;}
+.playover {background: rgba(23, 35, 34, .75);}
 
 }
 
@@ -6054,9 +6054,9 @@ video.player.site-load {
 .play:hover {background: rgba(23, 35, 34, .75);}
 .pause-icon:hover {background: rgba(23, 35, 34, .75);}
 
-.playover {fill: #fff; background: rgba(23, 35, 34, .75);}
-.play-icon .playover {fill: #fff; background: rgba(23, 35, 34, .75);}
-.pause-icon .playover {fill: #fff; background: rgba(23, 35, 34, .75);}
+.playover {fill: #fff;}
+.play-icon .playover {fill: #fff;}
+.playover {background: rgba(23, 35, 34, .75);}
 
 }
 
