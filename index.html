@@ -112,103 +112,6 @@ $(document).ready(function(){
 <div class="vp-video">
 <div id="luck" class="vp-telecine vp-telecine-cover" value="luck">
 
-<script>
-
-// var video = document.getElementById("video0");
-/*
-var url0 = "/video/luck.mp4";
-var url1 = "/video/moment.mp4";
-
-var xhr = new XMLHttpRequest();
-xhr.open("GET", url, true);
-xhr.responseType = "arraybuffer";
-
-xhr.onload = function(oEvent) {
-  var blob = new Blob([oEvent.target.response], {type: "video/mp4"});
-// ** video.src = URL.createObjectURL(blob);
-  document.getElementById("src0").src = URL0.createObjectURL(blob);
-  document.getElementById("src1").src = URL1.createObjectURL(blob);
-// ** video.play()  if you want it to play on load
-};
-
-xhr.onprogress = function(oEvent) {
-    if (oEvent.lengthComputable) {
-        var percentComplete = oEvent.loaded/oEvent.total;
-         console.log('progress: ', percentComplete);
-         if (percentComplete == 1) {
-         	console.log('done');
-
-         }
-        // do something with this
-    }
-}
-xhr.send();
-*/
-/*
-var index = ["luck.mp4", "moment.mp4"];
-var srdex = ["src0", "src1"];
-var requests=new Array(index.length);
-var srcs=new Array(srdex.length);
-for (let i = 0; i < index.length; i++) {
-    var url = "http:/video/" + index[i];
-    requests[i] = new XMLHttpRequest();
-    requests[i].open("GET", url);
-    requests[i].responseType = "arraybuffer";
-    requests[i].onload = function() {
-        requests[i] = new Blob([requests[i].target], {type: "video/mp4"});
-        document.getElementById(srdex[i]).src = URL.createObjectURL(requests[i]);
-    }
-    requests[i].onprogress = function(event) {
-       if (event.lengthComputable) {
-        var percentComplete = event.loaded/event.total;
-         console.log(requests[i] + ' progress:', percentComplete);
-         if (percentComplete == 1) {
-          console.log(requests[i] + ' progress: done!');
-
-         }
-        // do something with this
-       }
-    }
-    requests[i].send();
-}
-*/
-
-/*
-$(document).ready(function(){
-      // The video_length_round variable is video specific.
-      // In this example the video is 10.88 seconds long, rounded up to 11.
-      var video_length_round = 11;
-      var video = document.getElementById('video0');
-      var mp4Source = document.getElementById('src0');
-      // Ensure home_video_element present on page
-      if(typeof video !== 'undefined'){
-        // Ensure video element has an mp4Source, if so then update video src
-        if(typeof mp4Source !== 'undefined'){
-          $(mp4Source).attr('src', '/video/luck.mp4');
-        }
-        video.load();
-        // Ensure video is fully buffered before playing
-        video.addEventListener("canplay", function() {
-          this.removeEventListener("canplay", arguments.callee, false);
-          if(Math.round(video.buffered.end(0)) >= video_length_round){
-            // Video is already loaded
-            this.play();
-          } else {
-            // Monitor video buffer progress before playing
-            video.addEventListener("progress", function() {
-              if(Math.round(video.buffered.end(0)) == video_length_round){
-                this.removeEventListener("progress", arguments.callee, false);
-                video.play();
-              }
-            }, false);
-          }
-        }, false);
-      }
-    });
- */
-
-</script>
-
 <video id="video0" preload="auto" controls crossorigin playsinline poster="/vcover/luck.jpg" class="video-js player" >
 
 <!-- video files -->
@@ -1739,8 +1642,6 @@ function modalhide() {
 -->
 
 <script src="/js/video.min.js"></script>
-<script src="/js/videojs-mux.js"></script>
-
 
 </body>
 </html>
