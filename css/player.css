@@ -6044,7 +6044,7 @@ video.player.site-load {
 .pause-icon:hover {background: rgba(23, 35, 34, .75);}
 
 .playover {fill: #fff;}
-.play-icon .playover {fill: #fff;}
+.play-icon .playover {fill: #fff; background: rgba(23, 35, 34, .75);}
 
 }
 
@@ -6054,7 +6054,8 @@ video.player.site-load {
 .pause-icon:hover {background: rgba(23, 35, 34, .75);}
 
 .playover {fill: #fff;}
-.play-icon .playover {fill: #fff;}
+.play-icon .playover {fill: #fff; background: rgba(23, 35, 34, .75);}
+
 
 }
 
