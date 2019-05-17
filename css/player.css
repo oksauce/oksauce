@@ -6036,5 +6036,20 @@ video.player.site-load {
 
 /* default colors */
 
+/* mobile * disable hover & in click events */ 
+
+@media (max-width: 599px) and (orientation: landscape) {
+
+.play:hover {background-color: transparent;}
+.pause-icon:hover {background-color:transparent;}
+
+}
+
+@media (max-width: 599px) and (orientation: portrait) {
+
+.play:hover {background-color: transparent;}
+.pause-icon:hover {background-color:transparent;}
+
+}
 
 /* end * added * see mods above */
