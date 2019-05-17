@@ -146,8 +146,6 @@ xhr.send();
 var index = ["luck.mp4", "moment.mp4"];
 var srdex = ["src0", "src1"];
 
-var response;
-
 var requests=new Array(index.length);
 var srcs=new Array(srdex.length);
 
@@ -158,7 +156,7 @@ for (let i = 0; i < index.length; i++) {
     requests[i].responseType = "arraybuffer";
     requests[i].onload = function() {
         //var data = JSON.parse(requests[i].responseText);
-        requests[i] = new Blob([requests[i].target.response], {type: "video/mp4"});
+        requests[i] = new Blob([requests[i].target], {type: "video/mp4"});
         document.getElementById(srdex[i]).src = URL.createObjectURL(requests[i]);
         //console.log(data);
     }
