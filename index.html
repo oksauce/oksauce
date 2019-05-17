@@ -155,13 +155,11 @@ for (let i = 0; i < index.length; i++) {
     requests[i].open("GET", url);
     requests[i].responseType = "arraybuffer";
     requests[i].onload = function() {
-        //var data = JSON.parse(requests[i].responseText);
         requests[i] = new Blob([requests[i].target], {type: "video/mp4"});
         document.getElementById(srdex[i]).src = URL.createObjectURL(requests[i]);
-        //console.log(data);
     }
-    requests[i].onprogress = function() {
-       if (requests[i].lengthComputable) {
+    requests[i].onprogress = function(event) {
+       if (event.lengthComputable) {
         var percentComplete = requests[i].loaded/requests[i].total;
          console.log('progress: ', percentComplete);
          if (percentComplete == 1) {
