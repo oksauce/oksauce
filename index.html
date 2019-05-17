@@ -113,23 +113,21 @@ $(document).ready(function(){
 <script>
 
 // var video = document.getElementById("video0");
-var url = "/video/luck.mp4";
+/*
+var url0 = "/video/luck.mp4";
+var url1 = "/video/moment.mp4";
+
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url, true);
 xhr.responseType = "arraybuffer";
 
 xhr.onload = function(oEvent) {
- 
   var blob = new Blob([oEvent.target.response], {type: "video/mp4"});
-
 // ** video.src = URL.createObjectURL(blob);
-    
-  document.getElementById("src0").src = URL.createObjectURL(blob);
-
+  document.getElementById("src0").src = URL0.createObjectURL(blob);
+  document.getElementById("src1").src = URL1.createObjectURL(blob);
 // ** video.play()  if you want it to play on load
-
 };
-
 
 xhr.onprogress = function(oEvent) {
     if (oEvent.lengthComputable) {
@@ -143,6 +141,40 @@ xhr.onprogress = function(oEvent) {
     }
 }
 xhr.send();
+*/
+
+var index = ["luck.mp4", "moment.mp4"];
+var srdex = ["src0", "src1"];
+
+var requests=new Array(index.length);
+var srcs=new Array(srdex.length);
+
+for (let i = 0; i < index.length; i++) {
+    var url = "http:/video/" + index[i];
+    requests[i] = new XMLHttpRequest();
+    requests[i].open("GET", url);
+    requests[i].responseType = "arraybuffer";
+    requests[i].onload = function() {
+        //var data = JSON.parse(requests[i].responseText);
+        requests[i] = new Blob([requests[i].target.response], {type: "video/mp4"});
+        document.getElementById(srdex[i]).src = URL.createObjectURL(requests[i]);
+        //console.log(data);
+    }
+    requests[i].onprogress = function() {
+       if (requests[i].lengthComputable) {
+        var percentComplete = requests[i].loaded/requests[i].total;
+         console.log('progress: ', percentComplete);
+         if (percentComplete == 1) {
+          console.log('done');
+
+         }
+        // do something with this
+       }
+    }
+
+    requests[i].send();
+}
+
 
 /*
 $(document).ready(function(){
@@ -345,7 +377,7 @@ title="share via email" role="button" aria-label="share via email">
 
 <!-- video files -->
 
-<source src="/video/moment.mp4" type="video/mp4" size="1080">
+<source id="src1" src="/video/moment.mp4" type="video/mp4" size="1080">
 <!-- fallback for browsers that don't support the <video> element -->
 <a href="/video/moment.mp4" download>Download</a>
 </video>
