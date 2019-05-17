@@ -18,6 +18,8 @@
 <script src="/js/webflow.min.js" type="text/javascript"></script>
 <script src="/js/jquery.fitvids.js" type="text/javascript"></script>
 
+ <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
 <!-- passive default-passive-events * https://github.com/zzarcon/default-passive-events -->
 <script type="text/javascript" src="/js/index.js"></script>
 
@@ -142,13 +144,11 @@ xhr.onprogress = function(oEvent) {
 }
 xhr.send();
 */
-
+/*
 var index = ["luck.mp4", "moment.mp4"];
 var srdex = ["src0", "src1"];
-
 var requests=new Array(index.length);
 var srcs=new Array(srdex.length);
-
 for (let i = 0; i < index.length; i++) {
     var url = "http:/video/" + index[i];
     requests[i] = new XMLHttpRequest();
@@ -169,10 +169,9 @@ for (let i = 0; i < index.length; i++) {
         // do something with this
        }
     }
-
     requests[i].send();
 }
-
+*/
 
 /*
 $(document).ready(function(){
