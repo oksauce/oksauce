@@ -112,28 +112,43 @@ $(document).ready(function(){
 
 <script>
 
-var srcvid = document.getElementById("video0");
-
+// var video = document.getElementById("video0");
 var url = "/video/luck.mp4";
-
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url, true);
-
 xhr.responseType = "arraybuffer";
+
+function createWorker(oEvent, target, url) {
+  var worker = null;
+  try {
+    worker = new Worker(url);
+    } catch (e) {
+
+      var blob = new Blob([oEvent.target.response], {type: "video/mp4"});
+      //var url = window.URL || window.webkitURL;
+      var blobUrl = url.createObjectURL(blob);
+      worker = new Worker(blobUrl);
+  }
+  return worker;
+}
+
+
 
 
 xhr.onload = function(oEvent) {
+    
+    createWorker(oEvent, target, url);
 
-    var blob = new Blob([oEvent.target.response], {type: "video/mp4"});
+    // var blob = new Blob([oEvent.target.response], {type: "video/mp4"});
 
-    //video.src = URL.createObjectURL(blob);
+// *** video.src = URL.createObjectURL(blob);
 
-    document.getElementById("src0").src = URL.createObjectURL(blob);
+    document.getElementById("src0").src = createWorker(oEvent, target, url);
+    
+    // document.getElementById("src0").src = URL.createObjectURL(blob);
 
-    //bloburl = webkitURL.createObjectURL(blob);
-    //srcvid.setAttribute("src", bloburl);
+// *** video.play()  if you want it to play on load
 
-    //video.play()  if you want it to play on load
 };
 xhr.onprogress = function(oEvent) {
     if (oEvent.lengthComputable) {
@@ -147,7 +162,6 @@ xhr.onprogress = function(oEvent) {
     }
 }
 xhr.send();
-
 
 /*
 $(document).ready(function(){
@@ -184,10 +198,6 @@ $(document).ready(function(){
  */
 
 </script>
-
-
-
-<!-- <video id="video0" preload="auto" controls crossorigin playsinline poster="/vcover/luck.jpg" class="player"> -->
 
 <video id="video0" preload="auto" controls crossorigin playsinline poster="/vcover/luck.jpg" class="player" >
 
