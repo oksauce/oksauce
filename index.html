@@ -160,10 +160,10 @@ for (let i = 0; i < index.length; i++) {
     }
     requests[i].onprogress = function(event) {
        if (event.lengthComputable) {
-        var percentComplete = requests[i].loaded/requests[i].total;
-         console.log('progress: ', percentComplete);
+        var percentComplete = event.loaded/event.total;
+         console.log(requests[i] + ' progress:', percentComplete);
          if (percentComplete == 1) {
-          console.log('done');
+          console.log(requests[i] + ' progress: done!');
 
          }
         // do something with this
