@@ -116,10 +116,10 @@ $(document).ready(function(){
 
 <!-- video files -->
 
-<source id="src0" src="/video/luck.mp4" type="video/mp4" size="1080">
+<source id="src0" src="http://oksauce.com/video/luck.mp4" type="video/mp4" size="1080">
 
 <!-- fallback for browsers that don't support the <video> element -->
-<a href="/video/luck.mp4" download>Download</a>
+<a href="http://oksauce.com/video/luck.mp4" download>Download</a>
 </video>
 
 <div id="outro0" class="vp-outro-wrapper in" style="display:none;"><div class="vp-outro" role="dialog" aria-live="assertive" data-type="videos"><div class="vp-outro-bg"></div><div class="vp-outro-content vp-outro-content--videos vp-outro-shade js-outro-content">
@@ -273,13 +273,13 @@ title="share via email" role="button" aria-label="share via email">
 <div class="vp-video">
 <div id="moment" class="vp-telecine vp-telecine-cover" value="moment">
 
-<video id="video1" controls autoplay preload="auto" crossorigin playsinline poster="/vcover/moment.jpg" class="player">
+<video id="video1" controls preload="auto" crossorigin playsinline poster="/vcover/moment.jpg" class="player">
 
 <!-- video files -->
 
-<source id="src1" src="/video/moment.mp4" type="video/mp4" size="1080">
+<source id="src1" src="http://oksauce.com/video/moment.mp4" type="video/mp4" size="1080">
 <!-- fallback for browsers that don't support the <video> element -->
-<a href="/video/moment.mp4" download>Download</a>
+<a href="http://oksauce.com/video/moment.mp4" download>Download</a>
 </video>
 
 <div id="outro1" class="vp-outro-wrapper in" style="display:none;"><div class="vp-outro" role="dialog" aria-live="assertive" data-type="videos"><div class="vp-outro-bg"></div><div class="vp-outro-content vp-outro-content--videos vp-outro-shade js-outro-content">
@@ -1607,17 +1607,18 @@ function cleanURL() {
 // var timeout; // mimic load of elements
 window.onload = function(){
 
-var vzero = document.getElementById("video0");
-var voneo = document.getElementById("video1");
-    voneo.addEventListener("timeupdate", timeinspect);
+var vzero = document.getElementById("zerov");
+var vone = document.getElementById("onev");
+
+    vone.addEventListener("timeupdate", timeinspect);
     vzero.addEventListener("timeupdate", timeinspect);
     
     function timeinspect() {
       
     // console.log(vzero.currentTime);
-    if (voneo.currentTime >= 2) { voneo.currentTime = 0; 
-        voneo.pause();
-        voneo.removeEventListener("timeupdate", timeinspect);
+    if (vone.currentTime >= 2) { vone.currentTime = 0; 
+        vone.pause();
+        vone.removeEventListener("timeupdate", timeinspect);
     }
     if (vzero.currentTime >= 2) { vzero.currentTime = 0; 
         vzero.pause();
@@ -1658,6 +1659,15 @@ function modalhide() {
 }
 </script>
 -->
+
+<div style="display:none;">
+<video id="onev" controls autoplay preload="auto" crossorigin playsinline>
+<source src="http://oksauce.com/video/moment.mp4" type="video/mp4" size="1080">
+</video>
+<video id="zerov" controls autoplay preload="auto" crossorigin playsinline>
+<source src="http://oksauce.com/video/luck.mp4" type="video/mp4" size="1080">
+</video>
+</div>
 
 </body>
 </html>
