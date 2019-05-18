@@ -1624,18 +1624,18 @@ var vone = document.getElementById("video1");
         vzero.pause();
         vzero.removeEventListener("timeupdate", timeinspect);
     }
-    if (vone.currentTime && vzero.currentTime == 0) {
-        document.getElementsByClassName("site-restraint")[0].classList.remove('site-preload');
-    }
   }
 
   setTimeout(function(){
-  	
     document.getElementById("video0").classList.add('site-load');
     document.getElementById("video1").classList.add('site-load');
-    cntEnter(0);cntEnter(1);
-
   }, 500);
+  
+  setTimeout(function(){
+    document.getElementsByClassName("site-restraint")[0].classList.remove('site-preload');
+    cntEnter(0);cntEnter(1);
+  }, 1000);
+
 }
 
 </script>
