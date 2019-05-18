@@ -1607,24 +1607,30 @@ function cleanURL() {
 // var timeout; // mimic load of elements
 window.onload = function(){
 
-var vzero = document.getElementById("video1");
-    vzero.addEventListener("timeupdate", timeinspect);
-  function timeinspect() {
-      
-  console.log(vzero.currentTime);
-    if (vzero.currentTime >= 2) { vzero.currentTime = 0;
-     // vzero.load(); 
-        vzero.pause();
-        vzero.removeEventListener("timeupdate", timeinspect);
-    }
-  }
-
   setTimeout(function(){
+
   	document.getElementsByClassName("site-restraint")[0].classList.remove('site-preload');
     document.getElementById("video0").classList.add('site-load');
-    document.getElementById("video1").classList.add('site-load');
-    cntEnter(0);cntEnter(1);
+
+    cntEnter(0);
   }, 500);
+
+
+  setTimeout(function(){
+
+    var vone = document.getElementById("video1");
+    vone.addEventListener("timeupdate", timeinspect);
+      function timeinspect() {
+         if (vone.currentTime >= 2) { vone.currentTime = 0; 
+            vone.pause();
+            vone.removeEventListener("timeupdate", timeinspect);
+            document.getElementsByClassName("site-restraint")[0].classList.remove('site-preload');
+            document.getElementById("video1").classList.add('site-load');
+         }
+      }
+            cntEnter(1);
+  }, 600);
+
 }
 
 </script>
