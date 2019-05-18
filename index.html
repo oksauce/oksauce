@@ -1607,8 +1607,8 @@ function cleanURL() {
 // var timeout; // mimic load of elements
 window.onload = function(){
 
-var vzero = document.getElementById("zerov");
-var vone = document.getElementById("onev");
+var vzero = document.getElementById("video0");
+var vone = document.getElementById("video1");
 
     vone.addEventListener("timeupdate", timeinspect);
     vzero.addEventListener("timeupdate", timeinspect);
@@ -1624,13 +1624,17 @@ var vone = document.getElementById("onev");
         vzero.pause();
         vzero.removeEventListener("timeupdate", timeinspect);
     }
+    if (vone.currentTime && vzero.currentTime == 0) {
+        document.getElementsByClassName("site-restraint")[0].classList.remove('site-preload');
+    }
   }
 
   setTimeout(function(){
-  	document.getElementsByClassName("site-restraint")[0].classList.remove('site-preload');
+  	
     document.getElementById("video0").classList.add('site-load');
     document.getElementById("video1").classList.add('site-load');
     cntEnter(0);cntEnter(1);
+
   }, 500);
 }
 
@@ -1659,15 +1663,6 @@ function modalhide() {
 }
 </script>
 -->
-
-<div style="display:none;">
-<video id="onev" controls autoplay preload="auto" crossorigin playsinline>
-<source src="http://oksauce.com/video/moment.mp4" type="video/mp4" size="1080">
-</video>
-<video id="zerov" controls autoplay preload="auto" crossorigin playsinline>
-<source src="http://oksauce.com/video/luck.mp4" type="video/mp4" size="1080">
-</video>
-</div>
 
 </body>
 </html>
