@@ -1607,30 +1607,30 @@ function cleanURL() {
 // var timeout; // mimic load of elements
 window.onload = function(){
 
-  setTimeout(function(){
+var vzero = document.getElementById("video0");
+var voneo = document.getElementById("video1");
+    voneo.addEventListener("timeupdate", timeinspect);
+    vzero.addEventListener("timeupdate", timeinspect);
+    
+    function timeinspect() {
+      
+    // console.log(vzero.currentTime);
+    if (voneo.currentTime >= 2) { voneo.currentTime = 0; 
+        voneo.pause();
+        voneo.removeEventListener("timeupdate", timeinspect);
+    }
+    if (vzero.currentTime >= 2) { vzero.currentTime = 0; 
+        vzero.pause();
+        vzero.removeEventListener("timeupdate", timeinspect);
+    }
+  }
 
+  setTimeout(function(){
   	document.getElementsByClassName("site-restraint")[0].classList.remove('site-preload');
     document.getElementById("video0").classList.add('site-load');
-
-    cntEnter(0);
+    document.getElementById("video1").classList.add('site-load');
+    cntEnter(0);cntEnter(1);
   }, 500);
-
-
-  setTimeout(function(){
-
-    var vone = document.getElementById("video1");
-    vone.addEventListener("timeupdate", timeinspect);
-      function timeinspect() {
-         if (vone.currentTime >= 2) { vone.currentTime = 0; 
-            vone.pause();
-            vone.removeEventListener("timeupdate", timeinspect);
-            document.getElementsByClassName("site-restraint")[0].classList.remove('site-preload');
-            document.getElementById("video1").classList.add('site-load');
-         }
-      }
-            cntEnter(1);
-  }, 600);
-
 }
 
 </script>
