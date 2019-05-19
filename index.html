@@ -1635,13 +1635,14 @@ function cleanURL() {
          document.getElementById("video0").pause();
          //document.getElementById("video0").muted = false;
 
-         setTimeout(function(){ document.getElementById("video0").currentTime = 0; cuePoint(0);
-              document.getElementById("video0").removeEventListener("timeupdate", timeinspect);
-              document.getElementById("video0").style.visibility = "visible";
-         },200);
+         document.getElementById("video0").currentTime = 0; cuePoint(0);
+         document.getElementById("video0").removeEventListener("timeupdate", timeinspect);
+
+         setTimeout(function(){document.getElementById("video0").style.visibility = "visible";
+         },300);
 
          setTimeout(function(){document.getElementById("luck").style.background = " url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw== )";
-         },300);
+         },400);
 
          setTimeout(function(){document.getElementById("butshare0").style.opacity = "1";
          },500);
@@ -1658,9 +1659,11 @@ function cleanURL() {
 
          document.getElementById("video1").pause();
          //document.getElementById("video1").muted = false;
-         setTimeout(function(){ document.getElementById("video1").currentTime = 0; cuePoint(1);
-              document.getElementById("video1").removeEventListener("timeupdate", timeinspect);
-              document.getElementById("video1").style.visibility = "visible";
+
+         document.getElementById("video1").currentTime = 0; cuePoint(1);
+         document.getElementById("video1").removeEventListener("timeupdate", timeinspect);
+
+         setTimeout(function(){document.getElementById("video1").style.visibility = "visible";
          },150);
 
          setTimeout(function(){document.getElementById("moment").style.background = " url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw== )";
