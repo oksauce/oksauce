@@ -1617,21 +1617,19 @@ function cleanURL() {
       window.history.replaceState(null, null, window.location.pathname);
  }
 
- var v;      // videos
- var vt = 2; // videos total
- var vid;
 
  document.getElementById("video0").style.visibility = "hidden";
  document.getElementById("video1").style.visibility = "hidden";
 
- for(v=0; v < vt; ++v) {
-     vid = document.getElementById("video".concat(v));
+ document.getElementById("video0").addEventListener("timeupdate", timeinspect);
+ document.getElementById("video1").addEventListener("timeupdate", timeinspect);
 
- 	 vid.addEventListener('timeupdate',timeinspect);
- 	 vid.muted = true;
- 	 vid.play();
+ document.getElementById("video0").muted = true;
+ document.getElementById("video1").muted = true;
 
- 	}
+ document.getElementById("video0").play();
+ document.getElementById("video1").play();
+
 
     function timeinspect() {
 
@@ -1651,13 +1649,13 @@ function cleanURL() {
          },300);
 
          setTimeout(function(){document.getElementById("butshare0").style.opacity = "1";
-         },400);
-
-         setTimeout(function(){document.getElementById("playbar0").style.opacity = "1";
          },500);
 
-         setTimeout(function(){document.getElementById("playpause0").style.opacity = "1";
+         setTimeout(function(){document.getElementById("playbar0").style.opacity = "1";
          },600);
+
+         setTimeout(function(){document.getElementById("playpause0").style.opacity = "1";
+         },700);
 
      }
 
