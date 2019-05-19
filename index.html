@@ -1643,20 +1643,18 @@ function cleanURL() {
        // Show something in the UI that the video is muted
           document.getElementById(vid).muted = true;
           document.getElementById(vid).play();
-          });
-       }
 
-       console.log("add event listener video".concat(v));
+          console.log(document.getElementById(vid).currentTime);
 
-       console.log(document.getElementById(vid).currentTime);
-  
-        if (document.getElementById(vid).currentTime >= 2) {
-            document.getElementById(vid).pause();
-            document.getElementById(vid).currentTime = 0; 
-            document.getElementById(vid).removeEventListener("timeupdate", timeinspect());
+       if (document.getElementById(vid).currentTime >= 2) {
+           document.getElementById(vid).pause();
+           document.getElementById(vid).currentTime = 0; 
+           document.getElementById(vid).removeEventListener("timeupdate", timeinspect());
+           console.log("remove event listener video".concat(v));
         }
 
-        console.log("remove event listener video".concat(v));
+          });
+       }
 
       }
 
