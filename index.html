@@ -1636,18 +1636,17 @@ function cleanURL() {
 
      if (document.getElementById("video0").currentTime >= 3) {
    
-         document.getElementById("video0").load();
-         //document.getElementById("video0").pause();
+         document.getElementById("video0").pause();
          document.getElementById("video0").currentTime = 0;
-         //cuepoint(0);
+         cuePoint(0);
          document.getElementById("video0").removeEventListener("timeupdate", timeinspect);
      }
 
      if (document.getElementById("video1").currentTime >= 3) {
 
-         // vzero.load(); 
          document.getElementById("video1").pause();
          document.getElementById("video1").currentTime = 0;
+         cuePoint(1);
          document.getElementById("video1").removeEventListener("timeupdate", timeinspect);
      }
 
