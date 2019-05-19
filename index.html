@@ -1624,42 +1624,23 @@ function cleanURL() {
  for(v=0; v < vt; ++v) {
      vid = document.getElementById("video".concat(v));
  	 vid.addEventListener('timeupdate',timeinspect(vid));
+ 	 vid.muted = true;
  	}
 
- var promise = vid.play();
+    function timeinspect(vid) {
 
-      if (promise !== undefined) {
-          promise.then(_ => {
-       // Autoplay started!
+      console.log(vid.currentTime);
+      vid.play();
 
-          timeupdate(vid);
-          
-          }).catch(error => {
+     if(vid.currentTime >= 3) {
+        vid.currentTime = 0;
+        // vzero.load(); 
+        vid.pause();
+        vid.removeEventListener("timeupdate", timeinspect);
 
-       // Show something in the UI that the video is muted
-          vid.muted = true;
-          // current.play();
-
-          timeupdate(vid);
-          
-          });
-        }
-
-      function timeinspect(vid) {
-
-      	console.log(vid.currentTime);
-
-        vid.play();
-
-    if(vid.currentTime >= 3) {
-       vid.currentTime = 0;
-       // vzero.load(); 
-       vid.pause();
-       vid.removeEventListener("timeupdate", timeinspect);
+     }
 
     }
-
-      }
 
 }
 
