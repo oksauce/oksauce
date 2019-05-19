@@ -62,18 +62,37 @@ comment out
     overflow: hidden;
 }
 
-.video-0-wrapper {
+#luck {
     height: 100%;
     width: 100%;
     background: url(/vcover/luck.jpg) no-repeat center center;
     background-size: cover;
 }
 
-.video-1-wrapper {
+.video-0-wrapper {
+/*  
     height: 100%;
     width: 100%;
-    /* background: url(/vcover/moment.jpg) no-repeat center center;*/
+    background: url(/vcover/luck.jpg) no-repeat center center;
     background-size: cover;
+*/
+}
+
+#moment {
+    height: 100%;
+    width: 100%;
+    background: url(/vcover/luck.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+
+.video-1-wrapper {
+/*
+    height: 100%;
+    width: 100%;
+    background: url(/vcover/moment.jpg) no-repeat center center;
+    background-size: cover;
+*/
 }
 
 
