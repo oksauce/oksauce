@@ -1634,15 +1634,15 @@ function cleanURL() {
 
      console.log(vid.currentTime);
 
-     if (document.getElementById("video0").currentTime >= 2) {
+     if (document.getElementById("video0").currentTime >= 1) {
    
          document.getElementById("video0").pause();
          //document.getElementById("video0").muted = false;
          setTimeout(function(){ document.getElementById("video0").currentTime = 0; cuePoint(0);
-         document.getElementById("video0").removeEventListener("timeupdate", timeinspect);},150);
+         document.getElementById("video0").removeEventListener("timeupdate", timeinspect);},200);
      }
 
-     if (document.getElementById("video1").currentTime >= 2) {
+     if (document.getElementById("video1").currentTime >= 1) {
 
          document.getElementById("video1").pause();
          //document.getElementById("video1").muted = false;
