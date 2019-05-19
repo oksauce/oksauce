@@ -1644,6 +1644,37 @@ function cleanURL() {
 // var timeout; // mimic load of elements
 window.onload = function(){
 
+  var index = ["luck.mp4", "moment.mp4"];
+  // var srdex = ["src0", "src1"];
+  var srdex = ["video0", "video1"];
+  var requests=new Array(index.length);
+  var srcs=new Array(srdex.length);
+  for (let i = 0; i < index.length; i++) {
+     var url = "http:/video/" + index[i];
+     requests[i] = new XMLHttpRequest();
+     requests[i].open("GET", url);
+     requests[i].responseType = "arraybuffer";
+     requests[i].onload = function() {
+     requests[i] = new Blob([requests[i].target], {type: "video/mp4"});
+
+     //document.getElementById(srdex[i]).src = URL.createObjectURL(requests[i]);
+     document.getElementById(srdex[i]).src = URL.createObjectURL(requests[i]);
+     
+     }
+     requests[i].onprogress = function(event) {
+       if (event.lengthComputable) {
+        var percentComplete = event.loaded/event.total;
+         console.log(requests[i] + ' progress:', percentComplete);
+         if (percentComplete == 1) {
+          console.log(requests[i] + ' progress: done!');
+
+         }
+        // do something with this
+       }
+    }
+    requests[i].send();
+  }
+
   setTimeout(function(){
     document.getElementById("video0").classList.add('site-load');
     document.getElementById("video1").classList.add('site-load');
