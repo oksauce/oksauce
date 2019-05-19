@@ -1634,22 +1634,23 @@ function cleanURL() {
 
       console.log( "video".concat(v) );
 
-      var promise = document.getElementById(vid);
+      var current = document.getElementById(vid);
+      var promise = document.getElementById(vid).play();
 
-      if (promise.play() !== undefined) {
+      if (promise !== undefined) {
           promise.then(_ => {
        // Autoplay started!
           }).catch(error => {
        // Show something in the UI that the video is muted
-          promise.muted = true;
-          promise.play();
+          current.muted = true;
+          current.play();
 
-          console.log(promise.currentTime);
+          console.log(current.currentTime);
 
-       if (promise.currentTime >= 2) {
-           promise.pause();
-           promise.currentTime = 0; 
-           promise.removeEventListener("timeupdate", timeinspect());
+       if (current.currentTime >= 2) {
+           document.getElementById(vid).pause();
+           document.getElementById(vid).currentTime = 0; 
+           document.getElementById(vid).removeEventListener("timeupdate", timeinspect());
            console.log("remove event listener video".concat(v));
         }
 
