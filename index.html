@@ -1621,11 +1621,11 @@ function cleanURL() {
 // var timeout; // mimic load of elements
 window.onload = function(){
 
-var vzero = document.getElementById("video0");
+//var vzero = document.getElementById("video0");
 var vone = document.getElementById("video1");
 
     vone.addEventListener("timeupdate", timeinspect);
-    vzero.addEventListener("timeupdate", timeinspect);
+    //vzero.addEventListener("timeupdate", timeinspect);
     
     function timeinspect() {
       
@@ -1634,10 +1634,10 @@ var vone = document.getElementById("video1");
         vone.pause();
         vone.removeEventListener("timeupdate", timeinspect);
     }
-    if (vzero.currentTime >= 2) { vzero.currentTime = 0; 
-        vzero.pause();
-        vzero.removeEventListener("timeupdate", timeinspect);
-    }
+    //if (vzero.currentTime >= 2) { vzero.currentTime = 0; 
+    //    vzero.pause();
+    //    vzero.removeEventListener("timeupdate", timeinspect);
+    //}
   }
 
   setTimeout(function(){
