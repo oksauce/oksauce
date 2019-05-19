@@ -1647,6 +1647,8 @@ function cleanURL() {
        }
 
        console.log("add event listener video".concat(v));
+
+       console.log(document.getElementById(vid).currentTime);
   
         if (document.getElementById(vid).currentTime >= 2) {
             document.getElementById(vid).pause();
