@@ -1617,38 +1617,42 @@ function cleanURL() {
       window.history.replaceState(null, null, window.location.pathname);
  }
 
-var howmany = 2;
+ var v;      // videos
+ var vt = 2; // videos total
 
- var vone = document.getElementById("video1");
+ for(v=0; v < vt; ++v) {document.getElementById("video".concat(v)).addEventListener('timeupdate',timeupdate("video".concat(v)), false);}
 
-    vone.addEventListener("timeupdate", timeinspect);
-    console.log('video one add event listener');
+ //var vone = document.getElementById("video1");
+
+//    vone.addEventListener("timeupdate", timeinspect);
+//    console.log('video one add event listener');
     //vzero.addEventListener("timeupdate", timeinspect);
 
 //var test = document.getElementById("video".concat(howmany));
 
-console.log( "video".concat(howmany) );
+console.log( "video".concat(v) );
 
-var promise = vone.play();
+var promise = document.getElementById("video".concat(v)).play();
 
 if (promise !== undefined) {
   promise.then(_ => {
     // Autoplay started!
   }).catch(error => {
     // Show something in the UI that the video is muted
-    vone.muted = true;
-    vone.play();
+    document.getElementById("video".concat(v)).muted = true;
+    document.getElementById("video".concat(v)).play();
   });
 }
 
-      function timeinspect() {
+      function timeinspect(vid) {
+
       console.log('video one add event listener');
     // console.log(vzero.currentTime);
-        if (vone.currentTime >= 2) {
-        vone.pause();
+        if (document.getElementById(vid).currentTime >= 2) {
+        document.getElementById(vid).pause();
         //vone.currentTime = 0; 
         console.log('video one played for 2 secs * reset removed for now');
-        vone.removeEventListener("timeupdate", timeinspect);
+        document.getElementById(vid).removeEventListener("timeupdate", timeinspect);
         console.log('video one event listener removed');
         }
     //if (vzero.currentTime >= 2) { vzero.currentTime = 0; 
