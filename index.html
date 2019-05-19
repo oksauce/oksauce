@@ -1666,11 +1666,10 @@ window.onload = function(){
          console.log(requests[i] + ' progress:', percentComplete);
          if (percentComplete == 1) {
           console.log(requests[i] + ' progress: done!');
+          // do something with this
+          document.getElementById("luck").style.background = "url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)";
 
          }
-        // do something with this
-        document.getElementById("luck").style.background = "url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)";
-
        }
     }
     requests[i].send();
