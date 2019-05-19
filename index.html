@@ -1618,7 +1618,7 @@ function cleanURL() {
  }
 
  var v;      // videos
- var vt = 1; // videos total
+ var vt = 2; // videos total
  var vid;
 
  for(v=0; v < vt; ++v) {
@@ -1627,10 +1627,12 @@ function cleanURL() {
  	 vid.addEventListener('timeupdate',timeinspect);
  	 vid.muted = true;
  	 vid.play();
- 	 //console.log(vid.currentTime);
+
  	}
 
     function timeinspect() {
+
+     console.log(vid.currentTime);
    
      if(vid.currentTime >= 3) {
         vid.currentTime = 0;
