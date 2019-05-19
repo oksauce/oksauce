@@ -1622,9 +1622,21 @@ function cleanURL() {
     vone.addEventListener("timeupdate", timeinspect);
     console.log('video one add event listener');
     //vzero.addEventListener("timeupdate", timeinspect);
+
+var promise = vone.play();
+
+if (promise !== undefined) {
+  promise.then(_ => {
+    // Autoplay started!
+  }).catch(error => {
+    // Show something in the UI that the video is muted
+    vone.muted = true;
+    vone.play();
+  });
+}
     
       function timeinspect() {
-      
+      console.log('video one add event listener');
     // console.log(vzero.currentTime);
         if (vone.currentTime >= 2) {
         vone.pause();
