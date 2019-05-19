@@ -1618,18 +1618,19 @@ function cleanURL() {
  }
 
  var v;      // videos
- var vt = 2; // videos total
+ var vt = 1; // videos total
  var vid;
 
  for(v=0; v < vt; ++v) {
      vid = document.getElementById("video".concat(v));
- 	 vid.addEventListener('timeupdate',timeinspect(vid));
+
+ 	 vid.addEventListener('timeupdate',timeinspect);
  	 vid.muted = true;
  	 vid.play();
- 	 console.log(vid.currentTime);
+ 	 //console.log(vid.currentTime);
  	}
 
-    function timeinspect(vid) {
+    function timeinspect() {
    
      if(vid.currentTime >= 3) {
         vid.currentTime = 0;
