@@ -24,7 +24,7 @@
 <script>
 $(document).ready(function(){
   $(".site-content").fitVids();
-  cuePoint(0);cuePoint(1);
+  cuePoint(0);
   cleanURL();
 });
 </script>
@@ -1114,6 +1114,7 @@ function togglePlayPause(id) {
   switch(id) {
   
    case 0:
+       vidselect = 0;
        (document.getElementById("video0")).addEventListener("timeupdate", updatePlayed, true);
        document.getElementById("playpause0").style.visibility = 'visible';
        document.getElementById("playbar0").style.visibility = 'visible';
@@ -1173,10 +1174,11 @@ function togglePlayPause(id) {
   
         (document.getElementById("video0")).pause();
        }
-        vidselect = 0;
+        
     break;
 
     case 1:
+       vidselect = 1;
        (document.getElementById("video1")).addEventListener("timeupdate", updatePlayed, true);
        document.getElementById("playpause1").style.visibility = 'visible';
        document.getElementById("playbar1").style.visibility = 'visible';
@@ -1236,7 +1238,7 @@ function togglePlayPause(id) {
  
         (document.getElementById("video1")).pause();
        }
-        vidselect = 1;
+
     break;
   }   
 }
