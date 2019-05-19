@@ -1645,8 +1645,8 @@ function cleanURL() {
 window.onload = function(){
 
   var index = ["luck.mp4", "moment.mp4"];
-  // var srdex = ["src0", "src1"];
-  var srdex = ["video0", "video1"];
+  var srdex = ["src0", "src1"];
+  // var srdex = ["video0", "video1"];
   var requests=new Array(index.length);
   var srcs=new Array(srdex.length);
   for (let i = 0; i < index.length; i++) {
@@ -1657,7 +1657,6 @@ window.onload = function(){
      requests[i].onload = function() {
      requests[i] = new Blob([requests[i].target], {type: "video/mp4"});
 
-     //document.getElementById(srdex[i]).src = URL.createObjectURL(requests[i]);
      document.getElementById(srdex[i]).src = URL.createObjectURL(requests[i]);
      
      }
