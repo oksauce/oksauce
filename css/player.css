@@ -65,7 +65,7 @@ comment out
 #luck {
     height: 100%;
     width: 100%;
-    background: url(/vcover/luck.jpg) no-repeat center center;
+    background: black url(/vcover/luck.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -73,7 +73,7 @@ comment out
 /*  
     height: 100%;
     width: 100%;
-    background: url(/vcover/luck.jpg) no-repeat center center;
+    background: black url(/vcover/luck.jpg) no-repeat center center;
     background-size: cover;
 */
 }
@@ -81,7 +81,7 @@ comment out
 #moment {
     height: 100%;
     width: 100%;
-    background: url(/vcover/luck.jpg) no-repeat center center;
+    background: black url(/vcover/luck.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -90,7 +90,7 @@ comment out
 /*
     height: 100%;
     width: 100%;
-    background: url(/vcover/moment.jpg) no-repeat center center;
+    background: black url(/vcover/moment.jpg) no-repeat center center;
     background-size: cover;
 */
 }
