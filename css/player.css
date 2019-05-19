@@ -4481,15 +4481,7 @@ screen and (max-height:189px) {
     transition: opacity .25s
 }
 
-.player .vp-video-wrapper .vp-preview-cover-0 {
-    overflow: hidden; background-image: url("/vcover/luck.jpg";);
-    background-position: center center;
-    background-size: cover;
-}
-
-.player .vp-video-wrapper .vp-preview-cover-1 {
-    overflow: hidden; background-image: url("/vcover/moment.jpg";);
-    background-position: center center;
+.player .vp-video-wrapper .vp-preview-cover {
     background-size: cover;
 }
 
