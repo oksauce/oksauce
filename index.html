@@ -1625,14 +1625,18 @@ window.onload = function(){
 var vone = document.getElementById("video1");
 
     vone.addEventListener("timeupdate", timeinspect);
+    console.log('video one add event listener');
     //vzero.addEventListener("timeupdate", timeinspect);
     
     function timeinspect() {
       
     // console.log(vzero.currentTime);
-    if (vone.currentTime >= 2) { vone.currentTime = 0; 
+    if (vone.currentTime >= 2) {
         vone.pause();
+        //vone.currentTime = 0; 
+        console.log('video one played for 2 secs * reset removed for now');
         vone.removeEventListener("timeupdate", timeinspect);
+        console.log('video one event listener removed');
     }
     //if (vzero.currentTime >= 2) { vzero.currentTime = 0; 
     //    vzero.pause();
