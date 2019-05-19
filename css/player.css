@@ -35,8 +35,47 @@ comment out
 
 /* mods end */
 
-
 @charset "UTF-8";
+
+
+#video0 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -100;
+    right: 0;
+    bottom: 0;
+    background: url(/vcover/luck.jpg) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#video1 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -100;
+    right: 0;
+    bottom: 0;
+    background: url(/vcover/moment.jpg) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.video-0-wrapper {
+    height: 100%;
+    width: 100%;
+    background: url(/vcover/luck.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.video-1-wrapper {
+    height: 100%;
+    width: 100%;
+    background: url(/vcover/moment.jpg) no-repeat center center;
+    background-size: cover;
+}
+
 
 .played {background-color: rgb(255,255,255);}
 
