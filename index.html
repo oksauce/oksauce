@@ -1621,6 +1621,9 @@ function cleanURL() {
  var vt = 2; // videos total
  var vid;
 
+ document.getElementById("video0").style.visibility = "hidden";
+ document.getElementById("video1").style.visibility = "hidden";
+
  for(v=0; v < vt; ++v) {
      vid = document.getElementById("video".concat(v));
 
@@ -1638,8 +1641,11 @@ function cleanURL() {
    
          document.getElementById("video0").pause();
          //document.getElementById("video0").muted = false;
+
          setTimeout(function(){ document.getElementById("video0").currentTime = 0; cuePoint(0);
-         document.getElementById("video0").removeEventListener("timeupdate", timeinspect);},200);
+              document.getElementById("video0").removeEventListener("timeupdate", timeinspect);
+              document.getElementById("video0").style.visibility = "visible";
+         },200);
      }
 
      if (document.getElementById("video1").currentTime >= 1) {
@@ -1647,7 +1653,9 @@ function cleanURL() {
          document.getElementById("video1").pause();
          //document.getElementById("video1").muted = false;
          setTimeout(function(){ document.getElementById("video1").currentTime = 0; cuePoint(1);
-         document.getElementById("video1").removeEventListener("timeupdate", timeinspect);},150);
+              document.getElementById("video1").removeEventListener("timeupdate", timeinspect);
+              document.getElementById("video1").style.visibility = "visible";
+          },150);
      }
 
 
