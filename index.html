@@ -1637,13 +1637,14 @@ function cleanURL() {
           }).catch(error => {
 
        // Show something in the UI that the video is muted
-          current.muted = true;
+          vid.muted = true;
           // current.play();
 
           timeupdate(vid);
           
           });
         }
+   }
 
       function timeinspect(vid) {
 
