@@ -1620,42 +1620,49 @@ function cleanURL() {
  var v;      // videos
  var vt = 2; // videos total
 
- for(v=0; v < vt; ++v) {document.getElementById("video".concat(v)).addEventListener('timeupdate',timeinspect("video".concat(v)), false);}
+ for(v=0; v < vt; ++v) {document.getElementById("video".concat(v)).addEventListener('timeupdate',timeinspect()));}
 
  //var vone = document.getElementById("video1");
 
-//    vone.addEventListener("timeupdate", timeinspect);
-//    console.log('video one add event listener');
-    //vzero.addEventListener("timeupdate", timeinspect);
+//  vone.addEventListener("timeupdate", timeinspect);
+//  console.log('video one add event listener');
+//  vzero.addEventListener("timeupdate", timeinspect);
 
 //var test = document.getElementById("video".concat(howmany));
 
-      function timeinspect(vid) {
-
-      console.log( "video".concat(v) );
-
-      var current = document.getElementById(vid);
-      var promise = document.getElementById(vid).play();
+ var current = document.getElementById(vid);
+ var promise = document.getElementById(vid).play();
 
       if (promise !== undefined) {
           promise.then(_ => {
        // Autoplay started!
+
+          timeupdate(vid);
+          
           }).catch(error => {
+
        // Show something in the UI that the video is muted
           current.muted = true;
-          current.play();
+          // current.play();
 
-          console.log(current.currentTime);
-
-       if (current.currentTime >= 2) {
-           document.getElementById(vid).pause();
-           document.getElementById(vid).currentTime = 0; 
-           document.getElementById(vid).removeEventListener("timeupdate", timeinspect());
-           console.log("remove event listener video".concat(v));
+          timeupdate(vid);
+          
+          });
         }
 
-          });
-       }
+      function timeinspect() {
+
+      	console.log(current.currentTime);
+
+        current.play();
+
+    if(current.currentTime >= 3) {
+       current.currentTime = 0;
+       // vzero.load(); 
+       current.pause();
+       current.removeEventListener("timeupdate", timeinspect);
+
+    }
 
       }
 
