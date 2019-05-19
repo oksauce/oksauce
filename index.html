@@ -1619,19 +1619,14 @@ function cleanURL() {
 
  var v;      // videos
  var vt = 2; // videos total
+ var vid;
 
- for(v=0; v < vt; ++v) {document.getElementById("video".concat(v)).addEventListener('timeupdate',timeinspect());}
+ for(v=0; v < vt; ++v) {
+     vid = document.getElementById("video".concat(v));
+ 	 vid.addEventListener('timeupdate',timeinspect(vid)));
+ 	}
 
- //var vone = document.getElementById("video1");
-
-//  vone.addEventListener("timeupdate", timeinspect);
-//  console.log('video one add event listener');
-//  vzero.addEventListener("timeupdate", timeinspect);
-
-//var test = document.getElementById("video".concat(howmany));
-
- var current = document.getElementById(vid);
- var promise = document.getElementById(vid).play();
+ var promise = vid.play();
 
       if (promise !== undefined) {
           promise.then(_ => {
@@ -1650,17 +1645,17 @@ function cleanURL() {
           });
         }
 
-      function timeinspect() {
+      function timeinspect(vid) {
 
-      	console.log(current.currentTime);
+      	console.log(vid.currentTime);
 
-        current.play();
+        vid.play();
 
-    if(current.currentTime >= 3) {
-       current.currentTime = 0;
+    if(vid.currentTime >= 3) {
+       vid.currentTime = 0;
        // vzero.load(); 
-       current.pause();
-       current.removeEventListener("timeupdate", timeinspect);
+       vid.pause();
+       vid.removeEventListener("timeupdate", timeinspect);
 
     }
 
