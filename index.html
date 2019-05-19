@@ -18,15 +18,13 @@
 <script src="/js/webflow.min.js" type="text/javascript"></script>
 <script src="/js/jquery.fitvids.js" type="text/javascript"></script>
 
-<!-- <script src="/js/video-7.3.0.min.js"></script> -->
-
 <!-- passive default-passive-events * https://github.com/zzarcon/default-passive-events -->
 <script type="text/javascript" src="/js/index.js"></script>
 
 <script>
 $(document).ready(function(){
   $(".site-content").fitVids();
-  cuePoint(0);
+  cuePoint(0);cuePoint(1);
   cleanURL();
 });
 </script>
@@ -342,7 +340,7 @@ title="share via email" role="button" aria-label="share via email">
 <div id="playbar1" class="play-bar rounded-box"> 
 <div class="vp-progress">
 <div id="loaded1" class="loaded" role="progressbar" aria-label="loaded" aria-valuemin="0" aria-valuemax="87" aria-valuenow="0"></div>
-<div id="played1" class="played" role="progressbar" aria-label="played" aria-valuemin="0" aria-valuemax="87" aria-valuenow="0" aria-valuetext="" style=""></div>
+<div id="played1" class="played" role="progressbar" aria-label="played" aria-valuemin="0" aria-valuemax="87" aria-valuenow="0" aria-valuetext=""></div>
 <div id="cuepoint1" class="cuepoints" onclick="cuePoint(1)" onmouseover="cueOver(1)" onmouseout="cueOut(1)"></div>
 <div class="thumb-preview invisible hidden" role="presentation" aria-hidden="true" style="left:0;"><div class="thumb"></div></div>
 <div id="ghostpoint1" class="ghost-timecode" role="presentation" aria-hidden="true" style="left:0; display:none"><div id="box1" class="box">00:00</div></div>
