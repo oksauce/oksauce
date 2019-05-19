@@ -4487,6 +4487,12 @@ screen and (max-height:189px) {
     background-size: cover;
 }
 
+.player .vp-video-wrapper .vp-preview-cover-1 {
+    overflow: hidden; background-image: url("/vcover/moment.jpg";);
+    background-position: center center;
+    background-size: cover;
+}
+
 .player .vp-video-wrapper .vp-preview-invisible {
     opacity: 0
 }
