@@ -1616,33 +1616,33 @@ function cleanURL() {
       location.hash = '';
       window.history.replaceState(null, null, window.location.pathname);
  }
-}
 
-// var timeout; // mimic load of elements
-window.onload = function(){
-
-//var vzero = document.getElementById("video0");
-var vone = document.getElementById("video1");
+ var vone = document.getElementById("video1");
 
     vone.addEventListener("timeupdate", timeinspect);
     console.log('video one add event listener');
     //vzero.addEventListener("timeupdate", timeinspect);
     
-    function timeinspect() {
+      function timeinspect() {
       
     // console.log(vzero.currentTime);
-    if (vone.currentTime >= 2) {
+        if (vone.currentTime >= 2) {
         vone.pause();
         //vone.currentTime = 0; 
         console.log('video one played for 2 secs * reset removed for now');
         vone.removeEventListener("timeupdate", timeinspect);
         console.log('video one event listener removed');
-    }
+        }
     //if (vzero.currentTime >= 2) { vzero.currentTime = 0; 
     //    vzero.pause();
     //    vzero.removeEventListener("timeupdate", timeinspect);
     //}
-  }
+      }
+
+}
+
+// var timeout; // mimic load of elements
+window.onload = function(){
 
   setTimeout(function(){
     document.getElementById("video0").classList.add('site-load');
