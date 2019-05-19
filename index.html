@@ -1643,7 +1643,7 @@ function cleanURL() {
 
 // var timeout; // mimic load of elements
 window.onload = function(){
-
+  var iddex = ["luck", "moment"];
   var index = ["luck.mp4", "moment.mp4"];
   var srdex = ["src0", "src1"];
   // var srdex = ["video0", "video1"];
@@ -1667,7 +1667,7 @@ window.onload = function(){
          if (percentComplete == 1) {
           console.log(requests[i] + ' progress: done!');
           // do something with this
-          document.getElementById("luck").style.background = "url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)";
+          document.getElementById(iddex[i]).style.background = "url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)";
 
          }
        }
