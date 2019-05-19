@@ -1626,12 +1626,11 @@ function cleanURL() {
  	 vid.addEventListener('timeupdate',timeinspect(vid));
  	 vid.muted = true;
  	 vid.play();
+ 	 console.log(vid.currentTime);
  	}
 
     function timeinspect(vid) {
-
-     console.log(vid.currentTime);
-     
+   
      if(vid.currentTime >= 3) {
         vid.currentTime = 0;
         // vzero.load(); 
