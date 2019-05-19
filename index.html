@@ -1621,24 +1621,12 @@ function cleanURL() {
 // var timeout; // mimic load of elements
 window.onload = function(){
 
-//var vzero = document.getElementById("video0");
-var vone = document.getElementById("video1");
-
-    vone.addEventListener("timeupdate", timeinspect);
-    //vzero.addEventListener("timeupdate", timeinspect);
-    
-    function timeinspect() {
-      
-    // console.log(vzero.currentTime);
-    if (vone.currentTime >= 2) { vone.currentTime = 0; 
-        vone.pause();
-        vone.removeEventListener("timeupdate", timeinspect);
+  document.getElementById("video1").addEventListener("timeupdate",
+    if ( document.getElementById("video1").currentTime >= 2 ) {
+    	 document.getElementById("video1").currentTime = 0; 
+    	 document.getElementById("video1").pause();
+    	 document.getElementById("video1").removeEventListener("timeupdate");
     }
-    //if (vzero.currentTime >= 2) { vzero.currentTime = 0; 
-    //    vzero.pause();
-    //    vzero.removeEventListener("timeupdate", timeinspect);
-    //}
-  }
 
   setTimeout(function(){
     document.getElementById("video0").classList.add('site-load');
