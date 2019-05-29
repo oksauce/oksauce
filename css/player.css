@@ -74,6 +74,18 @@ comment out
     overflow: hidden;
 }
 
+#videostore {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -100;
+    right: 0;
+    bottom: 0;
+    background: url(/vcover/store.png) no-repeat center center;
+    background-size: contain;
+    overflow: hidden;
+}
+
 #mobile {
     height: 100%;
     width: 100%;
