@@ -81,41 +81,43 @@ p {
   /*font-size: 0.9rem;*/
   line-height: 1.7;
   color: #111111;
-}
+} 
 
 .short-order {margin-top: 1px;}
 
 .redlight {color: red !important;}
 
+ul {
+  padding-inline-start: 1.5rem;
+}
+
 ol {
-    counter-reset: item;
-    padding-inline-start: 1.5rem;
-    word-break: break-all;
+  counter-reset: item;
+  padding-inline-start: 1.5rem;
+  word-break: break-all;
 }
 
-ol li { display: block }
-
-ol li::before {
-  content: "";
-  width: 20px;
-  display: inline-block;
+ol li {
+  word-break: break-all;
+  white-space:nowrap;
+  max-width: 26rem;
 }
 
-ol li:before {
-    content: counter(item) ". ";
-    counter-increment: item;
-    font-weight: bold;
+ul li {
+  word-break: break-all;
 }
 
 .container .p, .container p {
-    margin: 0;
-    margin-top: 0px;
-    padding: 0;
-    margin-top: 9px;
-    position: relative;
+  margin: 0;
+  margin-top: 0px;
+  padding: 0;
+  margin-top: 9px;
+  position: relative;
 }
 
 li{
+  word-wrap: break-word;
+  white-space: normal !important;
   max-width: 26rem;
 }
 
