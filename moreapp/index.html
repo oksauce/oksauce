@@ -215,7 +215,7 @@ $(document).ready(function(){
 
 var tag = document.createElement('script');
 
-tag.src = "https://www.youtube.com/iframe_api";
+tag.src = "http://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -302,7 +302,7 @@ setTimeout(function(){$('#vid3').fadeTo(1000, 1);}, 500);
 $('#vidcover3').hide();
 
 $('.site-preload' ).css('pointer-events', 'auto' );
-$(".site-content").fitVids({ customSelector: "iframe[src^='https://youtube.com']"});
+$(".site-content").fitVids({ customSelector: "iframe[src^='http://youtube.com']"});
 
 // setTimeout(function(){
 //  document.getElementById("video0").classList.add('site-load');
