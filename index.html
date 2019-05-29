@@ -322,15 +322,13 @@ function onPlayerReady(event) {
        		
        		case 'vid0':
        			  cIDload0++
-       		      if (cIDload0 == 2) {console.clear();
-       		         console.log('video 0 loaded');
+       		      if (cIDload0 == 2) {
        		      $('#mobile').css('background','url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR4nGNgAAIAAAUAAXpeqz8=)');
        		      }
        		break;
        		case 'vid1':
        			  cIDload1++
        		      if (cIDload1 == 2) {
-       		         console.log('video 1 loaded');
        		      $('#desktop').css('background','url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR4nGNgAAIAAAUAAXpeqz8=)');
        		      }
        		break;
@@ -389,6 +387,7 @@ window.onload = function() {
 function loadOK() {
   document.getElementById("ktopd").style.color = "#ff0000";
   document.getElementById("ktopm").style.color = "#ff0000";
+  setTimeout(function(){console.clear();}, 1000);
 }
 
 function cleanURL() {
