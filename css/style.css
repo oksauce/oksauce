@@ -88,12 +88,12 @@ p {
 .redlight {color: red !important;}
 
 ul {
-  padding-inline-start: 1.5rem;
+  padding-inline-start: 1.1rem;
 }
 
 ol {
   counter-reset: item;
-  padding-inline-start: 1.5rem;
+  padding-inline-start: 1.1rem;
   word-break: break-all;
 }
 
