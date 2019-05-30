@@ -1171,8 +1171,12 @@ button button.small .text {
   .tc50  {margin-top: 0.3rem;display:inline-block;}
   .tc100 {margin-top: 0.3rem;display:none;}
 
-  ul {padding-inline-start: 0.2rem;}
-  ol {padding-inline-start: 0.2rem;}
+  ul {padding-inline-start: 0.99rem;
+      padding-inline-end: 0.99rem;
+  }
+  ol {padding-inline-start: 0.99rem;
+      padding-inline-end: 0.99rem;
+  }
 
 }
 
