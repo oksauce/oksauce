@@ -84,28 +84,7 @@ p {
 } 
 
 .short-order {margin-top: 1px;}
-
 .redlight {color: red !important;}
-
-ul {
-  padding-inline-start: 1.1rem;
-}
-
-ol {
-  counter-reset: item;
-  padding-inline-start: 1.1rem;
-  word-break: break-all;
-}
-
-ol li {
-  word-break: break-all;
-  white-space:nowrap;
-  max-width: 26rem;
-}
-
-ul li {
-  word-break: break-all;
-}
 
 .container .p, .container p {
   margin: 0;
@@ -113,12 +92,6 @@ ul li {
   padding: 0;
   margin-top: 9px;
   position: relative;
-}
-
-li{
-  word-wrap: break-word;
-  white-space: normal !important;
-  max-width: 26rem;
 }
 
 .center-wrapper p, .center-wrapper li{
@@ -511,7 +484,6 @@ pre {
 
 }
 
-
 /* Sidebar Modal */
 
 .col-container.sidebar-modal {
@@ -634,6 +606,9 @@ pre {
   display: none;
 }
 
+ul {padding-inline-start: 2.5rem;}
+ol {padding-inline-start: 2.5rem;}
+
 
 /* Mobile Styles */
 
@@ -702,7 +677,6 @@ pre {
   text-decoration: none;
   padding: 0;
 }
-
 
 hr {
     display: block;
@@ -806,7 +780,6 @@ hr {
 
 /*.product-buttons{padding-bottom: 2rem;}.product-buttons .ui-link{float: left;}.spfy-buy-button{float: left;} */
 
-
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
     display: block;
 }
@@ -878,9 +851,7 @@ button button.small .text {
     display:inline-block; 
 }
 
-
 .button:hover {background-color: #ff0000;}
-
 
 .leftpad {padding-left:0.4rem;}
 
@@ -969,13 +940,11 @@ button button.small .text {
   display: block;
 }
 
-
 .mobile-footer.biblio-footer{
   display: block;
   padding-right: 2.5rem;
   padding-left: 1.0rem;
 }
-
 
 .mobile-footer {
   display: none;
@@ -986,10 +955,19 @@ button button.small .text {
   border-top: 1px solid rgba(176,176,176,0.1);
 }
 
+.page-container{
+  padding: 4rem 2rem;
+}
+
+.page-container-docs{
+   padding: 4rem 2rem;
+}
+
 .in50  {margin-top: 0.3rem;display: none;}
 .in100 {margin-top: 0.3rem;display: inline-block;}
 .tc50  {margin-top: 0.3rem;display: none;}
 .tc100 {margin-top: 0.3rem;display: inline-block;}
+
 
 @media (max-width: 916px) {
   .ui-link {
@@ -1010,6 +988,10 @@ button button.small .text {
   .in100 {margin-top: 0.3rem;display:inline-block;}
   .tc50  {margin-top: 0.3rem;display: none;}
   .tc100 {margin-top: 0.3rem;display:inline-block;}
+
+  ul {padding-inline-start: 2.2rem;}
+  ol {padding-inline-start: 2.2rem;}
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1037,6 +1019,10 @@ button button.small .text {
   .in100 {margin-top: 0.3rem;display:none;}
   .tc50  {margin-top: 0.3rem;display:inline-block;}
   .tc100 {margin-top: 0.3rem;display:none;}
+
+  ul {padding-inline-start: 1.8rem;}
+  ol {padding-inline-start: 1.8rem;}
+
 }
 
 
@@ -1143,15 +1129,6 @@ button button.small .text {
   }
 }
 
-.page-container{
-  padding: 4rem 2rem;
-}
-
-.page-container-docs{
-   padding: 4rem 2rem;
-}
-
-
 @media (max-width: 516px) {
   .ui-link {
     /*border-bottom: 1px solid #ceced6;*/
@@ -1175,6 +1152,9 @@ button button.small .text {
     border-bottom: 1px solid #2b57d4;
   }
 
+  ul {padding-inline-start: 1.1rem;}
+  ol {padding-inline-start: 1.1rem;}
+
 }
 
 @media screen and (max-width: 479px) {
@@ -1190,6 +1170,10 @@ button button.small .text {
   .in100 {margin-top: 0.3rem;display:none;}
   .tc50  {margin-top: 0.3rem;display:inline-block;}
   .tc100 {margin-top: 0.3rem;display:none;}
+
+  ul {padding-inline-start: 1.1rem;}
+  ol {padding-inline-start: 1.1rem;}
+
 }
 
 @media (max-width: 479px) {
