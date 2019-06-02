@@ -123,7 +123,7 @@ $(document).ready(function(){
 
 <div id="vid0"></div>
 
-<video id="vidcover0" class="player" style="padding-top:6.25%"></video>
+<div id="vidcover0" class="player" style="padding-top:56.25%"></div>
 
 </div>
 </div>
@@ -195,7 +195,7 @@ $(document).ready(function(){
 
 <div id="vid1"></div>
 
-<video id="vidcover1" class="player" style="padding-top:6.25%"></video>
+<div id="vidcover1" class="player" style="padding-top:56.25%"></div>
 
 
 </div>
@@ -388,12 +388,7 @@ window.onload = function() {
 function loadOK(cIDload1) {
   document.getElementById("ktopd").style.color = "#ff0000";
   document.getElementById("ktopm").style.color = "#ff0000";
-
-  document.getElementById("vidcover0").controls = false;
-  document.getElementById("vidcover1").controls = false;
-  
-  video.removeAttribute("controls");   
- 
+   
   setTimeout(function(){console.clear();}, 1000);
 }
 
