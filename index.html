@@ -300,7 +300,6 @@ var player, cID; cIDload0 = 0; cIDload1 = 0;
         playerVars: {
             autohide: 1,
             modestbranding: 1,
-            controls: 1,
             showinfo: 0,
             iv_load_policy: 3,
             fs: 1,
@@ -389,8 +388,13 @@ window.onload = function() {
 function loadOK(cIDload1) {
   document.getElementById("ktopd").style.color = "#ff0000";
   document.getElementById("ktopm").style.color = "#ff0000";
-  setTimeout(function(){console.clear();}, 1000);
 
+  document.getElementById("vidcover0").controls = false;
+  document.getElementById("vidcover1").controls = false;
+  
+  video.removeAttribute("controls");   
+ 
+  setTimeout(function(){console.clear();}, 1000);
 }
 
 function cleanURL() {
