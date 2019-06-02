@@ -38,11 +38,13 @@ comment out
 @charset "UTF-8";
 
 video::-webkit-media-controls {
-    display:none !important;
+    opacity: 0;
+    position: absolute; top: -9999px;
 }
 
 video::-webkit-media-controls-start-playback-button {
-  display: none !important;
+    opacity: 0;
+    position: absolute; top: -9999px;
 }
 
 
