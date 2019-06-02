@@ -37,6 +37,9 @@ comment out
 
 @charset "UTF-8";
 
+video::-webkit-media-controls-start-playback-button {
+    display: none;
+}
 
 #video0 {
     height: 100%;
@@ -86,6 +89,7 @@ comment out
     overflow: hidden;
 }
 
+
 #mobile {
     height: 100%;
     width: 100%;
@@ -107,10 +111,10 @@ comment out
     background-size: contain;
 }
 
-
 #vid0 {display: none}
 #vid1 {display: none}
 #vid3 {display: none}
+
 
 /*
 .video-0-wrapper {
