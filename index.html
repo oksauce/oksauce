@@ -317,8 +317,9 @@ var player, cID; cIDload0 = 0; cIDload1 = 0;
 
 function onPlayerReady(event) {
 
+       player.setPlaybackQuality('hd1080'); 
        event.target.setVolume(100);
-  
+
        switch ( $(event.target.a).attr("id") ) {
        		
        		case 'vid0':
