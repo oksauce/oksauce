@@ -37,16 +37,34 @@ comment out
 
 @charset "UTF-8";
 
-video::-webkit-media-controls {
-    opacity: 0;
-    position: absolute; top: -9999px;
+/* this used to work for the parent element of button divs */
+/* but it does not work with newer browsers, the below doesn't hide the play button parent div */
+
+*::-webkit-media-controls {
+  display:none !important;
+  -webkit-appearance: none;
 }
 
-video::-webkit-media-controls-start-playback-button {
-    opacity: 0;
-    position: absolute; top: -9999px;
+*::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
 }
 
+/* old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* new shadow dom for play button */
+
+/* this one works! */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
 
 #video0 {
     height: 100%;
