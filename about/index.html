@@ -361,44 +361,7 @@ function checkLoad(id) {
  
     }
   break;
-  case 1:
-    if (preload1 == 0) {
 
-          //document.getElementById("vid1shade").classList.remove('vp-shade-invisible');
-          //document.getElementById("vid1shade").classList.add('vp-shade-visible');
-          document.getElementById("vid1spin").classList.remove('vp-spin-invisible');
-          document.getElementById("vid1spin").classList.add('vp-spin-visible');
-
-    	  (document.getElementById("video1")).play;
-    	  // (document.getElementById("video4")).play();
-
-    	  // console.log('buffered end :  ' + document.getElementById("video1").buffered.end(0));
-          // console.log('duration :  ' + document.getElementById("video1").duration);
-
-          // var playready = setInterval(()=>{ ** does not work on mobile !
-          // if((parseInt((document.getElementById("video1").buffered.end(0) / document.getElementById("video1").duration)) * 100) > 1 ){
-          // document.getElementById("vid4shade").classList.remove('vp-shade-visible');
-          // document.getElementById("vid4shade").classList.add('vp-shade-invisible');
-          // document.getElementById("vid1spin").classList.remove('vp-spin-visible');
-          // document.getElementById("vid1spin").classList.add('vp-spin-invisible'); 
-          // you can now stop checking every half second
-          // clearInterval(playready);
-          // console.log('preload1 == ' + preload1);
-          //}                   
-          //},1);
-
-    	  vidleave = setTimeout(function(){    
-          document.getElementById("playpause1").style.opacity = '0';
-          document.getElementById("playbar1").style.opacity = '0';
-          document.getElementById("butshare1").style.opacity = '0';
-          document.getElementById("replay1").classList.add('fill');
-          document.getElementById("replay1").classList.remove("playover");
-          }, 500);
-          vidselect = 1; 
-          preload1  = 1; // video loaded!
-
-    }
-  break;
  }
  return true;
 }
@@ -480,14 +443,7 @@ function shareOver(id) {
        document.getElementById("sparrow0").classList.add("playover");
        vidselect = 0;
     break;
-    case 1:
-       document.getElementById("share1").classList.remove('visible');
-       document.getElementById("share1").classList.add("invisible");
-       document.getElementById("share1").classList.add("hidden");
-       document.getElementById("sparrow1").classList.remove("fill");
-       document.getElementById("sparrow1").classList.add("playover");
-       vidselect = 1;
-    break;
+ 
   }
 }
 
@@ -503,14 +459,7 @@ function shareOut(id) {
        document.getElementById("sparrow0").classList.remove("playover");
        vidselect = 0;
     break;
-    case 1:
-       document.getElementById("share1").classList.remove('visible');
-       document.getElementById("share1").classList.add("invisible");
-       document.getElementById("share1").classList.add("hidden");
-       document.getElementById("sparrow1").classList.add("fill");
-       document.getElementById("sparrow1").classList.remove("playover");
-       vidselect = 1;
-    break;
+
   }
 }
 
@@ -523,12 +472,7 @@ function cntEnter(id) {
       document.getElementById("butshare0").style.opacity = '1';
       vidselect = 0;
    break;
-   case 1:
-      document.getElementById("playpause1").style.opacity = "1";
-      document.getElementById("playbar1").style.opacity = '1';
-      document.getElementById("butshare1").style.opacity = '1';
-      vidselect = 1;
-   break;
+
   }
    clearTimeout(vidleave);
 }
@@ -549,19 +493,7 @@ function cntLeave(id) {
       vidselect = 0;
      }
    break;
-   case 1:
-     if (player1 == 1) {                   /* hide replay links after play */
-     //if (player0 == 1 && vidend1 == 0) { /* show replay links after play * enabled line 1271 & 1322 */
-      vidleave = setTimeout(function(){
-      document.getElementById("playpause1").style.opacity = '0';
-      document.getElementById("playbar1").style.opacity = '0';
-      document.getElementById("butshare1").style.opacity = '0';
-      document.getElementById("replay1").classList.add('fill');
-      document.getElementById("replay1").classList.remove("playover");
-      }, showtime);
-      vidselect = 1;
-     }
-   break;
+
  }
  playmouseon = 0;
 }
@@ -594,31 +526,6 @@ $('.player-0').on('mouseleave touchend', function(){
    }
 });
 
-$('.player-1').on('mouseenter touchstart', function(){
-	  document.getElementById("playpause1").style.opacity = '0';
-      document.getElementById("playbar1").style.opacity = '0';
-      document.getElementById("butshare1").style.opacity = '0';
-
-      document.getElementById("playpause1").style.opacity = "1";
-      document.getElementById("playbar1").style.opacity = '1';
-      document.getElementById("butshare1").style.opacity = '1';
-      vidselect = 1;
-      clearTimeout(vidleave);
-});
-
-$('.player-1').on('mouseleave touchend', function(){
- 
-   if (player1 == 1) {
-      vidleave = setTimeout(function(){
-      document.getElementById("playpause1").style.opacity = '0';
-      document.getElementById("playbar1").style.opacity = '0';
-      document.getElementById("butshare1").style.opacity = '0';
-      //document.getElementById("replay1").classList.add('fill');
-      //document.getElementById("replay1").classList.remove("playover");
-      }, 2000);
-      vidselect = 1;
-   }
-});
 
 /* end * for mobile devices hack */
 
@@ -645,20 +552,7 @@ function playOver(id) {
         }
         vidselect = 0;
     break;
-    case 1:
-        if (vidend1 == 1 ){ // replay
-         document.getElementById("replay-icon1").classList.add('playover');
-         document.getElementById("replay-icon1").classList.remove('fill'); 
-        } else { 
-         document.getElementById("parrot1").classList.add('playover');
-         document.getElementById("parrot1").classList.remove('fill');
-         document.getElementById("pause12").classList.add("playover");
-         document.getElementById("pause12").classList.remove("fill");
-         document.getElementById("pause13").classList.add("playover");
-         document.getElementById("pause13").classList.remove("fill");   
-        }
-      vidselect = 1; 
-    break;
+
   }
     if (typeof window.matchMedia == 'undefined' || typeof window.msMatchMedia == 'undefined'){clearTimeout(vidleave);}
     playmouseon = 1;
@@ -681,20 +575,7 @@ function playOut(id) {
       }
       vidselect = 0;
     break;
-    case 1:
-      if (vidend1 == 1 ){ // replay
-        document.getElementById("replay-icon1").classList.add('fill');
-        document.getElementById("replay-icon1").classList.remove("playover");
-      } else { 
-        document.getElementById("parrot1").classList.remove('playover');
-        document.getElementById("parrot1").classList.add("fill");
-        document.getElementById("pause12").classList.remove('playover');
-        document.getElementById("pause12").classList.add('fill');
-        document.getElementById("pause13").classList.remove('playover');
-        document.getElementById("pause13").classList.add("fill");
-      }	
-      vidselect = 1;
-    break;
+
   }
   if (typeof window.matchMedia == 'undefined' || typeof window.msMatchMedia == 'undefined'){clearTimeout(vidleave);}
   playmouseon = 0;
@@ -709,11 +590,7 @@ function cogOver(id) {
        document.getElementById("gear-cog0").classList.add("cogover");
        vidselect = 0;
     break;
-    case 1:
-       document.getElementById("gear-cog1").classList.remove("fill");
-       document.getElementById("gear-cog1").classList.add("cogover");
-       vidselect = 1;
-    break;
+ 
   }
 }
 
@@ -726,11 +603,7 @@ function cogOut(id) {
        document.getElementById("gear-cog0").classList.remove("cogover");
        vidselect = 0;
     break;
-    case 1:
-       document.getElementById("gear-cog1").classList.add("fill");
-       document.getElementById("gear-cog1").classList.remove("cogover");
-       vidselect = 1;
-    break;
+
   }
 }
 
@@ -749,17 +622,7 @@ function vidOver(id) {
        document.getElementById("vidfull04").classList.add('vidover');
        vidselect = 0;
     break;
-    case 1:
-       document.getElementById("vidfull11").classList.remove('fill');
-       document.getElementById("vidfull11").classList.add('vidover');
-       document.getElementById("vidfull12").classList.remove('fill');
-       document.getElementById("vidfull12").classList.add('vidover');
-       document.getElementById("vidfull13").classList.remove('fill');
-       document.getElementById("vidfull13").classList.add('vidover');
-       document.getElementById("vidfull14").classList.remove('fill');
-       document.getElementById("vidfull14").classList.add('vidover');
-       vidselect = 1;
-    break;
+
   }
 }
 
@@ -778,17 +641,7 @@ function vidOut(id) {
        document.getElementById("vidfull04").classList.remove('vidover');
        vidselect = 0;
     break;
-    case 1:
-       document.getElementById("vidfull11").classList.add('fill');
-       document.getElementById("vidfull11").classList.remove('vidover');
-       document.getElementById("vidfull12").classList.add('fill');
-       document.getElementById("vidfull12").classList.remove('vidover');
-       document.getElementById("vidfull13").classList.add('fill');
-       document.getElementById("vidfull13").classList.remove('vidover');
-       document.getElementById("vidfull14").classList.add('fill');
-       document.getElementById("vidfull14").classList.remove('vidover');
-       vidselect = 1;
-    break;
+
   }
 }
 
@@ -809,16 +662,7 @@ function cueOver(id) {
        document.getElementById("box0").innerHTML = (date.toISOString().substr(11, 8).replace(/^.{3}/g, ''));}catch(e){}});
        vidselect = 0;
   break;
-  case 1:
-       $(".ghost-timecode").toggle();
-       $('#cuepoint1').mousemove(function(e) {
-       document.getElementById("ghostpoint1").style.left = (Math.floor(( (e.pageX - ($(this).parent().offset()).left) / $('#cuepoint1').width()) * 100) + "%")
-       try {
-       var date = new Date(null);
-       date.setSeconds((( (e.pageX - ($(this).parent().offset()).left) / $('#cuepoint1').width()) * 1 / (Math.floor((document.getElementById("video1")).duration)) * 100));
-       document.getElementById("box1").innerHTML = (date.toISOString().substr(11, 8).replace(/^.{3}/g, ''));}catch(e){}});
-       vidselect = 1;
-  break;
+
  }
 }
 
@@ -839,16 +683,7 @@ function cueOut(id) {
        document.getElementById("box0").innerHTML = date.toISOString().substr(11, 8).replace(/^.{3}/g, '');}catch(e){}});
        vidselect = 0;
   break;
-  case 1:
-       $(".ghost-timecode").toggle();
-       $('#cuepoint1').mousemove(function(e) {   
-       document.getElementById("ghostpoint1").style.left = (Math.floor(( (e.pageX - ($(this).parent().offset()).left) / $('#cuepoint1').width()) * 100)) + "%";
-       try {
-       var date = new Date(null);
-       date.setSeconds((( (e.pageX - ($(this).parent().offset()).left) / $('#cuepoint1').width()) * 1 / (Math.floor((document.getElementById("video1")).duration)) * 100));
-       document.getElementById("box1").innerHTML = date.toISOString().substr(11, 8).replace(/^.{3}/g, '');}catch(e){}});
-       vidselect = 1;
-   break;
+
  }
 }
 
@@ -868,18 +703,7 @@ function cuePoint(id) {
        ghost = document.getElementById("ghostpoint0").style.left;
        vidselect = 0;
    break;
-   case 1:
-       if ( (document.getElementById("video1").paused) === false) {    
-       $("#play1").hide();
-       $("#parrot1").hide();
-       $("#pause11").show();
-       $("#replay1").hide();    
-       } 
-       cuepoint = document.getElementById("cuepoint1");
-       video = document.getElementById("video1");
-       ghost = document.getElementById("ghostpoint1").style.left;
-       vidselect = 1;
-   break;
+
  }
    cuepoint.addEventListener("click", function(e) {
 
@@ -963,68 +787,6 @@ function togglePlayPause(id) {
         vidselect = 0;
     break;
 
-    case 1:
-       (document.getElementById("video1")).addEventListener("timeupdate", updatePlayed, true);
-       document.getElementById("playpause1").style.visibility = 'visible';
-       document.getElementById("playbar1").style.visibility = 'visible';
-       document.getElementById("outro1").style.display = 'none';
-       settingClose(1);
-       if (document.getElementById("video1").ended) {
-       
-        document.getElementById("loaded1").setAttribute("aria-valuenow",0);
-        document.getElementById("loaded1").setAttribute("aria-valuetext",0);
-        document.getElementById("loaded1").style.width = 0 + "%";
-        document.getElementById("played1").setAttribute("aria-valuenow",0);
-        document.getElementById("played1").setAttribute("aria-valuetext",0);
-        document.getElementById("played1").style.width = 0 + "%";
-
-        document.getElementById("pause12").classList.add('playover');
-        document.getElementById("pause12").classList.remove("fill");
-        document.getElementById("pause13").classList.add('playover');
-        document.getElementById("pause13").classList.remove("fill");
-        
-        $("#replay1").hide();
-        $("#parrot1").hide();
-        $("#play1").hide();
-        $("#pause11").show();
-        player1 = 1;
-        vidend1 = 0;
-
-        (document.getElementById("video1")).play();
-
-        } else if (document.getElementById("video1").paused) {
-
-        if (checkLoad(1)) {
-
-        document.getElementById("pause12").classList.add('playover');
-        document.getElementById("pause12").classList.remove("fill");
-        document.getElementById("pause13").classList.add('playover');
-        document.getElementById("pause13").classList.remove("fill");
-
-       	$("#replay1").hide();
-       	$("#parrot1").hide();
-        $("#play1").hide();
-        $("#pause11").show();
-        player1 = 1;
-        vidend1 = 0;
-  
-        (document.getElementById("video1")).play();
-
-        }
-
-        } else {
-
-        $("#replay1").hide();
-        $("#parrot1").show();
-        $("#play1").show();
-        $("#pause11").hide();
-        player1 = 1;
-        vidend1 = 0;       
- 
-        (document.getElementById("video1")).pause();
-       }
-        vidselect = 1;
-    break;
   }   
 }
 
@@ -1038,14 +800,6 @@ function justPause(id) {
          $("#play0").show();
          $("#pause01").hide();      
         (document.getElementById("video4")).pause();
-     break;
-
-     case 1:
-         $("#replay1").hide();
-         $("#parrot1").show();
-         $("#play1").show();
-         $("#pause11").hide();      
-        (document.getElementById("video1")).pause();
      break;
 
     }
@@ -1063,14 +817,6 @@ function justPlay(id) {
         $("#play0").hide();
         $("#pause01").show();
         (document.getElementById("video4")).play();
-     break;
-
-     case 1:
-        $("#replay1").hide();
-        $("#parrot1").show();
-        $("#play1").show();
-        $("#pause11").hide();
-        (document.getElementById("video1")).play();
      break;
 
     }
@@ -1110,37 +856,6 @@ function updateProgress() {
         } else {
             document.getElementById("replay-icon0").classList.remove('playover');
             document.getElementById("replay-icon0").classList.add("fill");
-        }
-   break;
-   
-   case 1:
-        if ((Math.floor((109 / document.getElementById("video1").duration) * document.getElementById("video1").currentTime)) < 101) {vload = Math.floor((109 / document.getElementById("video1").duration) * document.getElementById("video1").currentTime);} else {vload = 100;}
-        document.getElementById("loaded1").setAttribute("aria-valuenow",vload);
-        document.getElementById("loaded1").setAttribute("aria-valuetext",vload);
-        document.getElementById("loaded1").style.width = vload + "%";                                          
-        if ( document.getElementById("video1").currentTime > 0) { value = Math.floor((100 / document.getElementById("video1").duration) *   document.getElementById("video1").currentTime);}
-        document.getElementById("played1").setAttribute("aria-valuenow",value);
-        document.getElementById("played1").setAttribute("aria-valuetext",value);
-        document.getElementById("played1").style.width = value + "%";
-        player1 = 1;
-        if (Math.floor(document.getElementById("video1").currentTime) == Math.floor( document.getElementById("video1").duration)) { 
-           $("#parrot1").hide();
-           $("#pause11").hide();
-           $("#replay1").show();
-           $("#play1").hide();
-           vidend1 = 1;
-           document.getElementById("playbar1").style.visibility = 'hidden';
-           clearTimeout(vidleave);
-           document.getElementById("outro1").style.display = 'block';
-           document.getElementById("loaded1").style.width = "0%";
-           document.getElementById("played1").style.width = "0%";
-        }
-        if (playmouseon == 1){
-            document.getElementById("replay-icon1").classList.add('playover');
-            document.getElementById("replay-icon1").classList.remove("fill");
-        } else {
-            document.getElementById("replay-icon1").classList.remove('playover');
-            document.getElementById("replay-icon1").classList.add("fill");
         }
    break;
   }
@@ -1219,71 +934,7 @@ function updatePlayed() {
         } 
 
    break;
-   case 1:
-        var value = 0;
-        if ((document.getElementById("video1")).currentTime > 0) {
-        // video started * playing, remove any buffering * loading indicators
-	    // document.getElementById("vid1shade").classList.remove('vp-shade-visible');
-        // document.getElementById("vid1shade").classList.add('vp-shade-invisible');
-        document.getElementById("vid1spin").classList.remove('vp-spin-visible');
-        document.getElementById("vid1spin").classList.add('vp-spin-invisible');
 
-            value = Math.floor((100 / (document.getElementById("video1")).duration) * (document.getElementById("video1")).currentTime);}
-        
-        document.getElementById("played1").setAttribute("aria-valuenow",value);
-        document.getElementById("played1").setAttribute("aria-valuetext",value);
-        document.getElementById("played1").style.width = value + "%";
-
-        if ((Math.floor((109 / document.getElementById("video1").duration) * document.getElementById("video1").currentTime)) < 101) {vload = Math.floor((109 / document.getElementById("video1").duration) * document.getElementById("video1").currentTime);} else {vload = 100;}
-
-        document.getElementById("loaded1").setAttribute("aria-valuenow",vload);
-        document.getElementById("loaded1").setAttribute("aria-valuetext",vload);
-        document.getElementById("loaded1").style.width = vload + "%";
-        player1 = 1;
-
-        if ( (Math.floor(document.getElementById("video1").currentTime) ) == (Math.floor( document.getElementById("video1").duration)) ) {
-        
-           playoff++;
-           setTimeout(function(){ if(playoff > 3) {
-   
-           $("#parrot1").hide();
-           $("#pause11").hide();
-           $("#play1").hide();
-           $("#replay1").show();
-           vidend1 = 1;
-           
-           /* optional * display video link options */
-           // document.getElementById("playbar1").style.visibility = 'hidden';
-           // document.getElementById("outro1").style.display = 'block';
-           /* optional * display video link options */
-
-           //cntEnter(vidselect); // optional display controls on video end */
-
-           if (playmouseon == 1){
-             document.getElementById("replay-icon1").classList.add('playover');
-             document.getElementById("replay-icon1").classList.remove("fill");
-           } else {
-             document.getElementById("replay-icon1").classList.remove('playover');
-             document.getElementById("replay-icon1").classList.add("fill");
-           }
-
-           clearTimeout(vidleave);
-
-           playoff = 0;
-           }}, 100);
-        }
-      
-        clearTimeout(playoff); 
-
-        if (document.getElementById("video1").ended == true) { /* just to be sure :-) */
-        	$("#parrot1").hide();
-        	$("#pause11").hide();
-        	$("#play1").hide();
-        	$("#replay1").show();
-        	vidend1 = 1;
-        }
-
-   break;
   }
 }
 
@@ -1305,20 +956,6 @@ function settingClick(id) {
             setTimeout(function(){settingClose(id)}, 2000);
         }
    break;
-   case 1:
-        if((document.getElementById('setting1').getAttribute('aria-expanded')) == 'true'){     // close setting menu
-            document.getElementById("setting1").setAttribute("aria-expanded",'false');
-            document.getElementById("menu1").classList.add("vp-menu-invisible");
-            document.getElementById("menu1").classList.add("vp-menu-hidden");
-            document.getElementById("menu1").setAttribute("hidden",'');
-        } else {                  // open set menu
-            document.getElementById('setting1').setAttribute("aria-expanded",'true');
-            document.getElementById("menu1").classList.remove("vp-menu-invisible");
-            document.getElementById("menu1").classList.remove("vp-menu-hidden");
-            document.getElementById("menu1").removeAttribute("hidden");
-            setTimeout(function(){settingClose(id)}, 2000);
-        }
-   break;
 
  }
 }
@@ -1332,12 +969,6 @@ function settingClose(id) {
         document.getElementById("menu0").classList.add("vp-menu-invisible");
         document.getElementById("menu0").classList.add("vp-menu-hidden");
         document.getElementById("menu0").setAttribute("hidden",'');
-   break;
-   case 1:
-        document.getElementById("setting1").setAttribute("aria-expanded",'false');
-        document.getElementById("menu1").classList.add("vp-menu-invisible");
-        document.getElementById("menu1").classList.add("vp-menu-hidden");
-        document.getElementById("menu1").setAttribute("hidden",'');
    break;
    
  }
@@ -1356,10 +987,7 @@ function vidFull(id) {
         video = document.getElementById("video4");
         //video.webkitEnterFullScreen();        	
    break;
-   case 1:
-        video = document.getElementById("video1");
-        //video.webkitEnterFullScreen();
-   break;
+
  }
 
  if (navigator.userAgent.indexOf("iPhone") != -1) {
@@ -1429,7 +1057,8 @@ function loadVideo(vid4,src4) {
          	 document.getElementById("butshare0").innerHTML = percentComplete;
          	 document.getElementById("butshare0").style.backgroundColor = 'rgba(51,51,51,1)';
          }
-         	 if (requests[0].readyState == 4 && percentComplete == '100%') {
+         	 //if (requests[0].readyState == 4 && percentComplete == '100%') { // firefox bug !
+         	 if (percentComplete == '100%') {
                  //console.log(requests[0] + ' progress: done!');
                  document.getElementById("butshare0").innerHTML="<svg id='share0-icon' class='share-icon' viewBox='0 0 20 20' preserveAspectRatio='xMidYMid' tabindex='-1'><polygon id='sparrow0' class='fill' points='20,0 0,12 5,15 17,4 7,16 7,19 9,17 14,20'></polygon></svg>"
                  setTimeout(function(){document.getElementById("playbar0").style.opacity = '0';}, 60); 
@@ -1457,7 +1086,6 @@ function roundUp(num, precision) {
 window.onload = function(){
 
   loadVideo("luck.mp4","src4");
-
   loadOK();
 
   setTimeout(function(){
@@ -1472,12 +1100,7 @@ window.onload = function(){
 function loadOK() {
   document.getElementById("ktopd").style.color = "#ff0000";
   document.getElementById("ktopm").style.color = "#ff0000";
-  setTimeout(function(){
-  document.getElementById("butshare0").innerHTML="<svg id='share0-icon' class='share-icon' viewBox='0 0 20 20' preserveAspectRatio='xMidYMid' tabindex='-1'><polygon id='sparrow0' class='fill' points='20,0 0,12 5,15 17,4 7,16 7,19 9,17 14,20'></polygon></svg>";
-  document.getElementById("butshare0").style.pointerEvents = "auto"; 
-  document.getElementById("player0").style.pointerEvents = "auto";
-  document.getElementById("butshare0").style.backgroundColor = ''; 
-  }, 1000);
+
   setTimeout(function(){
   document.getElementById("ktopd").style.color = "#000000";
   document.getElementById("ktopm").style.color = "#000000";
