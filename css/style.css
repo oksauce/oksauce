@@ -725,15 +725,32 @@ hr {
   content: " ";
   display: table;
 }
+
 .w-nav:after {
   clear: both;
 }
+
 .w-nav-brand {
   position: relative;
   float: left;
   text-decoration: none;
   color: black;
 }
+
+.w-nav-brand-bottom {
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.space-out-top {
+  padding-left: 0.2rem;
+}
+
+.space-out-bottom {
+  padding-left: 0.1rem;
+}
+
 .w-nav-link {
   position: relative;
   display: inline-block;
