@@ -983,12 +983,7 @@ button button.small .text {
 .mobile-footer {
   display: none;
   /*padding: 2rem 4rem;*/
-  /*padding: 2rem 2rem;*/
-
-  padding-top: 2rem;
-  padding-left: 1.8rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 2rem;
 
   background-color: #ececec;
   /*background-color: rgba(196,196,196,0.40);*/
@@ -1262,7 +1257,7 @@ button button.small .text {
   }
   .mobile-footer {
     padding-right: 2.5rem;
-    padding-left: 2.5rem;
+    padding-left: 2.3rem;
   }
   .mobile-footer.biblio-footer {
     padding-right: 2.5rem;
