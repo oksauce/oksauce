@@ -511,6 +511,13 @@ pre {
   /*border-right: 1px solid rgba(213,213,213,0.5);*/
 }
 
+.site-logo-footer {
+  position: static;
+  width: 90px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
 .site-logo {
   position: static;
   width: 90px;
@@ -689,6 +696,7 @@ hr {
 
 .link-list {
   padding-left: 0px;
+  padding-right: 0px;
 }
 
 .list-link {
@@ -703,7 +711,7 @@ hr {
 
 .float-right {
   float:right;
-  margin-top: -34.5px;
+  margin-top: -37px;
 }
 
 .link-list-item-2 {
@@ -736,6 +744,15 @@ hr {
   text-decoration: none;
   color: black;
 }
+
+.w-nav-brand-right {
+  position: relative;
+  float: left;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
 
 .w-nav-brand-bottom {
   position: relative;
