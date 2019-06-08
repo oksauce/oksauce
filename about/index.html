@@ -433,8 +433,10 @@ function shareClickoff(id) {
 
 function shareOver(id) {
 
- switch(id) {
-  
+ if (preload0 == 1) {
+
+  switch(id) {
+
     case 0:
        document.getElementById("share0").classList.remove('visible');
        document.getElementById("share0").classList.add("invisible");
@@ -445,9 +447,12 @@ function shareOver(id) {
     break;
  
   }
+ }
 }
 
 function shareOut(id) {
+
+ if (preload0 == 1) {
 
  switch(id) {
   
@@ -461,6 +466,7 @@ function shareOut(id) {
     break;
 
   }
+ }
 }
 
 function cntEnter(id) {
