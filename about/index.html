@@ -1431,7 +1431,7 @@ function loadVideo(vid4,src4) {
          }
          	 if (requests[0].readyState == 4 && percentComplete == '100%') {
                  //console.log(requests[0] + ' progress: done!');
-                 setTimeout(function(){document.getElementById("butshare0").innerHTML="<svg id='share0-icon' class='share-icon' viewBox='0 0 20 20' preserveAspectRatio='xMidYMid' tabindex='-1'><polygon id='sparrow0' class='fill' points='20,0 0,12 5,15 17,4 7,16 7,19 9,17 14,20'></polygon></svg>"}, 30);
+                 document.getElementById("butshare0").innerHTML="<svg id='share0-icon' class='share-icon' viewBox='0 0 20 20' preserveAspectRatio='xMidYMid' tabindex='-1'><polygon id='sparrow0' class='fill' points='20,0 0,12 5,15 17,4 7,16 7,19 9,17 14,20'></polygon></svg>"
 
                  setTimeout(function(){document.getElementById("playbar0").style.opacity = '0';}, 60); 
                  setTimeout(function(){document.getElementById("playpause0").style.opacity = '0';
