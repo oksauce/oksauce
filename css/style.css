@@ -711,7 +711,7 @@ hr {
 
 .float-right {
   float:right;
-  margin-top: -37px;
+  margin-top: -36px;
 }
 
 .link-list-item-2 {
@@ -983,7 +983,13 @@ button button.small .text {
 .mobile-footer {
   display: none;
   /*padding: 2rem 4rem;*/
-  padding: 2rem 2rem;
+  /*padding: 2rem 2rem;*/
+
+  padding-top: 2rem;
+  padding-left: 1.8rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+
   background-color: #ececec;
   /*background-color: rgba(196,196,196,0.40);*/
   border-top: 1px solid rgba(176,176,176,0.1);
