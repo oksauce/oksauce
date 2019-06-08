@@ -1409,7 +1409,6 @@ function loadVideo(vid4,src4) {
     requests[i].onload = function() {
         requests[i] = new Blob([requests[i].target], {type: "video/mp4"});
         document.getElementById(srdex[i]).src = URL.createObjectURL(requests[i]);
-        document.getElementById(srdex[i]).src = webkitURL.createObjectURL(requests[i]);
  }
 
     requests[i].onprogress = function(event) {
