@@ -6210,7 +6210,8 @@ video.player.site-load {
 .pause-icon:hover {background: transparent;}
 /*.playover {fill: #fff;}*/
 .play-icon .playover {fill: #fff;}
-.share-button:hover {background: rgba(23, 35, 34, .75);}
+/*.share-button:hover {background: rgba(23, 35, 34, .75);}*/
+.share-button:hover {background: rgba(255,0,0,1);}
 }
 
 @media (max-width: 599px) and (orientation: portrait) {
@@ -6221,8 +6222,8 @@ video.player.site-load {
 .pause-icon:hover {background: transparent;}
 /*.playover {fill: #fff;}*/
 .play-icon .playover {fill: #fff;}
-.share-button:hover {background: rgba(23, 35, 34, .75);}
-
+/*.share-button:hover {background: rgba(23, 35, 34, .75);}*/
+.share-button:hover {background: rgba(255,0,0,1);}
 }
 
 /* end * added * see mods above */
