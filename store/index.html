@@ -22,6 +22,9 @@
 <!-- <script type="text/javascript" src="/js/index.js"></script> -->
 
 <script>
+
+var donate = 0;
+
 $(document).ready(function(){
   $(".site-content").fitVids();
   //***cuePoint(0);
@@ -253,7 +256,7 @@ title="share via email" role="button" aria-label="share via email">
 
 <p>> sauce software v1.0.1 includes a host of updates, including freeing up your WIFI or wired network from excessive sync traffic while respecting your privacy, the b2 no longer requires an internet connection to play your stored music</p>
 
-if you wish to <a href="https://en.wikipedia.org/wiki/donationware">donate</a> donation is via <a href="https://www.paypal.com/paypalme2/oksauce" style="color:blue" target="_blank">Paypal Me</a></p>
+if you wish to <a href="https://en.wikipedia.org/wiki/donationware">donate</a> donation is via <a href="https://www.paypal.com/paypalme2/oksauce" style="color:blue" target="_blank" onclick="donate=1">Paypal Me</a></p>
 
 <p>update brennan b2, copy b2.tar.gz to usb stick, on brennan b2, select upgrade via USB, if you decide you don't like this upgrade, use brennan b2 web upgrade and restore previous version</p>
 
@@ -263,11 +266,11 @@ if you wish to <a href="https://en.wikipedia.org/wiki/donationware">donate</a> d
 
 <div class="product-buttons">
 
-<button onclick="window.open('https://www.paypal.com/paypalme2/oksauce','_blank')" class="button small red">
+<button onclick="window.open('https://www.paypal.com/paypalme2/oksauce','_blank');donate=1;console.log('clicked donate')" class="button small red">
 <span class="text">donate</span>
 </button>
 
-<button onclick="location.href='/store'" class="button small black">
+<button onclick="location.href='/download/?thankyou=' + donate;" class="button small black">
 <span class="text">download</span>
 </button>
 
