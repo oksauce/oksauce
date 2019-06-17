@@ -249,6 +249,22 @@ pre {
   text-decoration: none;
 }
 
+.ui-link-red {
+  display: inline-block;
+  /* margin-right: 2rem; */
+  margin-right: 0.4rem;
+  padding-bottom: 2px;
+
+  margin-bottom: 12px;
+  /*font-size: 11.8px;*/
+
+  border-bottom: 1px solid #e0e0e0;
+  /*border-bottom: 1px solid rgba(255,255,255,1);*/
+  color: #ff0000 !important;
+  /*color: black;*/
+  text-decoration: none;
+}
+
 .site-content .ui-order {
   display: inline-block;
 }
@@ -269,6 +285,12 @@ pre {
 
 .ui-link:hover {
   color:red;
+  /*color: #3061ec;*/
+  /*border-bottom: 1px solid #2b57d4;*/
+}
+
+.ui-link-red:hover {
+  color: black !important;
   /*color: #3061ec;*/
   /*border-bottom: 1px solid #2b57d4;*/
 }
@@ -768,6 +790,18 @@ hr {
   padding-left: 0.1rem;
 }
 
+.space-the-final-frontier {
+  margin: 10px 0;
+}
+
+p .youtube-red {
+ color: #ff0000;
+}
+
+p .fade-to-grey {
+ color: #808080;
+}
+
 .w-nav-link {
   position: relative;
   display: inline-block;
@@ -856,13 +890,20 @@ button button.small .text {
     text-shadow: 0 1px 0 rgba(0,0,0,.6);
 }
 
+.button button.red.small {
+    background-position: 0 -245px;
+}
+.button button.red {
+    text-shadow: 0 1px 0 rgba(0,0,0,.6);
+}
+
 .button button {
     font-weight: 500 !important;
 }
 
 .button {
     max-height: 2rem;
-    padding-top: 0;
+    /*padding-top: 0;*/
     cursor: pointer;
     *overflow: visible;
     -webkit-user-select: none;
@@ -875,7 +916,7 @@ button button.small .text {
     font-weight: 600;
     color: #fff;
     min-width: 100px;
-    background-color: #333333;
+ 
     background-repeat: no-repeat;
     -webkit-appearance: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -885,7 +926,23 @@ button button.small .text {
     display:inline-block; 
 }
 
-.button:hover {background-color: #ff0000;}
+.button.small.red {
+   background-color: #ff0000;
+}
+
+.button.small.red:hover {
+   background-color: #000000;
+}
+
+.button.small.black {
+   background-color: #000000;
+}
+
+.button.small.black:hover {
+   background-color: #ff0000;
+}
+
+.button:hover {background-color: #000000;}
 
 .leftpad {padding-left:0.4rem;}
 
