@@ -22,14 +22,12 @@
 <!-- <script type="text/javascript" src="/js/index.js"></script> -->
 
 <script>
-
-var donate = 0;
-
 $(document).ready(function(){
   $(".site-content").fitVids();
   //***cuePoint(0);
   cleanURL();
 });
+  var donate = 0;
 </script>
 
 </head>
@@ -252,17 +250,24 @@ title="share via email" role="button" aria-label="share via email">
 <li>zero b2 player upload conflicts</li>
 <li>multiple devices access b2 zero sync network traffic</li>
 <li>mobile or laptop, sync only when using device</li>
+<li><a href="/moreapp/" class="ui-text" target="_blank">more information ...</a></li>
 </ul>
 
 <p>> sauce software v1.0.1 includes a host of updates, including freeing up your WIFI or wired network from excessive sync traffic while respecting your privacy, the b2 no longer requires an internet connection to play your stored music</p>
 
-if you wish to <a href="https://en.wikipedia.org/wiki/donationware">donate</a> donation is via <a href="https://www.paypal.com/paypalme2/oksauce" style="color:blue" target="_blank" onclick="donate=1">Paypal Me</a></p>
+<p>if you wish to <a href="https://en.wikipedia.org/wiki/donationware">donate</a> donation is via <a href="https://www.paypal.com/paypalme2/oksauce" style="color:blue" target="_blank" onclick="donate=1">Paypal Me</a></p>
 
 <p>update brennan b2, copy b2.tar.gz to usb stick, on brennan b2, select upgrade via USB, if you decide you don't like this upgrade, use brennan b2 web upgrade and restore previous version</p>
 
 <p>if you like the upgrade, or want to request potential updates, please let me know</p>
 
-<span class="short-order">donations fund future development</span>
+<p>
+<a href="/moreapp/" class="ui-text ui-link-red">upgrade information</a>
+<a href="/terms/" class="tc100 ui-text ui-link-red">terms & conditions</a>
+<a href="/terms/" class="tc50 ui-text ui-link-red">terms</a>
+</p>
+
+<div class="short-order">> donations fund future development</div>
 
 <div class="product-buttons">
 
@@ -270,14 +275,11 @@ if you wish to <a href="https://en.wikipedia.org/wiki/donationware">donate</a> d
 <span class="text">donate</span>
 </button>
 
-<button onclick="location.href='/download/?state=' + donate;" class="button small black">
-<span class="text">download</span>
-</button>
-
 <span class="leftpad"></span>
 
-<div class="tc100"><a href="/terms/" class="tc100 ui-text ui-link">terms & conditions</a></div>
-<div class="tc50"><a href="/terms/" class="tc50 ui-text ui-link">terms</a></div>
+<button onclick="window.open('/download/?state=' + donate +'','_blank');" class="button small black">
+<span class="text">download</span>
+</button>
 
 </div>
 
@@ -1408,6 +1410,7 @@ function loadOK(cIDload1) {
 function cleanURL() {
  // clean URL back from social url shares, see https://stackoverflow.com/
  // questions/22753052/remove-url-parameters-without-refreshing-page
+
   if ((location.hash.replace('#','')) != '') {
        location.hash = '';
        window.history.replaceState(null, null, window.location.pathname);
