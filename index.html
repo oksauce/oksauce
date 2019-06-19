@@ -150,16 +150,16 @@ web app for <b>mobile</b> & <b>desktop</b> recoded, javascript updated, with fun
 <p>update brennan b2, copy b2.tar.gz to usb stick, on brennan b2 select upgrade via USB</p>
 
 <p>
-<a href="/moreapp/" class="ui-text ui-link-red">upgrade information</a>
+<a href="/moreapp/" class="ui-text ui-link-red">information</a>
 <a href="/terms/" class="tc100 ui-text ui-link-red">terms & conditions</a>
 <a href="/terms/" class="tc50 ui-text ui-link-red">terms</a>
 </p>
 
-<div class="short-order">> donations fund future development</div>
+<div class="short-order">> donate to fund future updates</div>
 
 <div class="product-buttons">
 
-<button onclick="window.open('/download/?state=' + donate +'','_blank');" class="button small black">
+<button onclick="window.open('/download/?state=' + donate +'','_blank');" id="downbutton" class="button small black">
 <span class="text">download</span>
 </button>
 
@@ -294,7 +294,6 @@ function onPlayerReady(event) {
 
 </script>
 
-
 <script type="text/javascript">
 
 window.onload = function() {
@@ -331,8 +330,8 @@ function loadOK(cIDload1) {
 }
 
 function cleanURL() {
- // clean URL back from social url shares, see https://stackoverflow.com/
- // questions/22753052/remove-url-parameters-without-refreshing-page
+  // clean URL back from social url shares, see https://stackoverflow.com/
+  // questions/22753052/remove-url-parameters-without-refreshing-page
 
   if ((location.hash.replace('#','')) != '') {
       location.hash = '';
