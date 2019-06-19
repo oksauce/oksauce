@@ -23,10 +23,9 @@
 
 <script>
 $(document).ready(function(){
-
   cleanURL();
-
 });
+  var donate = 0;
 </script>
 
 </head>
@@ -74,7 +73,7 @@ $(document).ready(function(){
 </div>
 <div class="col-links">
 
-<a href="/store" class="ui-text ui-link">store</a>
+<a href="/store" class="ui-text ui-link ui-link-mm">store</a>
 <a href="/biblio" class="ui-text ui-link ui-link-mm">biblio</a>
 <a href="/about" class="ui-text ui-link ui-link-mm">about</a>
 
@@ -115,18 +114,17 @@ $(document).ready(function(){
 <div id="player0" onmouseover="cntEnter(0)" onmouseenter="cntEnter(0)" onmouseleave="cntLeave(0)" class="player player-0 js-player-fullscreen with-fullscreen with-sticky-custom-logo player-sm player-cardsCorner">
 -->
 
-<div id="player0" class="player vp-video-wrapper vp-preview-cover">
+<div id="player1" class="player vp-video-wrapper vp-preview-cover">
 
 <div class="vp-video">
 
 <div class="vp-preview vp-preview-cover"></div>
 
-<div id="desktop-demo" class="vp-telecine vp-telecine-cover" value="desktop-demo">
+<div id="desktop" class="video-1-wrapper vp-telecine vp-telecine-cover" value="desktop">
 
-<div id="vid3"></div>
+<div id="vid1"></div>
 
-<div id="vidcover3" class="player" style="padding-top:56.25%"></div>
-
+<div id="vidcover1" class="player" style="padding-top:56.25%"></div>
 
 </div>
 </div>
@@ -136,8 +134,13 @@ $(document).ready(function(){
 
 <div class="col-container-text">
 <h1 class="f1-title">brennan b2 app</h1>
-<h4>desktop demo</h4>
-mobile & laptop recoded, with event driven b2 sync, viewed using the laptop web app chrome developer tools ...</p>
+<h4>desktop recoded | mobile recoded</h4>
+
+desktop b2 software update app release, responsive design fully updated, decluttered desktop design, with youtube view optional and default mobile view, additional treble & bass controls added to desktop mobile view, again, network polling has been removed & replaced with event driven polling which is more like a wave saying hello to the B2 when you access the web app desktop or mobile client, leaving the b2 to get on with playing music, radio or uploading files without the problems associated with network polling frequency, additionally the b2 app no longer requires an internet connection, release includes many changes, new javascript functions and style updates</p>
+
+<p>software v1.0.1 update includes; recoded mobile web app, recoded desktop web app and new javascript bundled in the same zip format b2.tar.gz</p>
+
+<p>update brennan b2, copy b2.tar.gz to usb stick, on brennan b2 select upgrade via USB</p>
 
 <h4>b2 update why?</h4>
 
@@ -161,51 +164,29 @@ software v1.0.1 release includes many changes, new and modified javascript, perf
 
 <h4>b2 update how?</h4>
 
-> sauce software v 1.0.1 download is offered for free, future updates are supported by donations, if you donate, and want to be informed of future updates, please send an <a href="mailto:&#111;&#107;&#115;&#097;&#117;&#99;&#121;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;?subject=information@oksauce%2Ecom" class="ui-text ui-link-red">email</a></p>
+> sauce software v 1.0.1 download is offered for free, future updates are supported by donations</p>
 
-<!--
-<ul class="detail-list">
-<li>recommended watch full screen</li>
-</ul>
--->
 
-<p><a href="/biblio/" class="ui-text ui-link-red">upgrade information</a></p>
+<p>
+<a href="/moreapp/" class="ui-text ui-link-red">upgrade information</a>
+<a href="/terms/" class="tc100 ui-text ui-link-red">terms & conditions</a>
+<a href="/terms/" class="tc50 ui-text ui-link-red">terms</a>
+</p>
 
-<span class="short-order">donations fund future development</span>
+<div class="short-order">> donations fund future development</div>
 
 <div class="product-buttons">
 
-<button onclick="location.href='/store'" class="button small red">
+<button onclick="window.open('/download/?state=' + donate +'','_blank');" class="button small black">
 <span class="text">download</span>
 </button>
 
 <span class="leftpad"></span>
 
-<!--
-<span><a href="mailto:&#111;&#107;&#115;&#097;&#117;&#99;&#121;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;?subject=information@oksauce%2Ecom" class="ui-text ui-link">contact</a></span>
--->
+<button onclick="window.open('https://www.paypal.com/paypalme2/oksauce','_blank');donate=1;console.log('clicked donate')" class="button small red">
+<span class="text">donate</span>
+</button>
 
-<div class="in100"><a href="/moreapp/" class="ui-text ui-link">more info</a></div>
-<div class="in50"><a href="/moreapp/" class="in50 ui-text ui-link">info</a></div>
-<div class="tc100"><a href="/terms/" class="tc100 ui-text ui-link">terms & conditions</a></div>
-<div class="tc50"><a href="/terms/" class="tc50 ui-text ui-link">terms</a></div>
-
-<div class="ui-order">
-<!--
-<a class="ui-text ui-order-link"href="mailto:&#106;&#117;&#108;&#097;&#121;&#110;&#116;&#111;&#109;&#097;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;?subject=please%20send%20me%20the%20price%20of%20luck%20and%20purchase%20details%20@julayn%2Ecom&body=thank%20you">$ on application</a>
--->
-</div>
-
-<!-- <div class="ui-order" style="max-width: 280px;"><a href="luck/index.html" class="ui-text ui-order-link">Order</a></div> -->
-
-</div>
-</div>
-
-
-<!-- <a href="moment/index.html" class="ui-text ui-link ui-link-underline">More Info</a> -->
-<!-- <div class="ui-order" style="max-width: 280px;"><a href="moment/index.html" class="ui-text ui-order-link">Order</a></div> -->
-
-</div>
 </div>
 
 <!-- web site ends :-( -->
@@ -249,8 +230,8 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var vidID = ['lTyfOkq9ii0']
-var playID = ['vid3']
+var vidID = ['6TdyQtVI9fE']
+var playID = ['vid1']
 
 var player, cID; cIDload3 = 0;
 
@@ -287,10 +268,10 @@ function onPlayerReady(event) {
        
        switch ( $(event.target.a).attr("id") ) {
        		
-       		case 'vid3':
+       		case 'vid1':
        			  cIDload3++
        		      if (cIDload3 == 2) {
-       		         console.log('video 3 loaded');
+       		         console.log('video 1 loaded');
        		         $('#mobile').css('background','url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR4nGNgAAIAAAUAAXpeqz8=)');
        		      }
        		break;
@@ -326,9 +307,9 @@ function onPlayerReady(event) {
 
 window.onload = function() {
 
-setTimeout(function(){$('#vid3').fadeTo(1000, 1);}, 500);
+setTimeout(function(){$('#vid1').fadeTo(1000, 1);}, 500);
 
-$('#vidcover3').hide();
+$('#vidcover1').hide();
 
 $('.site-preload' ).css('pointer-events', 'auto' );
 $(".site-content").fitVids({ customSelector: "iframe[src^='https://youtube.com']"});
