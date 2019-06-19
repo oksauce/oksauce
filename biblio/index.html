@@ -25,6 +25,7 @@ $(document).ready(function(){
   $(".site-content").fitVids();
   cleanURL();
 });
+  var donate = 0;
 </script>
 
 </head>
@@ -80,15 +81,11 @@ $(document).ready(function(){
 
 <h4 id="b2app"><a href="/#b2app" class="ui-link-biblio-underline">b2 app</a></h4>
 
-<p>
-
-brennan b2 is a fantastic piece of kit, with great software support, however, on a busy family network, static polling every half a second, seemed to frequently get in the way of uploadng music & sometimes listening to the radio, the client software also requires an internet connection
-
-<p>
+<p>brennan b2 is a fantastic piece of kit, with great software support, however, on a busy family network, static polling every half a second, seemed to frequently get in the way of uploadng music & sometimes listening to the radio, the client software also requires an internet connection</p>
 
 <span class="youtube-red">> sauce software upgrades your brennan b2 with :</span>
 
-<ul>
+<ul style="margin-bottom:0px;">
 <li class="space-the-final-frontier">new and modified javascript</li>
 <li class="space-the-final-frontier">performance & style updates</li>
 <li class="space-the-final-frontier">freed up WIFI or wired network
@@ -105,6 +102,7 @@ brennan b2 is a fantastic piece of kit, with great software support, however, on
 <li class="space-the-final-frontier">multiple devices access b2 server
 <br>without sync network traffic overhead</li>
 <li class="space-the-final-frontier">improved performance & user experience</li>
+<li><a href="/moreapp/" class="ui-link-red" target="_blank">more information ...</a></li>
 </ul>
 
 brennan b2 music player is based on open source hardware with application software distributed via brennan.co.uk providing advice for b2 users to customise [ upgrade ] hardware & software, and use any version of brennan b2 software available from brennan.co.uk or and from the open source community, available here : 
@@ -121,27 +119,29 @@ brennan b2 recoded > sauce software, implements * lazy event driven sync, update
 
 <p><span class="fade-to-grey">* lazy master slave relationship, between all brennan b2 network client devices, slave can become master, master can become slave, for maximum usability</span>
 
-<p><a href="/moreapp/" class="ui-text ui-link-red">upgrade information</a></p>
+<p>
+<a href="/moreapp/" class="ui-text ui-link-red">upgrade information</a>
+<a href="/terms/" class="tc100 ui-text ui-link-red">terms & conditions</a>
+<a href="/terms/" class="tc50 ui-text ui-link-red">terms</a>
+</p>
 
-<span class="short-order">donations fund future development</span>
+<div class="short-order">> donations fund future development</div>
+
 <div class="product-buttons">
 
-<button onclick="location.href='/store'" class="button small red">
-<span class="text">download</span>
+<button onclick="window.open('https://www.paypal.com/paypalme2/oksauce','_blank');donate=1;console.log('clicked donate')" class="button small red">
+<span class="text">donate</span>
 </button>
 
 <span class="leftpad"></span>
 
-<!--
-<span><a href="mailto:&#111;&#107;&#115;&#097;&#117;&#99;&#121;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;?subject=information@oksauce%2Ecom" class="ui-text ui-link">contact</a></span>
--->
+<button onclick="window.open('/download/?state=' + donate +'','_blank');" class="button small black">
+<span class="text">download</span>
+</button>
 
-<div class="in100"><a href="/moreapp/" class="ui-text ui-link">more info</a></div>
-<div class="in50"><a href="/moreapp/" class="in50 ui-text ui-link">info</a></div>
-<div class="tc100"><a href="/terms/" class="tc100 ui-text ui-link">terms & conditions</a></div>
-<div class="tc50"><a href="/terms/" class="tc50 ui-text ui-link">terms</a></div>
+</div>
 
-<div class="ui-order">
+<!-- web site ends :-( -->
 
 </div>
 </div>
