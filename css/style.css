@@ -814,7 +814,8 @@ hr {
   margin: 10px 0;
 }
 
-p .youtube-red {
+.youtube-red {
+ margin-top: 12px;
  color: #ff0000;
 }
 
