@@ -147,13 +147,38 @@ $(document).ready(function(){
 
 <script type="text/javascript">
 
-/*setTimeout(function(){ document.getElementById('b2update').click(); }, 3000);*/
+// https://gist.github.com/hullen/7326597
+window.mobileCheck = {
+
+  ios: (function(){
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  }()),
+  android: (function(){
+    return navigator.userAgent.match(/Android/i);
+  }()),
+  blackBerry: (function(){
+    return navigator.userAgent.match(/BB10|Tablet|Mobile/i);
+  }()),
+  windows: (function(){
+    return navigator.userAgent.match(/IEMobile/i);
+  }()),
+  smartphone: (function(){
+    return (window.innerWidth <= 384 && window.innerHeight <= 640);
+  }()),
+  tablet: (function(){
+    return (navigator.userAgent.match(/Tablet|iPad|iPod/i) && window.innerWidth <= 1280 && window.innerHeight <= 800);
+  }()),
+  all: (function(){
+    return navigator.userAgent.match(/Android|BlackBerry|Tablet|Mobile|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
+  }())
+
+};
 
 var downloadButton = document.getElementById("down");
 var counter = 9;
 var msgElement = document.getElementById("downmsg");
-
 var newElement = document.getElementById("download");
+
 newElement.innerHTML = "<a id='b2update' class='button' href='samp/htmldoc.html' style='color: white !important;''>9 seconds</a>";
 
 var id;
@@ -162,21 +187,35 @@ id = setInterval(function() {
     counter--;
     if(counter < 0) {
         clearInterval(id);
-
-        newElement.innerHTML = "<a id='b2update' class='button' href='samp/htmldoc.html' download='sample-file.html' style='color: white !important; width:30px;''>download</a>";
-        
-        msgElement.innerHTML = "File ready for download ... ";
-
-        document.getElementById('b2update').click();
+     
+        if ( mobileCheck.all ) {
+            msgElement.innerHTML = "File download on laptop only ... ";
+            newElement.innerHTML = "<a id='b2update' class='button' style='color: white !important; width:30px;''>download</a>";
+            document.getElementById("download").classList.remove('red');
+            document.getElementById("download").classList.add('grey');
+        } else {
+            msgElement.innerHTML = "File ready for download ... ";
+            newElement.innerHTML = "<a id='b2update' class='button' href='samp/htmldoc.html' download='sample-file.html' style='color: white !important; width:30px;''>download</a>";
+            document.getElementById('b2update').click();
+        }
 
     } else {
         
         newElement.innerHTML = "<a id='b2update' class='button' style='color: white !important; width:30px;''>" + counter.toString() + " seconds</a>";
-
         msgElement.innerHTML = "File ready for download in " + counter.toString() + " seconds";
     }
 }, 1000);
 
+function loadOK(cIDload1) {
+  document.getElementById("ktopd").style.color = "#ff0000";
+  document.getElementById("ktopm").style.color = "#ff0000";
+  setTimeout(function(){console.clear();
+  }, 1000);
+  setTimeout(function(){
+  document.getElementById("ktopd").style.color = "#000000";
+  document.getElementById("ktopm").style.color = "#000000";
+  }, 6000);
+}
 
 function cleanURL() {
  // clean URL back from social url shares, see https://stackoverflow.com/
@@ -195,9 +234,11 @@ function cleanURL() {
      document.getElementById("helpnow").style.display = "none";
      document.getElementById("helplater").style.display = "block";
  }
-
- // console.log(queryString);
-
+   // if mobile download button disabled
+  if ( mobileCheck.all ) { 
+     document.getElementById("downbutton").classList.remove('black');
+     document.getElementById("downbutton").classList.add('grey');
+  }
 }
 
 </script>
