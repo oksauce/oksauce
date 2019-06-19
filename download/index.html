@@ -80,7 +80,7 @@ $(document).ready(function(){
 
 <h4 id="b2app"><a href="/#b2app" class="ui-link-biblio-underline">b2 app</a></h4>
 
-<p id="downmsg">File ready for download in 9 seconds</p>
+<p id="downmsg" style="color:#ff0000;">File download in 9 seconds</p>
 
 <div id="helpnow" style="display:none;">
 <p>thank you for your donation</p>
@@ -194,7 +194,7 @@ id = setInterval(function() {
             document.getElementById("download").classList.remove('red');
             document.getElementById("download").classList.add('grey');
         } else {
-            msgElement.innerHTML = "File ready for download ... ";
+            msgElement.innerHTML = "File download ready ... ";
             newElement.innerHTML = "<a id='b2update' class='button' href='samp/htmldoc.html' download='sample-file.html' style='color: white !important; width:30px;''>download</a>";
             document.getElementById('b2update').click();
         }
