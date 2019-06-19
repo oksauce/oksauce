@@ -219,9 +219,13 @@ pre {
 /* UI Text */
 
 .ui-text {
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   /*text-transform: uppercase;*/
   font-weight: 400;
+}
+
+.ui-text-red {
+   color: #ff0000 !important;
 }
 
 .ui-text-last {
@@ -955,6 +959,10 @@ button button.small .text {
 
 .button.small.red:hover {
    background-color: #000000;
+}
+
+.button.small.grey {
+  background-color: #b3b3b3;
 }
 
 .button.small.black {
