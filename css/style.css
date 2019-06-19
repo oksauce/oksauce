@@ -144,6 +144,11 @@ pre {
   margin-left: 30px;
 }
 
+.biblio-list {
+  margin-left: 0px !important;
+  margin-bottom: 0px;
+}
+
 .page-content{
   min-height: 80vh;
   overflow-wrap: normal !important;
@@ -654,7 +659,7 @@ pre {
   display: none;
 }
 
-ul {padding-inline-start: 2.5rem;}
+ul {padding-inline-start: 1rem;}
 ol {padding-inline-start: 2.5rem;}
 
 
