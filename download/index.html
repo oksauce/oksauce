@@ -89,7 +89,8 @@ $(document).ready(function(){
 </div>
 
 <div id="helplater" style="display:block;">
-<p>try out this b2 sauce update, if you like it let me know</p>
+<p>please try out this b2 sauce update</p>
+<p>if you like it let me know</p>
 <p>every donation helps pay for future updates ...</p>
 </div>
 
@@ -103,17 +104,23 @@ $(document).ready(function(){
 
 <div class="product-buttons">
 
-<button id="download" class="button small red" style="padding-left:0;padding-right:0;">
-
-</button>
-
-<span class="leftpad"></span>
-
 <button onclick="window.open('https://www.paypal.com/paypalme2/oksauce','_blank');donate=1;console.log('clicked donate')" class="button small black">
 <span class="text">donate</span>
 </button>
 
+<span class="leftpad"></span>
+
+<button id="download" class="button small red">
+<span class="text">download</span>
+</button>
+
 </div>
+
+<!-- web site ends :-( -->
+
+</div>
+</div>
+
 </div><!--.site-content-->
 </div><!--.f-grid-->
 
@@ -179,7 +186,7 @@ var counter = 9;
 var msgElement = document.getElementById("downmsg");
 var newElement = document.getElementById("download");
 
-newElement.innerHTML = "<a id='b2update' class='button' href='samp/htmldoc.html' style='color: white !important;''>9 seconds</a>";
+newElement.innerHTML = "<a id='b2update' href='samp/htmldoc.html' style='color: white !important;''>9 seconds</a>";
 
 var id;
 
@@ -190,18 +197,18 @@ id = setInterval(function() {
      
         if ( mobileCheck.all ) {
             msgElement.innerHTML = "File download on laptop only ... ";
-            newElement.innerHTML = "<a id='b2update' class='button' style='color: white !important; width:30px;''>download</a>";
+            newElement.innerHTML = "<a id='b2update' style='color: white !important; width:30px;''>download</a>";
             document.getElementById("download").classList.remove('red');
             document.getElementById("download").classList.add('grey');
         } else {
             msgElement.innerHTML = "File download ready ... ";
-            newElement.innerHTML = "<a id='b2update' class='button' href='samp/htmldoc.html' download='sample-file.html' style='color: white !important; width:30px;''>download</a>";
+            newElement.innerHTML = "<a id='b2update' href='samp/htmldoc.html' download='sample-file.html' style='color: white !important; width:30px;''>download</a>";
             document.getElementById('b2update').click();
         }
 
     } else {
         
-        newElement.innerHTML = "<a id='b2update' class='button' style='color: white !important; width:30px;''>" + counter.toString() + " seconds</a>";
+        newElement.innerHTML = "<a id='b2update' style='color: white !important; width:30px;''>" + counter.toString() + " seconds</a>";
         msgElement.innerHTML = "File download in " + counter.toString() + " seconds";
     }
 }, 1000);
