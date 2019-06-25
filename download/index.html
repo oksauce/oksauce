@@ -127,7 +127,6 @@ $(document).ready(function(){
 <div class="mobile-footer biblio-footer">
 <div class="center-wrapper">
 <ul class="link-list">
-
 <li class="link-list-item">
 
 <span class="ui-text-last-at"><a href="mailto:&#111;&#107;&#115;&#097;&#117;&#99;&#121;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;?subject=information@oksauce%2Ecom" class="ui-text-last">@</a></span><a href="https://twitter.com/intent/user?screen_name=oksaucy" target="_blank" alt="follow oksaucy"  class="site-logo-footer w-nav-brand-bottom w--current"><span class="space-out-bottom"></span>sauce</a>
@@ -186,7 +185,7 @@ var counter = 9;
 var msgElement = document.getElementById("downmsg");
 var newElement = document.getElementById("download");
 
-newElement.innerHTML = "<a id='b2update' href='samp/htmldoc.html' style='color: white !important;''>9 seconds</a>";
+newElement.innerHTML = "<a id='b2update' style='color: white !important;''>9 seconds</a>";
 
 var id;
 
@@ -202,7 +201,7 @@ id = setInterval(function() {
             document.getElementById("download").classList.add('grey');
         } else {
             msgElement.innerHTML = "File download ready ... ";
-            newElement.innerHTML = "<a id='b2update' href='samp/htmldoc.html' download='sample-file.html' style='color: white !important; width:30px;''>download</a>";
+            newElement.innerHTML = "<a id='b2update' href='/download/b2.tar.gz' download='sample-file.html' style='color: white !important; width:30px;''>download</a>";
             document.getElementById('b2update').click();
         }
 
