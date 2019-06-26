@@ -136,7 +136,8 @@ pre {
 }
 
 .center-wrapper ul{
-  margin-left: 30px;
+  padding-left: 15px;
+  margin-left: 5px;
 }
 
 .biblio-list {
@@ -176,6 +177,7 @@ pre {
   font-weight: 600;
   font-family: 'Roboto';
   color: black;
+  letter-spacing: -0.3px;
 }
 
 .f1.measure {
@@ -187,7 +189,7 @@ pre {
   margin-bottom: 1.5rem;
   font-size: 1.55rem;
   line-height: 1.55;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   color: #333333;
   font-weight: 400;
 }
@@ -219,7 +221,7 @@ pre {
 /* UI Text */
 
 .ui-text {
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   /*text-transform: uppercase;*/
   font-weight: 400;
 }
@@ -229,7 +231,7 @@ pre {
 }
 
 .ui-text-last {
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   text-decoration: none;
   font-weight: 400;
   color: black;
@@ -243,7 +245,7 @@ pre {
   font-family: helvetica;
   font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
   color: black;
 }
 
@@ -339,7 +341,7 @@ pre {
 
 .ui-link-biblio-underline {
   color: #3061ec;
-  border-bottom: 1px solid #e0e0e0;
+  /*border-bottom: 1px solid #e0e0e0;*/
 }
 
 .ui-link-underline {
@@ -398,8 +400,9 @@ pre {
 }
 
 .site-content-docs a{
-  color: #443e3c;
+  color: #222222;
   text-decoration: none;
+  letter-spacing: -0.8px;
   /* border-bottom: 1px solid #ddd; */
 }
 
@@ -556,14 +559,14 @@ pre {
   position: static;
   width: 90px;
   font-size: 1.1rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .site-logo {
   position: static;
   width: 90px;
   font-size: 1.05rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .site-logo:hover{
@@ -585,7 +588,7 @@ pre {
   color: #443e3c;
   font-size: 12px;
   font-weight: 400;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   text-transform: uppercase;
 }
 
@@ -654,10 +657,6 @@ pre {
   display: none;
 }
 
-ul {padding-inline-start: 1rem;}
-ol {padding-inline-start: 2.5rem;}
-
-
 /* Mobile Styles */
 
 .site-footer {
@@ -703,7 +702,7 @@ ol {padding-inline-start: 2.5rem;}
 
 .docs-nav a{
   font-size: 12px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   /*text-transform: uppercase;*/
   font-weight: 400;
   text-transform: uppercase;
@@ -718,7 +717,7 @@ ol {padding-inline-start: 2.5rem;}
 
 .docs-nav-biblio a{
   /*font-size: 14px;*/
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   font-weight: 500;
   /*text-transform: uppercase;*/
   display: inline-block;
@@ -1121,8 +1120,10 @@ button button.small .text {
 
   .center-wrapper .link-list {margin-left: 1px;}
 
-  ul {padding-inline-start: 2.2rem;}
-  ol {padding-inline-start: 2.2rem;}
+  .center-wrapper ul{
+    padding-left: 15px;
+    margin-left: 5px;
+  }
 
 }
 
@@ -1152,8 +1153,10 @@ button button.small .text {
   .tc50  {margin-top: 0.3rem;display:inline-block;}
   .tc100 {margin-top: 0.3rem;display:none;}
 
-  ul {padding-inline-start: 1.8rem;}
-  ol {padding-inline-start: 1.8rem;}
+  .center-wrapper ul{
+    padding-left: 15px;
+    margin-left: 5px;
+  }
 
 }
 
@@ -1173,7 +1176,7 @@ button button.small .text {
     padding: 0.5rem 2rem;
     background-color: #ececec;
     /*background-color: rgba(196,196,196,0.40);*/
-    /*border-bottom: 0.5px solid rgba(213,213,213,0.8);*/
+    /*border-bottom: 0.3px solid rgba(213,213,213,0.8);*/
   }
 
   .mobile-header .site-logo {
@@ -1235,7 +1238,7 @@ button button.small .text {
     /*border-top: 1px solid rgba(213,213,213,0.5);*/
     border-top: 1px solid rgba(176,176,176,0.1);
     font-size: 1rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     /*text-transform: uppercase;*/
   }
 
@@ -1248,7 +1251,7 @@ button button.small .text {
     border-top: 1px solid rgba(176,176,176,0.1);
     /*border-top: 1px solid rgba(213,213,213,0.5);*/
     font-size: 1rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     /*text-transform: uppercase;*/
   }
 
@@ -1273,19 +1276,21 @@ button button.small .text {
     border-bottom: 1px solid #ffffff;
   }
   .site-content .ui-link{
-    margin-left: 0.5px;
+    margin-left: 0.3px;
     margin-bottom: 1rem;
   }
   .site-content .ui-order-link{
-    margin-left: 0.5px;
+    margin-left: 0.3px;
   }
   .ui-order-link:hover {
     color: #3061ec;
     border-bottom: 1px solid #2b57d4;
   }
 
-  ul {padding-inline-start: 1rem;}
-  ol {padding-inline-start: 1rem;}
+  .center-wrapper ul{
+    padding-left: 15px;
+    margin-left: 5px;
+  }
 
 }
 
@@ -1303,11 +1308,9 @@ button button.small .text {
   .tc50  {margin-top: 0.3rem;display:inline-block;}
   .tc100 {margin-top: 0.3rem;display:none;}
 
-  ul {padding-inline-start: 0.99rem;
-      padding-inline-end: 0.99rem;
-  }
-  ol {padding-inline-start: 0.99rem;
-      padding-inline-end: 0.99rem;
+  .center-wrapper ul{
+    padding-left: 15px;
+    margin-left: 5px;
   }
 
 }
@@ -1339,7 +1342,7 @@ button button.small .text {
     /*background-color: #ececec;*/
     color: black;
     /*font-size: 12px;*/
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     /*text-transform: uppercase;*/
   }
   .mobile-nav-link-last {
@@ -1349,7 +1352,7 @@ button button.small .text {
     /*background-color: #ffffff;*/
     /*border-bottom: 1px solid rgba(206,206,214,0.5);*/
     /*font-size: 12px;*/
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     /*text-transform: uppercase;*/
   }
   .mobile-footer {
@@ -1368,15 +1371,20 @@ button button.small .text {
   }
   .site-content .ui-link{
     margin-bottom: 1rem;
-    margin-left: 0.5px;
+    margin-left: 0.3px;
     /*margin-bottom: 0.9rem;*/
   }
   .site-content .ui-order-link{
-    margin-left: 0.5px;
+    margin-left: 0.3px;
   }
   .link-list-item-2 {
     list-style-type: none;
     padding-top: 0.2rem;
+  }
+
+  .center-wrapper ul{
+    padding-left: 15px;
+    margin-left: 5px;
   }
 
 }
