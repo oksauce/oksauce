@@ -3,7 +3,6 @@
 /* based on vimeoplayer - v3.8.4 - 2019-01-16 */
 
 /* mods start
-
 comment out
 * comment out h1,h2,h3,h4
 *h1,h2,h3,h4{ font-weight: 400; }*
@@ -17,11 +16,9 @@ comment out margin-top: 2.5rem - replace margin-top 2.2rem;
 .w-nav-link.w--current {*color: #0082f3;*}
 .w--nav-menu-open {display: block !important;position: absolute;top: 100%;left: 0;right: 0;* background: #C8C8C8;* background-color: #ececec;text-align: center;overflow: visible;min-width: 200px;}
 .page-content h2, .page-content h1, .page-content h3, .page-content h4{margin-top: 2.5rem; * margin-top: 2.2rem; * }
-
 .product-buttons{padding-bottom: 2rem;}
 .product-buttons .ui-link{float: left;}
 .spfy-buy-button{float: left;}
-
 add
 .ui-order {max-width:280px;}
 .ui-link {margin-bottom: 12px;font-size: 11.8px;}
@@ -45,7 +42,6 @@ add
 .hidemodal {display: none;}
 .docs-nav-biblio a{font-size: 12px;letter-spacing: 1.5px;text-transform: uppercase;font-weight: 400;text-transform: uppercase;display: inline-block;margin-right: 2rem;padding-bottom: 2px;color: #443e3c;text-decoration: none;padding: 0;}
 hr {display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1em 0;padding: 0;}
-
 replace
 .col-sidebar {position: relative;width: 40%;min-width: 400px;-webkit-box-flex: 0;-webkit-flex: 0 0 auto;-ms-flex: 0 0 auto;flex: 0 0 auto;background-color: #ececec;height: 100vh;overflow: hidden;}
 .fixed-col {width: 40%;min-width: 400px;} ** showing changed values only
@@ -54,7 +50,6 @@ replace
 .link-list-item {list-style-type: none;margin-bottom: 10px;}
 .site-content .ui-link{margin-bottom: 1rem;}
 .page-container{padding: 4rem 2rem;}
-
 *  mods end */
 
 /* CSS Reset */
@@ -192,7 +187,7 @@ pre {
   margin-bottom: 1.5rem;
   font-size: 1.55rem;
   line-height: 1.55;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: #333333;
   font-weight: 400;
 }
@@ -590,7 +585,7 @@ pre {
   color: #443e3c;
   font-size: 12px;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
@@ -708,7 +703,7 @@ ol {padding-inline-start: 2.5rem;}
 
 .docs-nav a{
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   /*text-transform: uppercase;*/
   font-weight: 400;
   text-transform: uppercase;
@@ -723,7 +718,7 @@ ol {padding-inline-start: 2.5rem;}
 
 .docs-nav-biblio a{
   /*font-size: 14px;*/
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-weight: 500;
   /*text-transform: uppercase;*/
   display: inline-block;
@@ -1240,7 +1235,7 @@ button button.small .text {
     /*border-top: 1px solid rgba(213,213,213,0.5);*/
     border-top: 1px solid rgba(176,176,176,0.1);
     font-size: 1rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     /*text-transform: uppercase;*/
   }
 
@@ -1253,7 +1248,7 @@ button button.small .text {
     border-top: 1px solid rgba(176,176,176,0.1);
     /*border-top: 1px solid rgba(213,213,213,0.5);*/
     font-size: 1rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     /*text-transform: uppercase;*/
   }
 
@@ -1344,7 +1339,7 @@ button button.small .text {
     /*background-color: #ececec;*/
     color: black;
     /*font-size: 12px;*/
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     /*text-transform: uppercase;*/
   }
   .mobile-nav-link-last {
@@ -1354,7 +1349,7 @@ button button.small .text {
     /*background-color: #ffffff;*/
     /*border-bottom: 1px solid rgba(206,206,214,0.5);*/
     /*font-size: 12px;*/
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     /*text-transform: uppercase;*/
   }
   .mobile-footer {
@@ -1385,4 +1380,3 @@ button button.small .text {
   }
 
 }
-
