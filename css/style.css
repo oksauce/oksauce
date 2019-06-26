@@ -932,7 +932,7 @@ button button.small .text {
     max-height: 2rem;
 
     padding-top: 0.25rem;
-    padding-bottom: 0.3rem;
+    padding-bottom: 1.8rem;
 
     cursor: pointer;
     *overflow: visible;
