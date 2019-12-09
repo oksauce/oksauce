@@ -1,4 +1,4 @@
-# +sci ^glyn thomas ~ electronica
+# +sci ^ glyn thomas ~ electronica
 
 simple website @ http://oksauce.com
 
