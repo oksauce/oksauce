@@ -43,7 +43,7 @@ p {
 
 
 #page-container {
-  position: relative;
+  /*position: relative;*/
   min-height: 90vh;
 }
 
