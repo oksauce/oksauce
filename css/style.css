@@ -31,7 +31,7 @@ p {
 
 
 #header {
-  /*position: absolute;*/
+  position: absolute;
   text-align: left;
   font-size: 15px;
   font-weight:500;
