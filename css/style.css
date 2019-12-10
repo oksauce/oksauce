@@ -31,14 +31,13 @@ p {
 
 
 #header {
-  position: absolute;
+  position: fixed;
   text-align: left;
   font-size: 15px;
   font-weight:500;
   /*width: 100%;*/
   top: 6px;
-  margin-top: 0.6em;
-  margin-left: 0.6em;
+  left: 6px;
 }
 
 
@@ -69,8 +68,7 @@ p {
   width: 100%;
   font-size: 15px;
   font-stretch: ultra-condensed;
-  margin-right: 0.6em;
-  right: 2px;
+  right: 6px;
   /*transform: translate(-50%, -50%);*/
 }
 
