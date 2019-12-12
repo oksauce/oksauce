@@ -31,6 +31,7 @@ p {
 
 
 #header {
+  cursor:pointer;
   position: fixed;
   text-align: left;
   font-size: 15px;
@@ -40,6 +41,34 @@ p {
   left: 6px;
 }
 
+#right {
+  position: fixed;
+  text-align: right;
+  font-size: 15px;
+  font-weight:500;
+  /*width: 100%;*/
+  top: 6px;
+  right: 6px;
+}
+
+#circuitous {
+  cursor:pointer;
+}
+
+#cow {
+  cursor:pointer;
+}
+
+#cowabunga {
+  cursor:pointer;
+  color:#acacac;
+  font-size: 15px;
+}
+
+#topcircuitous {
+  cursor:pointer;
+  text-align: justify;
+}
 
 #page-container {
   /*position: relative;*/
@@ -48,6 +77,18 @@ p {
 
 #content-wrap {
   padding-bottom: 2.5rem;    /* Footer height */
+}
+
+.topcontent {
+  margin: 0;
+
+  position: fixed;
+  text-align: center;
+  top:42%;
+  /*font-size: 20px;*/
+  font-weight:500;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .content {
@@ -62,6 +103,7 @@ p {
 }
 
 #footer {
+  cursor:pointer;
   position: fixed;
   text-align: right;
   bottom: 6px;
@@ -70,6 +112,28 @@ p {
   font-stretch: ultra-condensed;
   right: 6px;
   /*transform: translate(-50%, -50%);*/
+}
+
+#footer p {
+  margin:auto;
+  text-align:center;
+  font-size:12px;
+  color:#acacac;
+  letter-spacing: 0.1em;
+}
+
+#footer a {
+  text-decoration:none; 
+  color:black;
+
+  cursor:pointer;
+  position: fixed;
+  text-align: right;
+  bottom: 6px;
+  width: 100%;
+  font-size: 15px;
+  font-stretch: ultra-condensed;
+  right: 6px;
 }
 
 /* CSS Reset */
