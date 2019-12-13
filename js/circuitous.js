@@ -30,3 +30,13 @@ function CountCircuitous(){
         console.info(ran_key);
 }
 
+function createMailtoLinks(){
+    $('a[data-u][href=""]').each(function(){
+        var i = $(this);
+        i.attr('href', 'mai'+'lto:'+i.data('u')+'@'+i.data('d'));
+        if (i.html()==''){ i.html(i.data('u')+'@'+i.data('d')); }
+    });
+}
+
+/* $(function(){createMailtoLinks();}); */
+
