@@ -1195,8 +1195,8 @@ button button.small .text {
 @media screen and (max-width: 767px) {
 
   .topcontent {
-    margin-left:20px;
-    margin-right: 20px;
+    margin-left:20%;
+    margin-right: 20%;
     margin-top: 20%;
     transform: none;
     top:0;
@@ -1219,6 +1219,15 @@ button button.small .text {
 
 @media (max-width: 516px) {
 
+    .topcontent {
+    margin-left:8%;
+    margin-right: 8%;
+    margin-top: 10%;
+    transform: none;
+    top:0;
+    left:0;
+  }
+
   #copy{display: none;}
 
   #copy-mobile {
@@ -1234,96 +1243,10 @@ button button.small .text {
 }
 
 @media screen and (max-width: 479px) {
-  .w-nav[data-collapse="tiny"] .w-nav-menu {
-    display: none;
-  }
-  .w-nav[data-collapse="tiny"] .w-nav-button {
-    display: block;
-  }
-  .button:hover {background-color: #333333;}
-
-  .in50  {margin-top: 0.3rem;display:inline-block;}
-  .in100 {margin-top: 0.3rem;display:none;}
-  .tc50  {margin-top: 0.3rem;display:inline-block;}
-  .tc100 {margin-top: 0.3rem;display:none;}
-
-  .center-wrapper ul{
-    padding-left: 15px;
-    margin-left: 5px;
-  }
 
 }
 
 @media (max-width: 479px) {
-  .col-container {
-    padding: 2.5rem;
-  }
-  .site-logo {
-    top: 14px;
-  }
-  .site-content .ui-link{
-    margin-bottom: 1rem;
-  }
-  .mobile-menu-btn {
-    right: -1rem;
-    padding: 18px;
-  }
-  .mobile-menu-btn.w--open {
-    background-color: transparent;
-  }
-  .menu-icon {
-    font-size: 20px;
-    line-height: 1;
-  }
-  .mobile-nav-link {
-    display: block;
-    padding-left: 2rem;
-    /*background-color: #ececec;*/
-    color: black;
-    /*font-size: 12px;*/
-    letter-spacing: 0.3px;
-    /*text-transform: uppercase;*/
-  }
-  .mobile-nav-link-last {
-    display: block;
-    padding-left: 2rem;
-    /*background-color: #ececec;*/
-    /*background-color: #ffffff;*/
-    /*border-bottom: 1px solid rgba(206,206,214,0.5);*/
-    /*font-size: 12px;*/
-    letter-spacing: 0.3px;
-    /*text-transform: uppercase;*/
-  }
-  .mobile-footer {
-    padding-right: 2.5rem;
-    padding-left: 2rem;
-  }
-  .mobile-footer.biblio-footer {
-    padding-right: 2.5rem;
-    /*padding-left: 1.0rem;*/
-  }
-  .col-container{
-    padding-bottom: 6rem;
-  }
-  .col-container-last{
-    padding-bottom: 3.7rem;
-  }
-  .site-content .ui-link{
-    margin-bottom: 1rem;
-    margin-left: 0.3px;
-    /*margin-bottom: 0.9rem;*/
-  }
-  .site-content .ui-order-link{
-    margin-left: 0.3px;
-  }
-  .link-list-item-2 {
-    list-style-type: none;
-    padding-top: 0.2rem;
-  }
 
-  .center-wrapper ul{
-    padding-left: 15px;
-    margin-left: 5px;
-  }
 
 }
