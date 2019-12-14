@@ -1285,8 +1285,8 @@ button button.small .text {
 
 @media (max-width: 375px) {
   .topcontent {
-    margin-left:4%;
-    margin-right:4%;
+    margin-left:3%;
+    margin-right:3%;
     transform: none;
     top:0;
     left:0;
