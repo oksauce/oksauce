@@ -147,7 +147,8 @@ a {
   right: 6px;
 }
 
-#mobilecircus{display: none;}
+#mobcircus{display: none;}
+#topcircus{display: block;}
 #copy-mobile{display: none;}
 
 /* CSS Reset */
@@ -1237,6 +1238,7 @@ button button.small .text {
     margin-top: 0;
   }
 
+  #mobcircus{display:block;}
   #topcircus{display: none;}
   #copy{display: none;}
 
