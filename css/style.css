@@ -1169,9 +1169,9 @@ button button.small .text {
 }
 
 #bottomcircuitous {
-
   text-align:justify;
   margin-top:8%;
+  line-height:1.6;
 }
 
 @media (max-width: 825px) {
