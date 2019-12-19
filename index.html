@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>sauce</title>
-<link rel="shortcut icon" type="image/x-icon" href="/img/circuitous-16x16.png" />
+
+<link id="short-icon" rel="shortcut icon" type="image/x-icon" href="/img/circuitous-16x16.png" />
 
 <meta content="width=device-width, initial-scale=1" name="viewport">
 
@@ -17,7 +18,7 @@
 </head>
 <body>
 
-<div id="header">+ sauce <span class="cow" style="color:#acacac;font-size:12px">100</span><span id="cowabunga" style="color:white;font-size:12px">100</span></div>
+<div id="header" onclick="clickSauce()">+ sauce <span class="cow" style="color:#acacac;font-size:12px">100</span><span id="cowabunga" style="color:white;font-size:12px">100</span></div>
 
  <div id="page-container">
    <div class="content">
@@ -25,7 +26,7 @@
    </div>
    <footer id="footer"> 
    	<!-- <a href="/circuitous"><span style="font-size:11px;position:relative;top:-0.7px">&#9776;</span> circuitous cards</a> -->
-   	<a href="/☰"><span style="font-size:11px;position:relative;top:-0.7px">&#9776;</span> circuitous cards</a> 
+   	<a href="/☰" onclick="clickCard()"><span style="font-size:11px;position:relative;top:-0.7px">&#9776;</span> circuitous cards</a> 
    </footer>
  </div>
 
