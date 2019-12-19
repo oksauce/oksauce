@@ -1286,13 +1286,6 @@ button button.small .text {
     left:0;
   }
 
-  .content {
-    height: 100%;
-    height: -moz-available;          /* WebKit-based browsers will ignore this. */
-    height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-    height: fill-available;
-  }
-
   #card {margin-top: 1%;margin-bottom: 1%;}
 
   #topcircuitous {
