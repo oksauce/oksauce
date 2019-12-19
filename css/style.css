@@ -1276,8 +1276,8 @@ button button.small .text {
 
 
   .topcontent {
-    margin-left:4%;
-    margin-right:4%;
+    margin-left:2%;
+    margin-right:2%;
     margin-top: 6%;
     transform: none;
     top:0;
@@ -1285,15 +1285,8 @@ button button.small .text {
   }
 
   #card {margin-top: 1%;margin-bottom: 1%;}
-
-  #topcircuitous {
-    margin-bottom:0;
-  }
-
-  #bottomcircuitous {
-    margin-top: 0;
-    line-height:1.7;
-  }
+  #topcircuitous {margin-bottom:0;}
+  #bottomcircuitous {margin-top: 0;line-height:1.7;}
 
   #mobcircus{display:block;}
   #topcircus{display: none;}
