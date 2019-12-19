@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <title>sauce</title>
 
-<meta content="width=device-width, initial-scale=1" name="viewport">
+<link id="short-icon" rel="shortcut icon" type="image/x-icon" href="/img/circuitous-16x16.png" />
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
 
 <link href="/css/fonts.css" rel="stylesheet" type="text/css">
 <link href="/css/style.css" rel="stylesheet" type="text/css">
 <link href="/css/syntax.css" rel="stylesheet" type="text/css">
-
-<!-- <link rel="shortcut icon" type="image/x-icon" href="/img/circuitous-16x16.png" /> -->
-<link rel="shortcut icon" type="image/x-icon" href="/img/+sauce-16x16.png" />  
 
 <script src="/js/jquery-1.10.2.min.js"></script>
 <script src="/js/circuitous.js"></script>
@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<div id="header"><a href="/"><span style="font-size:11px;position:relative;top:-0.7px">&#9776;</span> circuitous cards</a></div>
+<div id="header" onclick="clickSauce()"><a href="/"><span style="font-size:11px;position:relative;top:-0.7px">&#9776;</span> circuitous cards</a></div>
 
  <div id="page-container">
    <div class="topcontent">
@@ -40,7 +40,7 @@
    <footer id="footer">
    	 <p id="copy">circuitous cards are copyright of oksauce.com</p>
      <p id="copy-mobile">© 2019 oksauce</p>
-   	<a href="/" style="text-decoration:none;color:black;">+ sauce <span class="cow" style="color:#acacac;font-size:12px">100</span></a>
+   	<a href="/" onclick="clickSauce()" style="text-decoration:none;color:black;">+ sauce <span class="cow" style="color:#acacac;font-size:12px">100</span></a>
    </footer>
  </div>
 
