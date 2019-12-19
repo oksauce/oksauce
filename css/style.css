@@ -1284,7 +1284,7 @@ button button.small .text {
     left:0;
   }
 
-  #card {margin-top: 0.5%;margin-bottom: 0.5%;}
+  #card {margin-top: 0.01%;margin-bottom: 0.5%;}
   #topcircuitous {margin-bottom:0;line-height:1.3;}
   #bottomcircuitous {margin-top: 0;line-height:1.3;}
 
