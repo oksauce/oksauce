@@ -1295,7 +1295,9 @@ button button.small .text {
   #topcircus{display: none;}
   #copy{display: none;}
 
-  #footer a {position:relative;}
+  #footer {position:relative;}
+
+  #footer a {position:relative;bottom:-8px;}
 
   #footer #copy-mobile {
     display:none;
