@@ -1293,13 +1293,10 @@ button button.small .text {
 
 @media (max-width: 375px) {
 
-  #page-container {
-   padding-top: 50px;
-  }
-
   .topcontent {
     margin-left:3%;
     margin-right:3%;
+    margin-top: 11%;
     transform: none;
     top:0;
     left:0;
