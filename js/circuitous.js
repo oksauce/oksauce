@@ -45,13 +45,13 @@ document.head = document.head || document.getElementsByTagName('head')[0];
 
 function changeFavicon(src) {
  var link = document.createElement('link'),
-     oldLink = document.getElementById('dynamic-favicon');
+     oldLink = document.getElementById('dynamic-favicon'),
+     srtLink = document.getElementById('short-icon');
  link.id = 'dynamic-favicon';
  link.rel = 'shortcut icon';
  link.href = src;
- if (oldLink) {
-  document.head.removeChild(oldLink);
- }
+ if (srtLink) {document.head.removeChild(srtLink);}
+ if (oldLink) {document.head.removeChild(oldLink);}
  document.head.appendChild(link);
 }
 
@@ -60,8 +60,20 @@ var url = window.location.href;
     console.log(url);
     console.log(window.location.hostname);
 
-if (url == 'http://'+window.location.hostname+'/') {
+function clickSauce(){ 
+    setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 100);
+    setTimeout(function(){ changeFavicon('/img/sauce-16x16.png'); }, 500);
+    setTimeout(function(){ changeFavicon('/img/+sauce-16x16.png'); }, 1000);
+}
 
+function clickCard(){ 
+    setTimeout(function(){ changeFavicon('/img/+sauce-16x16.png'); }, 100);
+    setTimeout(function(){ changeFavicon('/img/sauce-16x16.png'); }, 500);
+    setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
+}
+
+
+if (url == 'http://'+window.location.hostname+'/') {
     setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 100);
     setTimeout(function(){ changeFavicon('/img/sauce-16x16.png'); }, 500);
     setTimeout(function(){ changeFavicon('/img/+sauce-16x16.png'); }, 1000);
