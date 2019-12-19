@@ -1276,11 +1276,11 @@ button button.small .text {
 
 
   .topcontent {
-    margin-left:4%;
-    margin-right:4%;
-    margin-top: 6%;
+    margin-left:2%;
+    margin-right:2%;
+    margin-top:0%;
     transform: none;
-    top:0;
+    top:20px;
     left:0;
   }
 
