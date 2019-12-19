@@ -1245,7 +1245,6 @@ button button.small .text {
 
 @media (max-width: 736px) and (orientation:landscape) {
 
-  body { position: fixed; top: 0; left: 0; right:0; bottom: 0; }
 
   .topcontent {
     margin-left:4%;
@@ -1275,7 +1274,6 @@ button button.small .text {
 
 @media (max-width: 568px) and (orientation:landscape) {
 
-  body { position: fixed; top: 0; left: 0; right:0; bottom: 0; }
 
   .topcontent {
     margin-left:4%;
