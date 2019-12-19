@@ -56,9 +56,11 @@ function changeFavicon(src) {
 }
 
 var url = window.location.href;
-    console.log(url);
 
-if (url == 'http://oksauce.io/%e2%98%b0/') {
+    //console.log(url);
+    //console.log(window.location.hostname);
+
+if (url == 'http://window.location.hostname/%e2%98%b0/') {
     setTimeout(function(){ changeFavicon('/img/+sauce-16x16.png'); }, 100);
     setTimeout(function(){ changeFavicon('/img/sauce-16x16.png'); }, 500);
     setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1500);
