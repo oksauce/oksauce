@@ -1185,12 +1185,35 @@ button button.small .text {
     margin-left:20%;
     margin-right:20%;
   }
+  p {max-width: 30rem;}
+}
 
-  p {
-    max-width: 30rem;
+@media (max-width: 812px) and (orientation:landscape) {
 
+  .topcontent {
+    margin-left:4%;
+    margin-right:4%;
+    margin-top: 6%;
+    transform: none;
+    top:0;
+    left:0;
   }
-
+  p {max-width: 50rem;}
+  #card {margin-top: 2%;margin-bottom: 4%;}
+  #topcircuitous {margin-bottom:0;}
+  #bottomcircuitous {margin-top: 0;line-height:1.7;}
+  #mobcircus{display:block;}
+  #topcircus{display: none;}
+  #copy{display: none;}
+  #footer #copy-mobile {
+    display:block;
+    margin: auto;
+    text-align: left;
+    margin-left: 15px;
+    font-size: 12px;
+    color: #acacac;
+    letter-spacing: 0.1em;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1217,6 +1240,35 @@ button button.small .text {
   }
 
 }
+
+@media (max-width: 736px) and (orientation:landscape) {
+
+  .topcontent {
+    margin-left:4%;
+    margin-right:4%;
+    margin-top: 6%;
+    transform: none;
+    top:0;
+    left:0;
+  }
+  p {max-width: 50rem;}
+  #card {margin-top: 2%;margin-bottom: 4%;}
+  #topcircuitous {margin-bottom:0;}
+  #bottomcircuitous {margin-top: 0;line-height:1.7;}
+  #mobcircus{display:block;}
+  #topcircus{display: none;}
+  #copy{display: none;}
+  #footer #copy-mobile {
+    display:block;
+    margin: auto;
+    text-align: left;
+    margin-left: 15px;
+    font-size: 12px;
+    color: #acacac;
+    letter-spacing: 0.1em;
+  }
+}
+
 @media (max-width: 568px) and (orientation:landscape) {
 
   .topcontent {
@@ -1253,6 +1305,8 @@ button button.small .text {
     letter-spacing: 0.1em;
   }
 }
+
+
 @media (max-width: 516px) {
 
   .topcontent {
@@ -1264,15 +1318,8 @@ button button.small .text {
     left:0;
   }
 
-  #topcircuitous {
-    top: 4%;
-    margin-bottom: 4%;
-  }
-
-  #bottomcircuitous {
-    margin-top: 4%;
-  }
-
+  #topcircuitous {top: 4%;margin-bottom: 4%;}
+  #bottomcircuitous {margin-top: 4%;}
   #mobcircus{display:block;}
   #topcircus{display: none;}
   #copy{display: none;}
