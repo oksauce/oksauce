@@ -40,7 +40,7 @@ function createMailtoLinks(){
 
 /* $(function(){createMailtoLinks();}); */
 
-/* Dynamically changing favicons with JavaScript */
+/* change favicons */
 document.head = document.head || document.getElementsByTagName('head')[0];
 
 function changeFavicon(src) {
@@ -57,8 +57,8 @@ function changeFavicon(src) {
 
 var url = window.location.href;
 
-    console.log(url);
-    console.log(window.location.hostname);
+    //console.log(url);
+    //console.log(window.location.hostname);
 
 function clickSauce(){ 
     setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 100);
