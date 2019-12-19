@@ -57,15 +57,17 @@ function changeFavicon(src) {
 
 var url = window.location.href;
 
-    //console.log(url);
-    //console.log(window.location.hostname);
+    console.log(url);
+    console.log(window.location.hostname);
 
-if (url == 'http://window.location.hostname/%e2%98%b0/') {
+if (url == 'http://'+window.location.hostname+'/') {
+
+    setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 100);
+    setTimeout(function(){ changeFavicon('/img/sauce-16x16.png'); }, 500);
+    setTimeout(function(){ changeFavicon('/img/+sauce-16x16.png'); }, 1000);
+} else {
     setTimeout(function(){ changeFavicon('/img/+sauce-16x16.png'); }, 100);
     setTimeout(function(){ changeFavicon('/img/sauce-16x16.png'); }, 500);
-    setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1500);
-} else {
-    setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 500);
-    setTimeout(function(){ changeFavicon('/img/+sauce-16x16.png'); }, 1000);
+    setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
 }
 
