@@ -41,9 +41,8 @@ a {
   text-align: left;
   font-size: 15px;
   font-weight:500;
-  /*width: 100%;*/
   top: 6px;
-  left: 6px;
+  left: 19px;
 }
 
 #header a {
@@ -52,12 +51,33 @@ a {
   border-bottom: none;
 }
 
+#headercard {
+  cursor:pointer;
+  position: fixed;
+  text-align: left;
+  font-size: 15px;
+  font-weight:500;
+  top: 6px;
+  left: 6px;
+}
+
+#headercard a {
+  text-decoration:none;
+  color:black;
+  border-bottom: none;
+}
+
+.headercard {
+  font-size:11px;
+  position:relative;
+  top:-0.8px
+}
+
 #right {
   position: fixed;
   text-align: right;
   font-size: 15px;
   font-weight:500;
-  /*width: 100%;*/
   top: 6px;
   right: 6px;
 }
@@ -89,6 +109,35 @@ a {
 #content-wrap {
   padding-bottom: 2.5rem;    /* Footer height */
 }
+
+.rotate{
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    top: 6.3px;
+    left: 6px;
+    cursor: pointer;
+    position: fixed;
+    text-align: left;
+    font-size: 11px;
+}
+
+.rotatecard{
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    right: 67px;
+    margin-top: 0.63px;
+    cursor: pointer;
+    position: fixed;
+    text-align: left;
+    font-size: 11px;
+}
+
 
 .topcontent {
   margin: 0;
