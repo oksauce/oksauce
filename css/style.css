@@ -1295,8 +1295,10 @@ button button.small .text {
   #topcircus{display: none;}
   #copy{display: none;}
 
+  #footer a {position:relative;}
+
   #footer #copy-mobile {
-    display:block;
+    display:none;
     margin: auto;
     text-align: left;
     margin-left: 15px;
