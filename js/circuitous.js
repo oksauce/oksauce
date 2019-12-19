@@ -40,3 +40,30 @@ function createMailtoLinks(){
 
 /* $(function(){createMailtoLinks();}); */
 
+/* Dynamically changing favicons with JavaScript */
+document.head = document.head || document.getElementsByTagName('head')[0];
+
+function changeFavicon(src) {
+ var link = document.createElement('link'),
+     oldLink = document.getElementById('dynamic-favicon');
+ link.id = 'dynamic-favicon';
+ link.rel = 'shortcut icon';
+ link.href = src;
+ if (oldLink) {
+  document.head.removeChild(oldLink);
+ }
+ document.head.appendChild(link);
+}
+
+var url = window.location.href;
+    console.log(url);
+
+if (url == 'http://oksauce.io/%e2%98%b0/') {
+    setTimeout(function(){ changeFavicon('/img/+sauce-16x16.png'); }, 100);
+    setTimeout(function(){ changeFavicon('/img/sauce-16x16.png'); }, 500);
+    setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1500);
+} else {
+    setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 500);
+    setTimeout(function(){ changeFavicon('/img/+sauce-16x16.png'); }, 1000);
+}
+
