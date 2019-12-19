@@ -1338,6 +1338,8 @@ button button.small .text {
 
   body { position: fixed; top: 0; left: 0; right:0; bottom: 0; }
 
+  /*#header {left:0px;}*/
+
   .topcontent {
     margin-left:3%;
     margin-right:3%;
