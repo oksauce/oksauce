@@ -1282,7 +1282,7 @@ button button.small .text {
     font-weight: 500;
     width: 101%;
     top: 6px;
-    left: 0px;
+    left: -1px;
   }
 
   .topcontent {
@@ -1313,7 +1313,7 @@ button button.small .text {
   }
 
   #footer a {
-  	right: 4px;
+  	right: -1px;
   }
 
   #footer {
@@ -1324,7 +1324,7 @@ button button.small .text {
     width: 101%;
     font-size: 15px;
     font-stretch: ultra-condensed;
-    right: 0px;
+    right: -1px;
     /* transform: translate(-50%, -50%); */
   }
 }
