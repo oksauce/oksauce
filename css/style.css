@@ -1274,6 +1274,17 @@ button button.small .text {
 
 @media (max-width: 568px) and (orientation:landscape) {
 
+  #header {
+    cursor: pointer;
+    position: fixed;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    width: 101%;
+    top: 6px;
+    left: 4px;
+  }
+
   .topcontent {
     margin-left:2%;
     margin-right:2%;
@@ -1299,6 +1310,22 @@ button button.small .text {
     font-size: 12px;
     color: #acacac;
     letter-spacing: 0.1em;
+  }
+
+  #footer a {
+  	right: 4px;
+  }
+
+  #footer {
+    cursor: pointer;
+    position: fixed;
+    text-align: right;
+    bottom: 6px;
+    width: 101%;
+    font-size: 15px;
+    font-stretch: ultra-condensed;
+    right: 4px;
+    /* transform: translate(-50%, -50%); */
   }
 }
 
@@ -1338,7 +1365,16 @@ button button.small .text {
 
   body { position: fixed; top: 0; left: 0; right:0; bottom: 0; }
 
-  /*#header {left:0px;}*/
+  #header {
+    cursor: pointer;
+    position: fixed;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    width: 101%;
+    top: 6px;
+    left: 4px;
+  }
 
   .topcontent {
     margin-left:3%;
@@ -1371,6 +1407,23 @@ button button.small .text {
     font-size: 12px;
     color: #acacac;
     letter-spacing: 0.1em;
+  }
+
+
+  #footer a {
+  	right: 4px;
+  }
+
+  #footer {
+    cursor: pointer;
+    position: fixed;
+    text-align: right;
+    bottom: 6px;
+    width: 101%;
+    font-size: 15px;
+    font-stretch: ultra-condensed;
+    right: 4px;
+    /* transform: translate(-50%, -50%); */
   }
 
 }
