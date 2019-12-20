@@ -64,12 +64,14 @@ function clickSauce(){
     setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 100);
     setTimeout(function(){ changeFavicon('/img/sauce-16x16.png'); }, 500);
     setTimeout(function(){ changeFavicon('/img/+sauce-16x16.png'); }, 1000);
+    changeZoomLevel();
 }
 
 function clickCard(){ 
     setTimeout(function(){ changeFavicon('/img/+sauce-16x16.png'); }, 100);
     setTimeout(function(){ changeFavicon('/img/sauce-16x16.png'); }, 500);
     setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
+    changeZoomLevel();
 }
 
 
@@ -83,3 +85,17 @@ if (url == 'http://'+window.location.hostname+'/') {
     setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
 }
 
+function changeZoomLevel() {
+
+    var wViewport = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    wViewport = wViewport + 1;
+
+    //console.log(wViewport);
+	
+	var sViewport = '<meta name="viewport" content="width='+ wViewport +'">';
+	var jViewport = $('meta[name="viewport"]');
+	if (jViewport.length > 0) { 
+		jViewport.replaceWith(sViewport);
+	} else {
+	   $('head').append(sViewport); } 
+}
