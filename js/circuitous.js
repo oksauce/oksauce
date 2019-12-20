@@ -83,20 +83,3 @@ if (url == 'http://'+window.location.hostname+'/') {
     setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
 }
 
-
-window.addEventListener('orientationchange', changeZoomLevel());
-
-
-function changeZoomLevel() {
-
-    var wViewport = window.innerWidth || document.documentElement.clienWidth || document.body.clientWidth;
-    //wViewport = wViewport + 1;
-    //console.log(wViewport);
-	
-	var sViewport = '<meta name="viewport" content="width='+ wViewport +'">';
-	var jViewport = $('meta[name="viewport"]');
-	if (jViewport.length > 0) { 
-		jViewport.replaceWith(sViewport);
-	} else {
-	   $('head').append(sViewport); } 
-}
