@@ -87,7 +87,7 @@ if (url == 'http://'+window.location.hostname+'/') {
 
 function changeZoomLevel() {
 
-    var wViewport = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var wViewport = window.innerHeight || document.documentElement.clienHeight || document.body.clientHeight;
     wViewport = wViewport + 1;
 
     //console.log(wViewport);
