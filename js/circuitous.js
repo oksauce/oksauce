@@ -83,16 +83,11 @@ if (url == 'http://'+window.location.hostname+'/') {
     setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
 }
 
+/*
 var mobile_timer = false;
-if(navigator.userAgent.match(/iPhone/i)) {
-    $('#viewport').attr('content','width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0');
-    $(window).bind('gesturestart',function () {
-        clearTimeout(mobile_timer);
-        $('#viewport').attr('content','width=device-width,minimum-scale=1.0,maximum-scale=10.0');
-    }).bind('touchend',function () {
-        clearTimeout(mobile_timer);
-        mobile_timer = setTimeout(function () {
-            $('#viewport').attr('content','width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0');
-        },1000);
-    });
-}
+if(navigator.userAgent.match(/iPhone/i)) {$('#viewport').attr('content','width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0');
+   $(window).bind('gesturestart',function () {clearTimeout(mobile_timer);$('#viewport').attr('content','width=device-width,minimum-scale=1.0,maximum-scale=10.0');
+    }).bind('touchend',function () {clearTimeout(mobile_timer); mobile_timer = setTimeout(function () {$('#viewport').attr('content','width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0');},1000);
+});}
+*/
+
