@@ -1274,6 +1274,10 @@ button button.small .text {
 
 @media (max-width: 568px) and (orientation:landscape) {
 
+  html, body {
+   -webkit-text-size-adjust: none;
+   }
+
   #header {
     cursor: pointer;
     position: fixed;
