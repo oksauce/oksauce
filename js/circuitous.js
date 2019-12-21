@@ -83,7 +83,9 @@ if (url == 'http://'+window.location.hostname+'/') {
     setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
 }
 
-function detectswipe(el,func) {
+window.onload=function(){
+
+    function detectswipe(el,func) {
       swipe_det = new Object();
       swipe_det.sX = 0;
       swipe_det.sY = 0;
@@ -131,4 +133,5 @@ function detectswipe(el,func) {
     }
 
     detectswipe('circuitous',randomfunction);
+}
 
