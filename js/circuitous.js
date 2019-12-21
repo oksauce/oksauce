@@ -73,6 +73,30 @@ function clickCard(){
 }
 
 
+
+function cardColor(backcolor){
+
+    //console.log('cardColor');
+    //console.log($("#cardcolor").css('background-color'));
+    //console.log($("#header").css('color'));
+
+    if ($("#cardcolor").css('background-color') == "rgba(0, 0, 0, 0)") {
+           $("#cardcolor").css("background-color", backcolor);
+           //$("#cowabunger").css("color", "rgb(36,36,38)");
+           $("#header").css("color", "rgba(255, 255, 255, 255)");
+           $("#circuitous").css("color", "rgba(255, 255, 255, 255)");
+           $("#footer a").css("color", "rgba(255, 255, 255, 255)");
+
+    } else if ($("#cardcolor").css('background-color') == backcolor.replace(/'/g, '"')) {
+           $("#cardcolor").css("background-color", "rgba(0, 0, 0, 0)");
+           //$("#cowabunger").css("color", "rgba(0, 0, 0, 0)");
+           $("#header").css("color", "rgba(0, 0, 0, 1)");
+           $("#circuitous").css("color", "rgba(0, 0, 0, 1)");
+           $("#footer a").css("color", "rgba(0, 0, 0, 1)");
+    }
+
+}
+
 if (url == 'http://'+window.location.hostname+'/') {
     setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 100);
     setTimeout(function(){ changeFavicon('/img/sauce-16x16.png'); }, 500);
