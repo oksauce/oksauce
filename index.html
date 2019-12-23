@@ -23,7 +23,7 @@
 </head>
 <body id="cardcolor">
 
-<div id="header" onclick="cardColor('rgb(36, 36, 38)')" >+ sauce <span class="cow" style="color:#acacac;font-size:12px">100</span>
+<div id="header" onclick="cardColor('rgb(36, 36, 38)')" ><span id="plus" class="">+</span> sauce <span class="cow" style="color:#acacac;font-size:12px">100</span>
 <span id="cowabunga" style="color:white;font-size:12px;visibility:hidden">100</span></div>
 
  <div id="page-container">
@@ -35,6 +35,13 @@
    	<a href="/☰" onclick="clickCard()"><span style="font-size:11px;position:relative;top:-0.7px">&#9776;</span> circuitous cards</a> 
    </footer>
  </div>
-
 </body>
+<script type="text/javascript" src="/js/pulltorefresh.js"></script>
+<script type="text/javascript">
+PullToRefresh.init({
+	shouldPullToRefresh:function(){
+		return $("#plus").hasClass("iconPulse")},
+		onRefresh:function(){$("#circuitous").blur(),pickRandomCircuitous()}
+	});
+</script>
 </html>
