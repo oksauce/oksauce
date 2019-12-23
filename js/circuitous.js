@@ -41,7 +41,7 @@ function getCookie(cname) {
 
 function pickRandomCircuitous(){
 	console.clear();
-	if (!isMobile) {RandomCircuitous()} else {$("#circuitous").blur()}
+	if (!isMobile) {RandomCircuitous()}
 }
 
 function RandomCircuitous(){
