@@ -44,6 +44,11 @@ function pickRandomCircuitous(){
 	if (!isMobile) {RandomCircuitous()}
 }
 
+function swipeRandomCircuitous(){
+	console.clear();
+	RandomCircuitous();
+}
+
 function RandomCircuitous(){
   var obj_keys = Object.keys(window.circuitous);
   window.ran_key_select = obj_keys[Math.floor(Math.random() *obj_keys.length)];
@@ -207,7 +212,7 @@ window.onload=function(){
 
     function randomfunction(el,d) {
       //alert("you swiped on element with id '"+el+"' to "+d+" direction");
-      pickRandomCircuitous();
+      swipeRandomCircuitous();
     }
 
     detectswipe('circuitous',randomfunction);
