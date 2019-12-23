@@ -41,7 +41,7 @@
 PullToRefresh.init({
 	shouldPullToRefresh:function(){
 		return $("#plus").hasClass("iconPulse")},
-		onRefresh:function(){pickRandomCircuitous()}
+		onRefresh:function(){$("#circuitous").blur(),RandomCircuitous()}
 	});
 </script>
 </html>
