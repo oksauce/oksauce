@@ -7,7 +7,7 @@ $.getJSON('/js/circuitous.json').done(function(data){
   CountCircuitous();
   CheckCookie();
   console.log(isMobile);
-  //if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
+  if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
 });
 
 var isMobile = false; //initiate as false
