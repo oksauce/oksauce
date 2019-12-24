@@ -21,7 +21,7 @@ p {
   margin-bottom: 1rem;
   /*font-size: 0.9rem;*/
   line-height: 1.7;
-  color: #111111;
+  /*color: #111111;*/
 
   margin: 0;
   margin-top: 0px;
@@ -31,7 +31,7 @@ p {
 
 a {
   text-decoration: none;
-  color: black;
+  /*color: black;*/
   border-bottom: 1px solid #acacac;
 }
 
@@ -64,6 +64,10 @@ a {
 
 #circuitous {
   cursor:pointer;
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
 }
 
 #cow {
@@ -103,6 +107,17 @@ a {
 }
 
 .content {
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  font-size: 20px;
+  font-weight:500;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#content {
   margin: 0;
   position: absolute;
   text-align: center;
