@@ -56,7 +56,7 @@ function pickCircuitousInfo(){
 
   InfoCircuitous();
 
-  setTimeout(function(){ InfoCircuitous(); }, 2000);
+  setTimeout(function(){ InfoCircuitous(); }, 3000);
 
   if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
   });
