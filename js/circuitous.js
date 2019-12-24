@@ -53,7 +53,11 @@ function swipeRandomCircuitous(){
 function pickCircuitousInfo(){
   $.getJSON('/☰/circuitousinfo.json').done(function(data){
   window.circuitousinfo = data;
+
   InfoCircuitous();
+
+  setTimeout(function(){ InfoCircuitous(); }, 2000);
+
   if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
   });
 }
