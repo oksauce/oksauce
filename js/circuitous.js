@@ -12,7 +12,7 @@ $.getJSON('/☰/circuitous.json').done(function(data){
 
 var isMobile = false; //initiate as false
 var obj_key_count = 0;
-var interval = null;
+//var interval = null;
 
 // device detection
 if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -197,7 +197,8 @@ function cardColor(backcolor){
       $("#footer a").css("color", "rgba(255, 255, 255, 255)");
 
       setCookie ("darkmode","enable",365);
-      clearInterval(interval); // stop the interval
+      darkTime(false);
+      //clearInterval(interval); // stop the interval
 
   } else if ($("#cardcolor").css('background-color') == backcolor.replace(/'/g, '"')) {
       $("#cardcolor").css("background-color", "rgba(0, 0, 0, 0)");
@@ -210,7 +211,8 @@ function cardColor(backcolor){
 
       //setCookie ("darkmode","disable",365);
       setCookie ("darkmode","auto",365);
-      interval = setInterval(time, 3000);
+      darkTime(true);
+      //interval = setInterval(time, 3000);
 
   }
 
@@ -245,54 +247,72 @@ if (url == 'http://'+window.location.hostname+'/') {
   setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
 }
 
+function darkTime(wstate) {
+  
+//  darkTime : true  * start || false * stop
 
-function getTime() {
-    return (new Date()).getTime();
+  //console.log('inside darkTime');
+
+  darkstate = wstate;
+
+    var newWorker = function (funcObj) {
+    var blobURL = URL.createObjectURL(new Blob(['(',
+    funcObj.toString(),')()'], {type: 'application/javascript'})),
+    worker = new Worker(blobURL);
+    URL.revokeObjectURL(blobURL);
+    return worker;
+    }
+
+    var darktime;
+
+    var d = new Date();
+    var s = d.getSeconds();
+    //var m = d.getMinutes();
+    var h = d.getHours();
+
+    var w1 = newWorker(function (darkstate) {
+    var i = 0;
+
+      function darkCount() {
+         i = i + 1;
+         postMessage(i);
+         darktime = setTimeout(darkCount, 3000);
+      }
+         darkCount();
+    });
+
+    w1.onmessage = function (event) { // 3000
+
+      //console.log(event.data);
+      
+      if (darkstate == false){
+        //console.log('darktime false!');
+        clearTimeout(darktime);
+        w1.terminate();
+        w1 = undefined;
+      }
+
+      //console.log(h);
+      //console.log(s);
+
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
+      } else if (h > 18) {
+          if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
+      } else if (h < 18 && h < 7) {
+          if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
+      } else if (h < 18 && h > 7) {
+          if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDefault()}
+      }  
+
+    };
 }
 
-var lastInterval = getTime();
-
-function intervalHeartbeat() {
-  var now = getTime();
-  var diff = now - lastInterval;
-  var offBy = diff - 1000; // 1000 = the 1 second delay I was expecting
-  lastInterval = now;
-
-  if(offBy > 100) { // don't trigger on small stutters less than 100ms
-        console.log('interval heartbeat - off by ' + offBy + 'ms');
-  }
-
-  var d = new Date();
-  var s = d.getSeconds();
-  //var m = d.getMinutes();
-  var h = d.getHours();
-
-  // console.log(h);
-  // console.log(s);
-
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
-  } else if (h > 18) {
-      if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
-  } else if (h < 18 && h < 7) {
-      if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
-  } else if (h < 18 && h > 7) {
-      if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDefault()}
-  } 
-
-
-}
-
-
+/*
 function time() {
   var d = new Date();
   var s = d.getSeconds();
-  //var m = d.getMinutes();
   var h = d.getHours();
-
-  // console.log(h);
-  // console.log(s);
-
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
   } else if (h > 18) {
@@ -302,12 +322,8 @@ function time() {
   } else if (h < 18 && h > 7) {
       if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDefault()}
   } 
-  /*
-  if (s > 55) {$("#plus").css("color", "rgba(255, 0, 0, 1)") } else { $("#plus").css("color", "") }
-  if (s > 10 && s < 15) {$("#tailcard").css("color", "rgba(255, 0, 0, 1)") } else { $("#tailcard").css("color", "") }
-  */
 }
-
+*/
 
 window.onload=function(){
 
@@ -317,7 +333,7 @@ window.onload=function(){
   }
 
   //interval = setInterval(time, 3000);
-  setInterval(intervalHeartbeat, 3000);
+  darkTime();
 
   function detectswipe(el,func) {
     swipe_det = new Object();
