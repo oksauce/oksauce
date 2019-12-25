@@ -245,6 +245,45 @@ if (url == 'http://'+window.location.hostname+'/') {
   setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
 }
 
+
+function getTime() {
+    return (new Date()).getTime();
+}
+
+var lastInterval = getTime();
+
+function intervalHeartbeat() {
+  var now = getTime();
+  var diff = now - lastInterval;
+  var offBy = diff - 1000; // 1000 = the 1 second delay I was expecting
+  lastInterval = now;
+
+  if(offBy > 100) { // don't trigger on small stutters less than 100ms
+        console.log('interval heartbeat - off by ' + offBy + 'ms');
+  }
+
+  var d = new Date();
+  var s = d.getSeconds();
+  //var m = d.getMinutes();
+  var h = d.getHours();
+
+  // console.log(h);
+  // console.log(s);
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
+  } else if (h > 18) {
+      if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
+  } else if (h < 18 && h < 7) {
+      if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
+  } else if (h < 18 && h > 7) {
+      if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDefault()}
+  } 
+
+
+}
+
+
 function time() {
   var d = new Date();
   var s = d.getSeconds();
@@ -277,7 +316,8 @@ window.onload=function(){
       cardColorDefault();
   }
 
-  interval = setInterval(time, 3000);
+  //interval = setInterval(time, 3000);
+  setInterval(intervalHeartbeat, 3000);
 
   function detectswipe(el,func) {
     swipe_det = new Object();
