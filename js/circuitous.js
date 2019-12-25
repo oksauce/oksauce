@@ -6,7 +6,7 @@ $.getJSON('/☰/circuitous.json').done(function(data){
   CountCircuitous();
   CheckCookie();
 
-  console.log(isMobile);
+  //console.log(isMobile);
   if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
 });
 
@@ -113,7 +113,7 @@ function CountCircuitous(){
   var ran_key = (obj_keys.length);
   //document.getElementById("cow").innerHTML = ran_key;
   $('span.cow').text(ran_key);
-  console.info(ran_key);
+  //console.info(ran_key);
 }
 
 function CheckCookie(){
