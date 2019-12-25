@@ -129,6 +129,12 @@ a {
   transform: translate(-50%, -50%);
 }
 
+#tailcard {
+  font-size:11px;
+  position:relative;
+  top:-0.7px;  
+}
+
 #footer {
   cursor:pointer;
   position: fixed;
