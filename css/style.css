@@ -3,7 +3,9 @@
 html {
   -webkit-font-smoothing: auto;
   text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
 }
 
 body {
@@ -15,7 +17,6 @@ body {
   line-height: 1.55rem;
   /*color: #443e3c;*/
   color: #000000;
-  -webkit-user-select: none;
 }
 
 p {
