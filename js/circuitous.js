@@ -5,7 +5,6 @@ $.getJSON('/☰/circuitous.json').done(function(data){
   RandomCircuitous();
   CountCircuitous();
   CheckCookie();
-  DarkTime();
 
   //console.log(isMobile);
   if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
@@ -248,7 +247,7 @@ if (url == 'http://'+window.location.hostname+'/') {
   setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
 }
 
-function DarkTime(wstate) {
+function darkTime(wstate) {
   
 //  darkTime : true  * start || false * stop
 
@@ -334,7 +333,7 @@ window.onload=function(){
   }
 
   //interval = setInterval(time, 3000);
-  DarkTime();
+  darkTime();
 
   function detectswipe(el,func) {
     swipe_det = new Object();
