@@ -15,6 +15,7 @@ body {
   line-height: 1.55rem;
   /*color: #443e3c;*/
   color: #000000;
+  -webkit-user-select: none;
 }
 
 p {
