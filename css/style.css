@@ -129,6 +129,12 @@ a {
   transform: translate(-50%, -50%);
 }
 
+#contentcard {
+  font-size:14px;
+  position:relative;
+  top:-0.7px;  
+}
+
 #tailcard {
   font-size:11px;
   position:relative;
