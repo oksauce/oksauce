@@ -6,7 +6,7 @@ $.getJSON('/☰/circuitous.json').done(function(data){
   CountCircuitous();
   CheckCookie();
 
-//console.log(isMobile);
+  //console.log(isMobile);
   if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
 });
 
@@ -326,21 +326,6 @@ function time() {
 */
 
 window.onload=function(){
-
-  // Create an “Add to home screen” popup -- start 
-  // https://www.netguru.com/codestories/few-tips-that-will-make-your-pwa-on-ios-feel-like-native
-  // Detects if device is on iOS 
-  // const isIos = () => {
-  // const userAgent = window.navigator.userAgent.toLowerCase();
-  // return /iphone|ipad|ipod/.test( userAgent );
-  // }
-  // Detects if device is in standalone mode
-  // const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
-  // Checks if should display install popup notification:
-  // if (isIos() && !isInStandaloneMode()) {
-  //	  this.setState({ showInstallMessage: true });
-  //}
-  // Create an “Add to home screen” popup -- end 
 
   if (getCookie("darkmode")==""){
       setCookie ("darkmode","notset",365);
