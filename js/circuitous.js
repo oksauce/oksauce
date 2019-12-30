@@ -1,18 +1,15 @@
 
 $.getJSON('/☰/circuitous.json').done(function(data){
   window.circuitous = data;
-
   RandomCircuitous();
   CountCircuitous();
   CheckCookie();
-
   //console.log(isMobile);
   if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
 });
 
 var isMobile = false; //initiate as false
 var obj_key_count = 0;
-//var interval = null;
 
 // device detection
 if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -48,18 +45,15 @@ function pickRandomCircuitous(){
 }
 
 function swipeRandomCircuitous(){
-	console.clear();
-	RandomCircuitous();
+  console.clear();
+  RandomCircuitous();
 }
 
 function pickCircuitousInfo(){
   $.getJSON('/☰/circuitousinfo.json').done(function(data){
   window.circuitousinfo = data;
-
   InfoCircuitous();
-
   setTimeout(function(){ InfoCircuitous(); }, 3000);
-
   if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
   });
 }
@@ -198,7 +192,6 @@ function cardColor(backcolor){
 
       setCookie ("darkmode","enable",365);
       darkTime(false);
-      //clearInterval(interval); // stop the interval
 
   } else if ($("#cardcolor").css('background-color') == backcolor.replace(/'/g, '"')) {
       $("#cardcolor").css("background-color", "rgba(0, 0, 0, 0)");
@@ -212,8 +205,6 @@ function cardColor(backcolor){
       //setCookie ("darkmode","disable",365);
       setCookie ("darkmode","auto",365);
       darkTime(true);
-      //interval = setInterval(time, 3000);
-
   }
 
 }
@@ -308,23 +299,6 @@ function darkTime(wstate) {
     };
 }
 
-/*
-function time() {
-  var d = new Date();
-  var s = d.getSeconds();
-  var h = d.getHours();
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
-  } else if (h > 18) {
-      if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
-  } else if (h < 18 && h < 7) {
-      if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
-  } else if (h < 18 && h > 7) {
-      if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDefault()}
-  } 
-}
-*/
-
 window.onload=function(){
 
   if (getCookie("darkmode")==""){
@@ -332,7 +306,6 @@ window.onload=function(){
       cardColorDefault();
   }
 
-  //interval = setInterval(time, 3000);
   darkTime();
 
   function detectswipe(el,func) {
