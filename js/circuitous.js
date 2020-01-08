@@ -8,8 +8,14 @@ $.getJSON('/☰/circuitous.json').done(function(data){
   if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
 });
 
-var isMobile = false; //initiate as false
+var isMobile = false;  //initiate as false
 var obj_key_count = 0;
+var darkstate = null;
+var swipe_det = null;
+var ele = null;
+var ran_key = null;
+var count_key = 0;
+var darkness = null;;
 
 // device detection
 if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -39,14 +45,14 @@ function getCookie(cname) {
   return "";
 }
 
-function pickRandomCircuitous(){
-	console.clear();
-	if (!isMobile) {RandomCircuitous()}
-}
-
 function swipeRandomCircuitous(){
   console.clear();
   RandomCircuitous();
+}
+
+function pickRandomCircuitous(){
+  console.clear();
+  if (!isMobile) {RandomCircuitous()}
 }
 
 function pickCircuitousInfo(){
@@ -104,8 +110,8 @@ function RandomCircuitous(){
 
 function CountCircuitous(){
   var obj_keys = Object.keys(window.circuitous);
-  var ran_key = (obj_keys.length);
-  //document.getElementById("cow").innerHTML = ran_key;
+  ran_key = (obj_keys.length);
+  
   $('span.cow').text(ran_key);
   //console.info(ran_key);
 }
@@ -118,7 +124,7 @@ function CheckCookie(){
   } else if (getCookie("darkmode")=="auto") {
       setCookie ("darkmode","auto",365);
   } else if (getCookie("darkmode")=="notset") {
-  	  cardColorDefault();
+      cardColorDefault();
   }
 /*
   if (getCookie("darkmode")=="enable" || getCookie("darkmode")=="disable"){
@@ -138,7 +144,7 @@ function createMailtoLinks(){
 /* $(function(){createMailtoLinks();}); */
 
 /* change favicons */
-document.head = document.head || document.getElementsByTagName('head')[0];
+// document.head = document.head || document.getElementsByTagName('head')[0];
 
 function changeFavicon(src) {
   var link = document.createElement('link'),
@@ -238,13 +244,12 @@ if (url == 'http://'+window.location.hostname+'/') {
   setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
 }
 
-function darkTime(wstate) {
+function darkTime(darkstate) {
   
 //  darkTime : true  * start || false * stop
 
   //console.log('inside darkTime');
-
-  darkstate = wstate;
+  //darkstate = wstate;
 
     var newWorker = function (funcObj) {
     var blobURL = URL.createObjectURL(new Blob(['(',
@@ -253,8 +258,6 @@ function darkTime(wstate) {
     URL.revokeObjectURL(blobURL);
     return worker;
     }
-
-    var darktime;
 
     var d = new Date();
     var s = d.getSeconds();
@@ -267,7 +270,7 @@ function darkTime(wstate) {
       function darkCount() {
          i = i + 1;
          postMessage(i);
-         darktime = setTimeout(darkCount, 3000);
+         darkness = setTimeout(darkCount, 3000);
       }
          darkCount();
     });
@@ -275,6 +278,8 @@ function darkTime(wstate) {
     w1.onmessage = function (event) { // 3000
 
       //console.log(event.data);
+      //console.log(h);
+      //console.log(s);
       
       if (darkstate == false){
         //console.log('darktime false!');
@@ -283,20 +288,55 @@ function darkTime(wstate) {
         w1 = undefined;
       }
 
-      //console.log(h);
-      //console.log(s);
+      if (count_key != ran_key) {
+          count_key = count_key + 1;
+          $('span.cow').text(count_key);
+      } else if (count_key == ran_key) {
+          $('span.cow').text(count_key);
+          count_key = 0;
+      }
+
+      		switch (h) {
+      		   case (8):
+      		 	 case (9):
+      		 	 case (10):
+      		 	 case (11):
+      		 	 case (12):
+      		 	 case (13):
+      		 	 case (14):
+      		 	 case (15):
+      		 	 case (16):
+                  if (getCookie("darkmode")=="notset"){cardColorDefault()}
+                  if (getCookie("darkmode")=="auto"){cardColorDefault()}
+    			break;
+      		 	 case (17):
+      		 	 case (18):
+      		 	 case (19):
+      		 	 case (20):
+      		 	 case (21):
+      		 	 case (22):
+      		 	 case (23):
+      		 	 case (24):
+      		 	 case (1):
+      		 	 case (2):
+      		 	 case (3):
+      		 	 case (4):
+      		 	 case (5):
+      		 	 case (6):
+      		 	 case (7):
+    				      if (getCookie("darkmode")=="notset"){cardColorDark()}
+    				      if (getCookie("darkmode")=="auto"){cardColorDark()}
+    			 break;
+		     }
 
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
-      } else if (h > 18) {
-          if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
-      } else if (h < 18 && h < 7) {
-          if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDark()}
-      } else if (h < 18 && h > 7) {
-          if (getCookie("darkmode")=="notset" || getCookie("darkmode")=="auto"){cardColorDefault()}
-      }  
+          if (getCookie("darkmode")=="notset"){cardColorDark()}
+          if (getCookie("darkmode")=="auto"){cardColorDark()}
+      }
 
-    };
+      //console.log(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+    }
 }
 
 window.onload=function(){
@@ -306,7 +346,12 @@ window.onload=function(){
       cardColorDefault();
   }
 
-  darkTime();
+  darkTime(true);
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('./sw.js');
+  }
 
   function detectswipe(el,func) {
     swipe_det = new Object();
@@ -356,5 +401,5 @@ window.onload=function(){
     }
 
     detectswipe('circuitous',randomfunction);
-}
 
+}
