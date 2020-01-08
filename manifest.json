@@ -1,0 +1,34 @@
+{
+  "name": "oksauce",
+  "short_name": "sauce",
+  "icons": [{
+      "src": "/icon/touch-icon-msapp.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "/icon/touch-icon-ipad.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": "/icon/touch-icon-ipad-retina.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    }, {
+      "src": "/icon/touch-icon-iphone.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }, {
+      "src": "/icon/touch-icon-ipad-pro.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "/icon/touch-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }],
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "black",
+  "theme_color": "black"
+}
