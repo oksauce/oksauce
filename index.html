@@ -4,6 +4,11 @@
 <head>
 <meta charset="utf-8">
 <title>sauce</title>
+<link rel="manifest" href="/manifest.json">
+
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<!--<link href="/css/syntax.css" rel="stylesheet" type="text/css">-->
 
 <link id="short-icon" rel="shortcut icon" type="image/x-icon" href="/img/circuitous-16x16.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,8 +18,12 @@
 <link rel="apple-touch-icon" sizes="167x167" href="/icon/touch-icon-ipad-retina.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/icon/touch-icon-ipad.png">
 
+<meta name="theme-color" content="black"/>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-title" content="☰ sauce"> 
+<meta name="msapplication-TileImage" content="/icon/touch-icon-msapp.png">  
+<meta name="msapplication-TileColor" content="#FFFFFF">
 
 <!-- iPad Pro 12.9" (2048px x 2732px) -->
 <link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" href="/ipadpro2-splash-2048x2732.png">
@@ -31,13 +40,6 @@
 <!-- iPhone 5 (640px x 1136px) -->
 <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/iphone5-splash-640x1136.png">
 
-<link href="/css/fonts.css" rel="stylesheet" type="text/css">
-<link href="/css/style.css" rel="stylesheet" type="text/css">
-<link href="/css/syntax.css" rel="stylesheet" type="text/css">
-
-<script src="/js/jquery-1.10.2.min.js"></script>
-<script src="/js/circuitous.js"></script>
-
 </head>
 <body id="cardcolor">
 
@@ -53,5 +55,17 @@
    	<a onclick="clickCard()"><span id="tailcard">&#9776;</span> circuitous cards</a> 
    </footer>
  </div>
+
+<script>
+/*
+ function loadScripts(sources) {sources.forEach(src => {var script = document.createElement('script');script.src = src;script.async = false; //<-- the important part document.body.appendChild( script ); //<-- make sure to append to body instead of head });}loadScripts(['/js/jquery.js','/js/circuitous.js','/js/main.js'])
+*/
+</script>
+
+<script src="/js/jquery.js"></script>
+ <!-- <script src="/js/main.js"></script> -->
+<script src="/js/circuitous.js"></script> 
+
+
 </body>
 </html>
