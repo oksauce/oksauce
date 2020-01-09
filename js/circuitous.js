@@ -244,6 +244,16 @@ if (url == 'http://'+window.location.hostname+'/') {
   setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
 }
 
+
+function updateJson() {
+  $.getJSON('/☰/circuitous.json').done(function(data){
+  	window.circuitous = data;
+  	//console.log(isMobile);
+  	if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
+  });
+}
+
+
 function darkTime(darkstate) {
   
 //  darkTime : true  * start || false * stop
@@ -281,58 +291,73 @@ function darkTime(darkstate) {
       //console.log(h);
       //console.log(s);
       
-      if (darkstate == false){
+    if (darkstate == false){
         //console.log('darktime false!');
         clearTimeout(darktime);
         w1.terminate();
         w1 = undefined;
-      }
+    }
 
-      if (count_key != ran_key) {
-          count_key = count_key + 1;
-          $('span.cow').text(count_key);
-      } else if (count_key == ran_key) {
-          $('span.cow').text(count_key);
-          count_key = 0;
-      }
+    if (count_key != ran_key) {
+        count_key = count_key + 1;
+        $('span.cow').text(count_key);
+    } else if (count_key == ran_key) {
+        $('span.cow').text(count_key);
+        count_key = 0;
+    }
 
-      		switch (h) {
-      		   case (8):
-      		 	 case (9):
-      		 	 case (10):
-      		 	 case (11):
-      		 	 case (12):
-      		 	 case (13):
-      		 	 case (14):
-      		 	 case (15):
-      		 	 case (16):
-                  if (getCookie("darkmode")=="notset"){cardColorDefault()}
-                  if (getCookie("darkmode")=="auto"){cardColorDefault()}
-    			break;
-      		 	 case (17):
-      		 	 case (18):
-      		 	 case (19):
-      		 	 case (20):
-      		 	 case (21):
-      		 	 case (22):
-      		 	 case (23):
-      		 	 case (24):
-      		 	 case (1):
-      		 	 case (2):
-      		 	 case (3):
-      		 	 case (4):
-      		 	 case (5):
-      		 	 case (6):
-      		 	 case (7):
-    				      if (getCookie("darkmode")=="notset"){cardColorDark()}
-    				      if (getCookie("darkmode")=="auto"){cardColorDark()}
-    			 break;
-		     }
+    switch(count_key) {
+      	case (10): // every 30 seconds
+      	case (20): // every 30 seconds
+      	case (30): // every 30 seconds
+      	case (40): // every 30 seconds
+      	case (50): // every 30 seconds
+    		if (navigator.onLine) {
+    			console.log('online - check for new content -- every 30 seconds!');
+    			updateJson();
+    		} else {
+    			console.log('offline');
+    		}
+    	break;
+    }
 
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          if (getCookie("darkmode")=="notset"){cardColorDark()}
-          if (getCookie("darkmode")=="auto"){cardColorDark()}
-      }
+    switch (h) {
+      	case (8):
+      	case (9):
+      	case (10):
+      	case (11):
+      	case (12):
+      	case (13):
+      	case (14):
+      	case (15):
+      	case (16):
+            if (getCookie("darkmode")=="notset"){cardColorDefault()}
+            if (getCookie("darkmode")=="auto"){cardColorDefault()}
+    	break;
+      	case (17):
+      	case (18):
+      	case (19):
+      	case (20):
+      	case (21):
+      	case (22):
+      	case (23):
+      	case (24):
+      	case (1):
+      	case (2):
+      	case (3):
+      	case (4):
+      	case (5):
+      	case (6):
+      	case (7):
+    		if (getCookie("darkmode")=="notset"){cardColorDark()}
+    		if (getCookie("darkmode")=="auto"){cardColorDark()}
+    	break;
+	}
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        if (getCookie("darkmode")=="notset"){cardColorDark()}
+        if (getCookie("darkmode")=="auto"){cardColorDark()}
+    }
 
       //console.log(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
 
