@@ -1,4 +1,3 @@
-
 var cacheName = '☰ sauce';
 var filesToCache = [
   '/',
@@ -13,8 +12,6 @@ var filesToCache = [
   '/js/jquery.js',
   '/js/main.js',
   '/js/circuitous.js'
-  //'/%E2%98%B0/circuitous.json',
-  //'/%E2%98%B0/circuitousinfo.json'
 ];
 
 /* Start the service worker and cache all of the app's content */
