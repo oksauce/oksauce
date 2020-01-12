@@ -1,5 +1,7 @@
 # ☰ sauce ^ glyn thomas ~ electronica
 
-simple website @ oksauce.com
+oksauce.com +home
+
+☰ circuitous cards
 
 made with love
