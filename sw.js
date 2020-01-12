@@ -1,4 +1,6 @@
-var cacheName = 'sauce-pwa';
+
+
+var cacheName = '☰ sauce';
 var filesToCache = [
   '/',
   '/index.html',
@@ -11,9 +13,9 @@ var filesToCache = [
   '/icon/touch-icon-msapp.png',
   '/js/jquery.js',
   '/js/main.js',
-  '/%E2%98%B0/circuitous.json',
-  '/%E2%98%B0/circuitousinfo.json',
   '/js/circuitous.js'
+  //'/%E2%98%B0/circuitous.json',
+  //'/%E2%98%B0/circuitousinfo.json'
 ];
 
 /* Start the service worker and cache all of the app's content */
