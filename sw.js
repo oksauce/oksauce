@@ -13,7 +13,7 @@ var filesToCache = [
   '/js/circuitous.js'
 ];
 
-/* Start the service worker and cache all of the app's content
+/* start the service worker and cache all of the app's content */
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(cacheName)
@@ -22,8 +22,8 @@ self.addEventListener('install', function(event) {
     })
   );
 });
-*/
 
+/* start the service worker and cache all of the app's content - check for errors
 self.addEventListener("install", function(event) {
   event.waitUntil(
     caches.open(cacheName)
@@ -31,8 +31,9 @@ self.addEventListener("install", function(event) {
     .catch(error => console.error('💩', error))
   )
 });
+*/
 
-/* Serve cached content when offline */
+/* serve cached content when offline */
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
