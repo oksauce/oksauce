@@ -10,7 +10,6 @@ var filesToCache = [
   '/img/+sauce-16x16.png',
   '/icon/touch-icon-msapp.png',
   '/js/jquery.js',
-  '/js/main.js',
   '/js/circuitous.js'
 ];
 
