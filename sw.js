@@ -1,5 +1,4 @@
 
-
 var cacheName = '☰ sauce';
 var filesToCache = [
   '/',
