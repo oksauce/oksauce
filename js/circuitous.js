@@ -279,7 +279,10 @@ function onlineJson() {
       if ('serviceWorker' in navigator) {
         localStorage.setItem('circuitous', JSON.stringify(data));
         window.circuitous = JSON.parse(localStorage.getItem('circuitous'));
+        var obj_keys = Object.keys(window.circuitous);
+        ran_key = (obj_keys.length);
         //console.log('update window.circuitous data');
+        console.log('cards ☰ '+netcount);
       }
     }
     cardcount = netcount;
