@@ -7,6 +7,7 @@ var ele = null;
 var ran_key = null;
 var count_key = 0;
 var darkness = null;
+var ran_key_select = 0;
 
 var cardcount = 0;
 var infocount = 0;
@@ -127,7 +128,15 @@ function InfoCircuitous(){
 function RandomCircuitous(){
   $("#content").css("text-align", "center");
   var obj_keys = Object.keys(window.circuitous);
-  window.ran_key_select = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+
+  if (ran_key_select & 1 == 1) { // odd number
+  	window.ran_key_select = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+  	//console.log('card ☰ random odd');
+  } else {
+  	window.ran_key_select = obj_keys[Math.floor(Math.random() *(obj_keys.length - 1))];
+  	//console.log('card ☰ random even');
+  }
+
   window.selectedcircuitous = window.circuitous[ran_key_select];
   document.getElementById("circuitous").innerHTML = (JSON.stringify(window.selectedcircuitous.circuitous)).replace(/\"/g, "").replace(/\"/g, "");
   document.getElementById("cowabunga").innerHTML = window.ran_key_select;
