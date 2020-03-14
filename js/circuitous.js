@@ -7,13 +7,12 @@ var ele = null;
 var ran_key = null;
 var count_key = 0;
 var darkness = null;
-var ran_key_select = 0;
 
 var cardcount = 0;
 var infocount = 0;
 
 
-$.getJSON('/☰/circuitous.json').done(function(data){
+$.getJSON('/☰/json/circuitous.json').done(function(data){
   window.circuitous = data;
 
   localStorage.setItem('circuitous', JSON.stringify(data));
@@ -29,7 +28,7 @@ $.getJSON('/☰/circuitous.json').done(function(data){
   if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
 });
  
-$.getJSON('/☰/circuitousinfo.json').done(function(data){
+$.getJSON('/☰/json/circuitousinfo.json').done(function(data){
   window.circuitousinfo = data;
 
   localStorage.setItem('circuitousinfo', JSON.stringify(data));
@@ -86,7 +85,8 @@ function pickCircuitousInfo(){
   //localStorage.setItem('circuitousinfo', JSON.stringify(data));
 
   InfoCircuitous();
-  setTimeout(function(){ InfoCircuitous(); }, 3000);
+  setTimeout(function(){ InfoCircuitous(); }, 2000);
+  setTimeout(function(){RandomCircuitous(); }, 4000);
   if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
   //});
 }
@@ -128,15 +128,7 @@ function InfoCircuitous(){
 function RandomCircuitous(){
   $("#content").css("text-align", "center");
   var obj_keys = Object.keys(window.circuitous);
-
-  if (ran_key_select & 1 == 1) { // odd number
-  	window.ran_key_select = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-  	//console.log('card ☰ random odd');
-  } else {
-  	window.ran_key_select = obj_keys[Math.floor(Math.random() *(obj_keys.length - 1))];
-  	//console.log('card ☰ random even');
-  }
-
+  window.ran_key_select = obj_keys[Math.floor(Math.random() *obj_keys.length)];
   window.selectedcircuitous = window.circuitous[ran_key_select];
   document.getElementById("circuitous").innerHTML = (JSON.stringify(window.selectedcircuitous.circuitous)).replace(/\"/g, "").replace(/\"/g, "");
   document.getElementById("cowabunga").innerHTML = window.ran_key_select;
@@ -216,6 +208,15 @@ function clickCard(){
   //$("#circuitous").html("inspired by Brian Eno and Peter Schmidt,circuitous cards are developing to inspire and build new processes for creative electronic music production");
 }
 
+function clickCuts(){ 
+  setTimeout(function(){ changeFavicon('/img/+sauce-16x16.png'); }, 100);
+  setTimeout(function(){ changeFavicon('/img/sauce-16x16.png'); }, 500);
+  setTimeout(function(){ changeFavicon('/img/circuitous-16x16.png'); }, 1000);
+  window.location.href = '/☰';
+
+}
+
+
 function cardColor(backcolor){
 
   //console.log('cardColor');
@@ -288,10 +289,7 @@ function onlineJson() {
       if ('serviceWorker' in navigator) {
         localStorage.setItem('circuitous', JSON.stringify(data));
         window.circuitous = JSON.parse(localStorage.getItem('circuitous'));
-        var obj_keys = Object.keys(window.circuitous);
-        ran_key = (obj_keys.length);
         //console.log('update window.circuitous data');
-        console.log('cards ☰ '+netcount);
       }
     }
     cardcount = netcount;
