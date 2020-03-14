@@ -281,7 +281,7 @@ if (url == 'http://'+window.location.hostname+'/') {
 
 
 function onlineJson() {
-  $.getJSON('/☰/circuitous.json').done(function(data){
+  $.getJSON('/☰/json/circuitous.json').done(function(data){
   	window.circuitous = data;
     var netcount = Object.keys(data).length;
     //console.log(netcount);
