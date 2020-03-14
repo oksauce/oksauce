@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>sauce</title>
+<link rel="manifest" href="/manifest.json">
+
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<!--<link href="/css/syntax.css" rel="stylesheet" type="text/css">-->
+
+<link id="short-icon" rel="shortcut icon" type="image/x-icon" href="/img/circuitous-16x16.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="apple-touch-icon" href="/icon/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icon/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="167x167" href="/icon/touch-icon-ipad-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icon/touch-icon-ipad.png">
+
+<meta name="theme-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-title" content="☰ sauce"> 
+<meta name="msapplication-TileImage" content="/icon/touch-icon-msapp.png">  
+<meta name="msapplication-TileColor" content="#FFFFFF">
+
+<!-- Le styles -->
+<link href="css/style.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+<body>
+
+<!-- Navbar ================================================== -->
+
+  <div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+     <div class="container">
+  
+        <div id="header" onclick="cardColor('rgb(36, 36, 38)')" ><span id="plus" class="">+</span> sauce <span class="cow" style="color:#acacac;font-size:12px"></span>
+      <span id="cowabunga" style="color:white;font-size:12px;visibility:hidden"></span></div>
+          </div> <!-- / container -->
+    </div> <!-- / navbar inner -->
+</div> <!-- / nav --> 
+
+<!-- wrapper -->
+<div id="wrap">
+
+
+<div class="get-social">
+<!--
+	<div class="container">
+		<ul class="social-buttons" style="height:30px;">
+			<li class="plusone-button">
+				<div class="g-plusone" data-href="http://www.livekeyboardshortcuts.com/" data-size="medium"></div>
+			</li>
+			<li class="twitter-button">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-text="Cool Web App to Learn Ableton Live Keyboard Shortcuts" data-hashtags="keyboardshortcuts, AbletonLive" data-url="http://www.abletonlivekeyboardshortcuts.com">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</li>
+			<li class="facebook-button">
+				<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.abletonlivekeyboardshortcuts.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font=verdana&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:20px;" allowTransparency="true"></iframe>
+			</li>	
+			<li class="reddit-button">
+				<a href="http://www.reddit.com/submit" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="http://www.reddit.com/static/spreddit7.gif" alt="submit to reddit" border="0" /> </a>
+			</li>
+		</ul>
+	</div>
+  -->
+</div>         
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+        <h3 id="myModalLabel">Instructions</h3>
+    </div>
+    <div class="modal-body">
+        <p>Search and visualize default keyboard shortcuts for Ableton Live 8 and 9. </p>
+        <p>For Mac keyboards with or without a numeric keypad, and for generic PC keyboards.</p>
+        <h4>How to use:</h4> 
+        <ul>
+        <li>Click on a category on the left, then hover over a function on the right.</li>
+        <li>Alternatively, enter a keyword into the search input field, and hover over the results.</li>
+        <li>The appropriate keyboard shortcut will light up.</li>
+        <li>Commit to memory!</li>
+        </ul>
+        <h4>Tooltips</h4>
+        <p>Some Ableton Live functions have <a href="#" class="tooltip-demo" title data-original-title="This is a tooltip">tooltips</a>, which can be activated by hovering over them with the mouse.</p>                        		<p>Tooltips are used:</p>
+        <ul>
+	        <li>whenever there's additional information about a function</li>
+	        <li>whenever there's an alternative keyboard shortcut for a function</li>
+	        <li>whenever invoking an Ableton Live function involves a mouse-click</li>
+        </ul>
+    </div>
+     <div class="modal-footer">
+		<a href="#" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Yep, got it.</a> 
+	</div>
+</div> <!-- / modal --><div class="row-fluid">
+	<div class="span3">
+
+		<div>
+		
+<div class="row-fluid">
+    <div class="scrollsidebar hidden-phone">
+  
+        <ul class="nav nav-list shortcuts-sidenav" id="mynav">
+  <li><a href="#showing-and-hiding-views"><i class="icon-chevron-right"></i>Show Hide Views</a>
+  </li>
+  <li><a href="#adjusting-values"><i class="icon-chevron-right"></i>Adjusting Values</a>
+  </li>
+  <li><a href="#browsing"><i class="icon-chevron-right"></i>Browsing</a>
+  </li>
+  <li><a href="#transport"><i class="icon-chevron-right"></i>Transport</a>
+  </li>
+  <li><a href="#editing"><i class="icon-chevron-right"></i>Editing</a>
+  </li>
+  <li><a href="#loop-brace-and-start-end-markers"><i class="icon-chevron-right"></i>Loop Start&#x2F;End Markers </a>
+  </li>
+  <li><a href="#session-view-commands"><i class="icon-chevron-right"></i>Session View</a>
+  </li>
+  <li><a href="#arrangement-view-commands"><i class="icon-chevron-right"></i>Arrangement View</a>
+  </li>
+  <li><a href="#commands-for-tracks"><i class="icon-chevron-right"></i>Commands for Tracks</a>
+  </li>
+  <li><a href="#key-midi-map-mode"><i class="icon-chevron-right"></i>Key&#x2F;MIDI Map Mode</a>
+  </li>
+  <li><a href="#zooming-display-and-selections"><i class="icon-chevron-right"></i>Zoom & Display</a>
+  </li>
+  <li><a href="#clip-view-sample-display"><i class="icon-chevron-right"></i>Clip View Display</a>
+  </li>
+  <li><a href="#clip-view-midi-editor"><i class="icon-chevron-right"></i>Clip View MIDI Editor</a>
+  </li>
+  <li><a href="#grid-snapping-and-drawing"><i class="icon-chevron-right"></i>Grid Snapping</a>
+  </li>
+  <li><a href="#global-quantization"><i class="icon-chevron-right"></i>Global Quantization </a>
+  </li>
+  <li><a href="#working-with-sets-and-the-program"><i class="icon-chevron-right"></i>Sets and the Program</a>
+  </li>
+  <li><a href="#working-with-plugins-and-devices"><i class="icon-chevron-right"></i>Plug-Ins and Devices</a>
+  </li>
+</ul>
+</div>
+</div>
+    </div>
+
+
+  </div>
+<div class="span9">
+	<div class="container-fluid" id="keyboard"></div>	
+	<div class="navbar" id="thetoolbar">
+	<div class="navbar-inner">
+		<!--<a class="brand"><i class="icon-wrench"></i></a>-->
+
+  <form class="navbar-search">
+    	<div class="input-prepend">
+		    <i class="add-on"><i class="icon-search icon-large"></i></i>
+		    <input  id="input_search" type="text" placeholder="Search a Shortcut..." autocomplete="on" onClick="_gaq.push(['_trackEvent', 'Search', 'Searched']);">    
+	    </div>
+    </form>
+
+
+			<div class="btn-group">
+				<button class="btn btn-small btn-primary dropdown-toggle" data-toggle="dropdown"><i class="icon-keyboard"></i> Keyboard <i class="icon-caret-down"></i></button>
+					<ul class="dropdown-menu">
+					    <li id="togglenumerics" onclick="$('#layoutbutton').prop('disabled', true);"><a href="#"><i class="icon-apple"></i> Numeric Keypad</a></li>
+					    <li id="togglewireless" onclick="$('#layoutbutton').prop('disabled', false);"><a href="#"><i class="icon-apple"></i> Wireless</a></li>
+					    <li id="togglemacbook" onclick="$('#layoutbutton').prop('disabled', false);"><a href="#"><i class="icon-apple"></i> Macbook Pro</a></li>
+					    <li id="togglepc" onclick="$('#layoutbutton').prop('disabled', true);"><a href="#"><i class="icon-windows"></i> PC Generic</a></li>
+					</ul>
+			</div>
+
+			 <!-- button-group -->
+	<div class="btn-group">						
+		<button id="layoutbutton" class="btn btn-small btn-primary dropdown-toggle" data-toggle="dropdown"><i class="icon-globe"></i> Layout <i class="icon-caret-down"></i></button>
+			<ul class="dropdown-menu">
+			    <li id="englishintl"><a href="#">English Intl</a></li>
+			    <li id="english"><a href="#">English</a></li>
+			    <li id="englishuk"><a href="#">English UK</a></li>					    
+			</ul>
+	</div>
+
+	<!--
+    <form class="navbar-search pull-right">
+    	<div class="input-prepend">
+		    <i class="add-on"><i class="icon-search icon-large"></i></i>
+		    <input  id="input_search" type="text" placeholder="Search a Shortcut..." autocomplete="on" onClick="_gaq.push(['_trackEvent', 'Search', 'Searched']);">    
+	    </div>
+    </form>
+-->
+    </div> <!-- navbar-inner -->
+</div> <!-- navbar the toolbar -->
+
+
+<div id="combos" data-spy="scroll" data-target=".scrollsidebar" data-offset="150">
+    </section>
+    <section class="thesection" id="showing-and-hiding-views">
+      <h3 class="text-center" style="margin-top: 0px;"><i class="icon-chevron-sign-right icon-large pull-left"></i>Showing & Hiding Views</h3>
+      <div pc-keys="f11" data-keys="control,f11"><kbd class="abletonmac">&#x2303; F11</kbd><kbd class="abletonpc">F11</kbd>Toggle Full Screen Mode</div>
+      <div pc-keys="tab" data-keys="tab"><kbd class="abletonmac">&#x21E5;</kbd><kbd class="abletonpc">&#x21E5;</kbd>Toggle Session&#x2F;Arrangement View</div>
+      <div class="tooltip-demo" pc-keys="control,f12" data-keys="control,f12"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Shift + Tab or Control F12">Toggle Track&#x2F;Clip View</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Shift + Tab or F12">Toggle Track&#x2F;Clip View</a><kbd class="abletonmac">&#x2303; F12</kbd><kbd class="abletonpc">&#x2303; F12</kbd>
+      </div>
+      <div class="tooltip-demo" pc-keys="control,alt,l" data-keys="command,option,l"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Command + Option + L or Control + Shift + F12">Hide&#x2F;Show Detail View</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Control + Alt + L or Shift + F12">Hide&#x2F;Show Detail View</a><kbd class="abletonmac">&#x2318; &#x2325; L</kbd><kbd class="abletonpc">&#x2303; Alt L</kbd>
+      </div>
+      <div pc-keys="q" data-keys="q"><kbd class="abletonmac">Q</kbd><kbd class="abletonpc">Q</kbd>Toggle Hot-Swap Mode</div>
+      <div pc-keys="d" data-keys="d"><kbd class="abletonmac">D</kbd><kbd class="abletonpc">D</kbd>Toggle Drum Rack&#x2F;last selected Pad</div>
+      <div pc-keys="shift,&#x2F;" data-keys="shift,&#x2F;"><kbd class="abletonmac">&#x21E7; /</kbd><kbd class="abletonpc">&#x21E7; /</kbd>Hide&#x2F;Show Info View</div>
+      <div pc-keys="control,alt,b" data-keys="command,option,b"><kbd class="abletonmac">&#x2318; &#x2325; B</kbd><kbd class="abletonpc">&#x2303; Alt B</kbd>Hide&#x2F;Show Browser</div>
+      <div pc-keys="control,alt,o" data-keys="command,option,o"><kbd class="abletonmac">&#x2318; &#x2325; O</kbd><kbd class="abletonpc">&#x2303; Alt O</kbd>Hide&#x2F;Show Overview</div>
+      <div pc-keys="control,alt,i" data-keys="command,option,i"><kbd class="abletonmac">&#x2318; &#x2325; I</kbd><kbd class="abletonpc">&#x2303; Alt I</kbd>Hide&#x2F;Show In&#x2F;Out</div>
+      <div pc-keys="control,alt,s" data-keys="command,option,s"><kbd class="abletonmac">&#x2318; &#x2325; S</kbd><kbd class="abletonpc">&#x2303; Alt S</kbd>Hide&#x2F;Show Sends</div>
+      <div pc-keys="control,alt,m" data-keys="command,option,m"><kbd class="abletonmac">&#x2318; &#x2325; M</kbd><kbd class="abletonpc">&#x2303; Alt M</kbd>Hide&#x2F;Show Mixer</div>
+      <div pc-keys="control,lt" data-keys="command,lt"><kbd class="abletonmac">&#x2318; ,</kbd><kbd class="abletonpc">&#x2303; ,</kbd>Open Preferences</div>
+      <div pc-keys="esc" data-keys="esc"><kbd class="abletonmac">&#x238B;</kbd><kbd class="abletonpc">&#x238B;</kbd>Close Window&#x2F;Dialog</div>
+    </section>
+    <section class="thesection" id="adjusting-values">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Adjusting Values</h3>
+      <div pc-keys="down,up" data-keys="down,up"><kbd class="abletonmac">&#x2193; &#x2191;</kbd><kbd class="abletonpc">&#x2193; &#x2191;</kbd>Decrement&#x2F;Increment</div>
+      <div pc-keys="control" data-keys="command"><kbd class="abletonmac">&#x2318;</kbd><kbd class="abletonpc">&#x2303;</kbd>Finer Resolution for Dragging</div>
+      <div pc-keys="delete" data-keys="delete"><kbd class="abletonmac">Backspace</kbd><kbd class="abletonpc">Delete</kbd>Return to Default</div>
+      <div pc-keys="),!,@,#,$,%,^,amp,*,(" data-keys="),!,@,#,$,%,^,amp,*,("><kbd class="abletonmac">0 - 9</kbd><kbd class="abletonpc">0 - 9</kbd>Type In Value</div>
+      <div pc-keys="lt,gt" data-keys="lt,gt"><kbd class="abletonmac">, .</kbd><kbd class="abletonpc">, .</kbd>Go to Next Field</div>
+      <div pc-keys="esc" data-keys="esc"><kbd class="abletonmac">&#x238B;</kbd><kbd class="abletonpc">&#x238B;</kbd>Abort Value Entry</div>
+      <div pc-keys="return" data-keys="return"><kbd class="abletonmac">&#x21A9;</kbd><kbd class="abletonpc">&#x21A9;</kbd>Confirm Value Entry</div>
+    </section>
+    <section class="thesection" id="browsing">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Browsing</h3>
+      <div pc-keys="down,up" data-keys="down,up"><kbd class="abletonmac">&#x2193; &#x2191;</kbd><kbd class="abletonpc">&#x2193; &#x2191;</kbd>Scroll Down&#x2F;Up</div>
+      <div pc-keys="left,right" data-keys="left,right"><kbd class="abletonmac">&#x2190; &#x2192;</kbd><kbd class="abletonpc">&#x2190; &#x2192;</kbd>Close&#x2F;Open Folders</div>
+      <div pc-keys="return" data-keys="return"><kbd class="abletonmac">&#x21A9;</kbd><kbd class="abletonpc">&#x21A9;</kbd>Set Selected Folder as Browser Root</div>
+      <div class="tooltip-demo" pc-keys="return" data-keys="return"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Return, or Double Click">Load Selected Item from Browser</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Return, or Double Click">Load Selected Item from Browser</a><kbd class="abletonmac">&#x21A9;</kbd><kbd class="abletonpc">&#x21A9;</kbd>
+      </div>
+      <div pc-keys="shift,return" data-keys="shift,return"><kbd class="abletonmac">&#x21E7; &#x21A9;</kbd><kbd class="abletonpc">&#x21E7; &#x21A9;</kbd>Preview Selected File</div>
+      <div pc-keys="control,f" data-keys="command,f"><kbd class="abletonmac">&#x2318; &#x21E7; F</kbd><kbd class="abletonpc">&#x2303; &#x21E7; F</kbd>Search in Browser</div>
+      <div pc-keys="down" data-keys="down"><kbd class="abletonmac">&#x2193;</kbd><kbd class="abletonpc">&#x2193;</kbd>Jump to Search Results</div>
+    </section>
+    <section class="thesection" id="transport">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Transport</h3>
+      <div pc-keys="space" data-keys="space"><kbd class="abletonmac">&#x2423;</kbd><kbd class="abletonpc">&#x2423;</kbd>Play from Start Marker&#x2F;Stop</div>
+      <div pc-keys="shift,space" data-keys="shift,space"><kbd class="abletonmac">&#x21E7; &#x2423;</kbd><kbd class="abletonpc">&#x21E7; &#x2423;</kbd>Continue Play from Stop Point</div>
+      <div pc-keys="space" data-keys="space"><kbd class="abletonmac">&#x2325; &#x2423;</kbd><kbd class="abletonpc">&#x2303; &#x2423;</kbd>Play Arrangement View Selection</div>
+      <div pc-keys="numhome" data-keys="fn,left"><kbd class="abletonmac">fn &#x2190;</kbd><kbd class="abletonpc">Home</kbd>Move Insert Marker to Beginning</div>
+      <div pc-keys="f9" data-keys="f9"><kbd class="abletonmac">F9</kbd><kbd class="abletonpc">F9</kbd>Record</div>
+      <div pc-keys="f10" data-keys="f10"><kbd class="abletonmac">F10</kbd><kbd class="abletonpc">F10</kbd>Back to Arrangement</div>
+      <div pc-keys="f1,f2,f3,f4,f5,f6,f7,f8" data-keys="fn,f1,f2,f3,f4,f5,f6,f7,f8"><kbd class="abletonmac">fn F1 - F8</kbd><kbd class="abletonpc">F1 - F8</kbd>Activate&#x2F;Deactivate Track 1..8</div>
+    </section>
+    <section class="thesection" id="editing">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Editing</h3>
+      <div pc-keys="control,x" data-keys="command,x"><kbd class="abletonmac">&#x2318; X</kbd><kbd class="abletonpc">&#x2303; X</kbd>Cut</div>
+      <div pc-keys="control,c" data-keys="command,c"><kbd class="abletonmac">&#x2318; C</kbd><kbd class="abletonpc">&#x2303; C</kbd>Copy</div>
+      <div pc-keys="control,v" data-keys="command,v"><kbd class="abletonmac">&#x2318; V</kbd><kbd class="abletonpc">&#x2303; V</kbd>Paste</div>
+      <div pc-keys="control,d" data-keys="command,d"><kbd class="abletonmac">&#x2318; D</kbd><kbd class="abletonpc">&#x2303; D</kbd>Duplicate</div>
+      <div pc-keys="delete" data-keys="delete"><kbd class="abletonmac">Backspace</kbd><kbd class="abletonpc">Delete</kbd>Delete</div>
+      <div pc-keys="control,z" data-keys="command,z"><kbd class="abletonmac">&#x2318; Z</kbd><kbd class="abletonpc">&#x2303; Z</kbd>Undo</div>
+      <div pc-keys="control,y" data-keys="command,shift,z"><kbd class="abletonmac">&#x2318; &#x21E7; Z</kbd><kbd class="abletonpc">&#x2303; Y</kbd>Redo</div>
+      <div pc-keys="control,r" data-keys="command,r"><kbd class="abletonmac">&#x2318; R</kbd><kbd class="abletonpc">&#x2303; R</kbd>Rename</div>
+      <div pc-keys="control,a" data-keys="command,a"><kbd class="abletonmac">&#x2318; A</kbd><kbd class="abletonpc">&#x2303; A</kbd>Select All</div>
+    </section>
+    <section class="thesection" id="loop-brace-and-start-end-markers">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Loop Brace and Start&#x2F;End Markers </h3>
+      <div class="tooltip-demo" pc-keys="shift" data-keys="shift"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Shift Click">Move Start Marker to Position</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Shift Click">Move Start Marker to Position</a><kbd class="abletonmac">&#x21E7;</kbd><kbd class="abletonpc">&#x21E7;</kbd>
+      </div>
+      <div pc-keys="left,right" data-keys="left,right"><kbd class="abletonmac">&#x2190; &#x2192;</kbd><kbd class="abletonpc">&#x2190; &#x2192;</kbd>Nudge Loop Left&#x2F;Right</div>
+      <div pc-keys="up,down" data-keys="up,down"><kbd class="abletonmac">&#x2191; &#x2193;</kbd><kbd class="abletonpc">&#x2191; &#x2193;</kbd>Move Loop By Loop Length</div>
+      <div pc-keys="control,up,down" data-keys="command,up,down"><kbd class="abletonmac">&#x2318; &#x2191; &#x2193;</kbd><kbd class="abletonpc">&#x2303; &#x2191; &#x2193;</kbd>Halve&#x2F;Double Loop Length</div>
+      <div pc-keys="control,up,down" data-keys="command,up,down"><kbd class="abletonmac">&#x2318; &#x2191; &#x2193;</kbd><kbd class="abletonpc">&#x2303; &#x2191; &#x2193;</kbd>Shorten&#x2F;Lengthen Loop</div>
+      <div pc-keys="control,shift,l" data-keys="command,shift,l"><kbd class="abletonmac">&#x2318; &#x21E7; L</kbd><kbd class="abletonpc">&#x2303; &#x21E7; L</kbd>Select Material in Loop</div>
+    </section>
+    <section class="thesection" id="session-view-commands">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Session View Commands</h3>
+      <div pc-keys="return" data-keys="return"><kbd class="abletonmac">&#x21A9;</kbd><kbd class="abletonpc">&#x21A9;</kbd>Launch Selected Clip&#x2F;Slot</div>
+      <div pc-keys="left,right,down,up" data-keys="left,right,down,up"><kbd class="abletonmac">&#x2190; &#x2192; &#x2193; &#x2191;</kbd><kbd class="abletonpc">&#x2190; &#x2192; &#x2193; &#x2191;</kbd>Select Neighbouring Clip&#x2F;Slot</div>
+      <div pc-keys="control,a" data-keys="command,a"><kbd class="abletonmac">&#x2318; A</kbd><kbd class="abletonpc">&#x2303; A</kbd>Select All Clips&#x2F;Slots</div>
+      <div class="tooltip-demo" pc-keys="control" data-keys="option"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Option + Drag">Copy Clips</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Control + Drag">Copy Clips</a><kbd class="abletonmac">&#x2325;</kbd><kbd class="abletonpc">&#x2303;</kbd>
+      </div>
+      <div pc-keys="control,e" data-keys="command,e"><kbd class="abletonmac">&#x2318; E</kbd><kbd class="abletonpc">&#x2303; E</kbd>Add&#x2F;Remove Stop Button</div>
+      <div class="tooltip-demo" pc-keys="control,shift,m" data-keys="command,shift,m"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Command + Shift + M or Double Click Slot">Insert MIDI clip</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Control + Shift + M or Double Click Slot">Insert MIDI clip</a><kbd class="abletonmac">&#x2318; &#x21E7; M</kbd><kbd class="abletonpc">&#x2303; &#x21E7; M</kbd>
+      </div>
+      <div pc-keys="control,i" data-keys="command,i"><kbd class="abletonmac">&#x2318; I</kbd><kbd class="abletonpc">&#x2303; I</kbd>Insert Scene</div>
+      <div pc-keys="control,shift,i" data-keys="command,shift,i"><kbd class="abletonmac">&#x2318; &#x21E7; I</kbd><kbd class="abletonpc">&#x2303; &#x21E7; I</kbd>Insert Captured Scene</div>
+      <div pc-keys="control,down,up" data-keys="command,down,up"><kbd class="abletonmac">&#x2318; &#x2193; &#x2191;</kbd><kbd class="abletonpc">&#x2303; &#x2193; &#x2191;</kbd>Move Nonadjacent Scenes Without Collapsing</div>
+      <div pc-keys="control" data-keys="command"><kbd class="abletonmac">&#x2318;</kbd><kbd class="abletonpc">&#x2303;</kbd>Drop Browser Clips as a Scene</div>
+    </section>
+    <section class="thesection" id="arrangement-view-commands">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Arrangement View Commands</h3>
+      <div pc-keys="control,e" data-keys="command,e"><kbd class="abletonmac">&#x2318; E</kbd><kbd class="abletonpc">&#x2303; E</kbd>Split Clip at Selection</div>
+      <div pc-keys="control,j" data-keys="command,j"><kbd class="abletonmac">&#x2318; J</kbd><kbd class="abletonpc">&#x2303; J</kbd>Consolidate Selection into Clip</div>
+      <div pc-keys="control,alt,f" data-keys="command,option,f"><kbd class="abletonmac">&#x2318; &#x2325; F</kbd><kbd class="abletonpc">&#x2303; Alt F</kbd>Create Fade&#x2F;Crossfade</div>
+      <div class="tooltip-demo" pc-keys="control,l" data-keys="command,l"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Command + L">Loop Selection</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Control + L">Loop Selection</a><kbd class="abletonmac">&#x2318; L</kbd><kbd class="abletonpc">&#x2303; L</kbd>
+      </div>
+      <div pc-keys="control,i" data-keys="command,i"><kbd class="abletonmac">&#x2318; I</kbd><kbd class="abletonpc">&#x2303; I</kbd>Insert Silence</div>
+      <div pc-keys="control,alt" data-keys="command,option"><kbd class="abletonmac">&#x2318; &#x2325;</kbd><kbd class="abletonpc">&#x2303; Alt</kbd>Pan Left&#x2F;Right of Selection</div>
+      <div class="tooltip-demo" pc-keys="alt" data-keys="option"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Option + Unfold Button">Unfold All Tracks</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Alt + Unfold Button">Unfold All Tracks</a><kbd class="abletonmac">&#x2325;</kbd><kbd class="abletonpc">Alt</kbd>
+      </div>
+      <div pc-keys="control,shift,f" data-keys="command,shift,f"><kbd class="abletonmac">&#x2318; &#x21E7; F</kbd><kbd class="abletonpc">&#x2303; &#x21E7; F</kbd>Scroll Display to Follow Playback</div>
+    </section>
+    <section class="thesection" id="commands-for-tracks">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Commands for Tracks</h3>
+      <div pc-keys="control,t" data-keys="command,t"><kbd class="abletonmac">&#x2318; T</kbd><kbd class="abletonpc">&#x2303; T</kbd>Insert Audio Track</div>
+      <div pc-keys="shift,control,t" data-keys="shift,command,t"><kbd class="abletonmac">&#x21E7; &#x2318; T</kbd><kbd class="abletonpc">&#x21E7; &#x2303; T</kbd>Insert MIDI Track</div>
+      <div pc-keys="control,alt,t" data-keys="command,option,t"><kbd class="abletonmac">&#x2318; &#x2325; T</kbd><kbd class="abletonpc">&#x2303; Alt T</kbd>Insert Return Track</div>
+      <div pc-keys="control,r" data-keys="command,r"><kbd class="abletonmac">&#x2318; R</kbd><kbd class="abletonpc">&#x2303; R</kbd>Rename Selected Track</div>
+      <div pc-keys="tab" data-keys="tab"><kbd class="abletonmac">&#x21E5;</kbd><kbd class="abletonpc">&#x21E5;</kbd>While Renaming, Go to next Track</div>
+      <div pc-keys="control,g" data-keys="command,g"><kbd class="abletonmac">&#x2318; G</kbd><kbd class="abletonpc">&#x2303; G</kbd>Group Selected Tracks</div>
+      <div pc-keys="control,shift,g" data-keys="command,shift,g"><kbd class="abletonmac">&#x2318; &#x21E7; G</kbd><kbd class="abletonpc">&#x2303; &#x21E7; G</kbd>Ungroup Tracks</div>
+      <div pc-keys="=" data-keys="="><kbd class="abletonmac">=</kbd><kbd class="abletonpc">=</kbd>Show Grouped Tracks</div>
+      <div pc-keys="-" data-keys="-"><kbd class="abletonmac">-</kbd><kbd class="abletonpc">-</kbd>Hide Grouped Tracks</div>
+      <div pc-keys="control,up,down,left,right" data-keys="command,up,down,left,right"><kbd class="abletonmac">&#x2318; &#x2191; &#x2193; &#x2190; &#x2192;</kbd><kbd class="abletonpc">&#x2303; &#x2191; &#x2193; &#x2190; &#x2192;</kbd>Move Nonadjacent Tracks Without Collapsing</div>
+      <div class="tooltip-demo" pc-keys="control" data-keys="command"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Command + Click">Arm&#x2F;Solo Multiple Tracks</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Control + Click">Arm&#x2F;Solo Multiple Tracks</a><kbd class="abletonmac">&#x2318;</kbd><kbd class="abletonpc">&#x2303;</kbd>
+      </div>
+      <div class="tooltip-demo" pc-keys="return" data-keys="return"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Return">Add Device from Browser</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Return">Add Device from Browser</a><kbd class="abletonmac">&#x21A9;</kbd><kbd class="abletonpc">&#x21A9;</kbd>
+      </div>
+    </section>
+    <section class="thesection" id="key-midi-map-mode">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Key&#x2F;MIDI Map Mode</h3>
+      <div pc-keys="control,m" data-keys="command,m"><kbd class="abletonmac">&#x2318; M</kbd><kbd class="abletonpc">&#x2303; M</kbd>Toggle MIDI Map Mode</div>
+      <div pc-keys="control,k" data-keys="command,k"><kbd class="abletonmac">&#x2318; K</kbd><kbd class="abletonpc">&#x2303; K</kbd>Toggle Key Map Mode</div>
+      <div pc-keys="control,shift,k" data-keys="command,shift,k"><kbd class="abletonmac">&#x2318; &#x21E7; K</kbd><kbd class="abletonpc">&#x2303; &#x21E7; K</kbd>Computer MIDI Keyboard</div>
+    </section>
+    <section class="thesection" id="zooming-display-and-selections">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Zooming, Display and Selections</h3>
+      <div pc-keys="shift,=" data-keys="shift,="><kbd class="abletonmac">&#x21E7; =</kbd><kbd class="abletonpc">&#x21E7; =</kbd>Zoom In</div>
+      <div pc-keys="-" data-keys="-"><kbd class="abletonmac">-</kbd><kbd class="abletonpc">-</kbd>Zoom Out</div>
+      <div pc-keys="shift" data-keys="shift"><kbd class="abletonmac">&#x21E7;</kbd><kbd class="abletonpc">&#x21E7;</kbd>Drag&#x2F;Click to Append to a Selection</div>
+      <div pc-keys="shift" data-keys="shift"><kbd class="abletonmac">&#x21E7;</kbd><kbd class="abletonpc">&#x21E7;</kbd>Click to Add Adjacent Clips&#x2F;Tracks&#x2F;Scenes to Multi-Selection</div>
+      <div pc-keys="control" data-keys="command"><kbd class="abletonmac">&#x2318;</kbd><kbd class="abletonpc">&#x2303;</kbd>Click to Add Nonadjacent Ctrl Clips&#x2F;Tracks&#x2F;Scenes to a</div>
+      <div pc-keys="control,shift,f" data-keys="command,shift,f"><kbd class="abletonmac">&#x2318; &#x21E7; F</kbd><kbd class="abletonpc">&#x2303; &#x21E7; F</kbd>Follow (Auto-Scroll)</div>
+      <div pc-keys="control,alt" data-keys="command,option"><kbd class="abletonmac">&#x2318; &#x2325;</kbd><kbd class="abletonpc">&#x2303; Alt</kbd>Pan Left&#x2F;Right of Selection</div>
+    </section>
+    <section class="thesection" id="clip-view-sample-display">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Clip View Sample Display</h3>
+      <div pc-keys="control,u" data-keys="command,u"><kbd class="abletonmac">&#x2318; U</kbd><kbd class="abletonpc">&#x2303; U</kbd>Quantize</div>
+      <div pc-keys="control,shift,u" data-keys="command,shift,u"><kbd class="abletonmac">&#x2318; &#x21E7; U</kbd><kbd class="abletonpc">&#x2303; &#x21E7; U</kbd>Quantize Settings&#8230;</div>
+      <div pc-keys="left,right" data-keys="left,right"><kbd class="abletonmac">&#x2190; &#x2192;</kbd><kbd class="abletonpc">&#x2190; &#x2192;</kbd>Move Selected Warp Marker</div>
+      <div pc-keys="control,left,right" data-keys="command,left,right"><kbd class="abletonmac">&#x2318; &#x2190; &#x2192;</kbd><kbd class="abletonpc">&#x2303; &#x2190; &#x2192;</kbd>Select Warp Marker</div>
+      <div pc-keys="control,f" data-keys="command,f"><kbd class="abletonmac">&#x2318; F</kbd><kbd class="abletonpc">&#x2303; F</kbd>Scroll Display to Follow Playback</div>
+      <div pc-keys="shift,left,right" data-keys="shift,left,right"><kbd class="abletonmac">&#x21E7; &#x2190; &#x2192;</kbd><kbd class="abletonpc">&#x21E7; &#x2190; &#x2192;</kbd>Move Clip Region with Start Marker</div>
+    </section>
+    <section class="thesection" id="clip-view-midi-editor">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Clip View MIDI Editor</h3>
+      <div pc-keys="control,u" data-keys="command,u"><kbd class="abletonmac">&#x2318; U</kbd><kbd class="abletonpc">&#x2303; U</kbd>Quantize</div>
+      <div pc-keys="control,shift,u" data-keys="command,shift,u"><kbd class="abletonmac">&#x2318; &#x21E7; U</kbd><kbd class="abletonpc">&#x2303; &#x21E7; U</kbd>Quantize Settings&#8230;</div>
+      <div pc-keys="numpageup,numpagedown" data-keys="fn,up,down"><kbd class="abletonmac">fn &#x2191; &#x2193;</kbd><kbd class="abletonpc">page&#x2191; page&#x2193;</kbd>Scroll Editor Vertically</div>
+      <div pc-keys="control,numpageup,numpagedown" data-keys="command,fn,up,down"><kbd class="abletonmac">&#x2318; fn &#x2191; &#x2193;</kbd><kbd class="abletonpc">&#x2303; page&#x2191; page&#x2193;</kbd>Scroll Editor Horizontally</div>
+      <div class="tooltip-demo" pc-keys="control" data-keys="option"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Option + Drag">Copy Note</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Control + Drag">Copy Note</a><kbd class="abletonmac">&#x2325;</kbd><kbd class="abletonpc">&#x2303;</kbd>
+      </div>
+      <div class="tooltip-demo" pc-keys="alt" data-keys="command"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Command + Drag">Change Velocity from Note Editor</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Alt + Drag">Change Velocity from Note Editor</a><kbd class="abletonmac">&#x2318;</kbd><kbd class="abletonpc">Alt</kbd>
+      </div>
+      <div class="tooltip-demo" pc-keys="" data-keys=""><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Double Click">Add&#x2F;Delete Note in Edit Mode</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Double Click">Add&#x2F;Delete Note in Edit Mode</a><kbd class="abletonmac"></kbd><kbd class="abletonpc"></kbd>
+      </div>
+      <div pc-keys="numhome" data-keys="fn,left"><kbd class="abletonmac">fn &#x2190;</kbd><kbd class="abletonpc">Home</kbd>Move Insert Marker to Beginning</div>
+      <div pc-keys="numend" data-keys="fn,right"><kbd class="abletonmac">fn &#x2192;</kbd><kbd class="abletonpc">End</kbd>Move Insert Marker to End</div>
+      <div pc-keys="control,shift,f" data-keys="command,shift,f"><kbd class="abletonmac">&#x2318; &#x21E7; F</kbd><kbd class="abletonpc">&#x2303; &#x21E7; F</kbd>Scroll Display to Follow Playback</div>
+      <div pc-keys="shift,left,right" data-keys="shift,left,right"><kbd class="abletonmac">&#x21E7; &#x2190; &#x2192;</kbd><kbd class="abletonpc">&#x21E7; &#x2190; &#x2192;</kbd>Move Clip Region with Start Marker</div>
+    </section>
+    <section class="thesection" id="grid-snapping-and-drawing">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Grid Snapping and Drawing</h3>
+      <div pc-keys="b" data-keys="b"><kbd class="abletonmac">B</kbd><kbd class="abletonpc">B</kbd>Toggle Draw Mode</div>
+      <div pc-keys="control,!" data-keys="command,!"><kbd class="abletonmac">&#x2318; 1</kbd><kbd class="abletonpc">&#x2303; 1</kbd>Narrow Grid</div>
+      <div pc-keys="control,@" data-keys="command,@"><kbd class="abletonmac">&#x2318; 2</kbd><kbd class="abletonpc">&#x2303; 2</kbd>Widen Grid</div>
+      <div pc-keys="control,#" data-keys="command,#"><kbd class="abletonmac">&#x2318; 3</kbd><kbd class="abletonpc">&#x2303; 3</kbd>Triplet Grid</div>
+      <div pc-keys="control,$" data-keys="command,$"><kbd class="abletonmac">&#x2318; 4</kbd><kbd class="abletonpc">&#x2303; 4</kbd>Snap to Grid</div>
+      <div pc-keys="control,%" data-keys="command,%"><kbd class="abletonmac">&#x2318; 5</kbd><kbd class="abletonpc">&#x2303; 5</kbd>Fixed&#x2F;Zoom-Adaptive Grid</div>
+      <div pc-keys="alt" data-keys="command"><kbd class="abletonmac">&#x2318;</kbd><kbd class="abletonpc">Alt</kbd>Bypass Snapping While Dragging</div>
+    </section>
+    <section class="thesection" id="global-quantization">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Global Quantization </h3>
+      <div pc-keys="control,^" data-keys="command,^"><kbd class="abletonmac">&#x2318; 6</kbd><kbd class="abletonpc">&#x2303; 6</kbd>Sixteenth-Note Quantization</div>
+      <div pc-keys="control,&amp;" data-keys="command,&amp;"><kbd class="abletonmac">&#x2318; 7</kbd><kbd class="abletonpc">&#x2303; 7</kbd>Eighth-Note Quantization</div>
+      <div pc-keys="control,*" data-keys="command,*"><kbd class="abletonmac">&#x2318; 8</kbd><kbd class="abletonpc">&#x2303; 8</kbd>Quarter-Note Quantization</div>
+      <div pc-keys="control,(" data-keys="command,("><kbd class="abletonmac">&#x2318; 9</kbd><kbd class="abletonpc">&#x2303; 9</kbd>1-Bar Quantization</div>
+      <div pc-keys="control,)" data-keys="command,)"><kbd class="abletonmac">&#x2318; 0</kbd><kbd class="abletonpc">&#x2303; 0</kbd>Quantization Off</div>
+    </section>
+    <section class="thesection" id="working-with-sets-and-the-program">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Working with Sets and the Program</h3>
+      <div pc-keys="control,n" data-keys="command,n"><kbd class="abletonmac">&#x2318; N</kbd><kbd class="abletonpc">&#x2303; N</kbd>New Live Set</div>
+      <div pc-keys="control,o" data-keys="command,o"><kbd class="abletonmac">&#x2318; O</kbd><kbd class="abletonpc">&#x2303; O</kbd>Open Live Set</div>
+      <div pc-keys="control,w" data-keys="command,w"><kbd class="abletonmac">&#x2318; W</kbd><kbd class="abletonpc">&#x2303; W</kbd>Close Live Set</div>
+      <div pc-keys="control,s" data-keys="command,s"><kbd class="abletonmac">&#x2318; S</kbd><kbd class="abletonpc">&#x2303; S</kbd>Save Live Set</div>
+      <div pc-keys="shift,control,s" data-keys="shift,command,s"><kbd class="abletonmac">&#x21E7; &#x2318; S</kbd><kbd class="abletonpc">&#x21E7; &#x2303; S</kbd>Save Live Set As&#8230;</div>
+      <div pc-keys="control,q" data-keys="command,q"><kbd class="abletonmac">&#x2318; Q</kbd><kbd class="abletonpc">&#x2303; Q</kbd>Quit Live</div>
+      <div pc-keys="" data-keys="command,h"><kbd class="abletonmac">&#x2318; H</kbd><kbd class="abletonpc"></kbd>Hide Live</div>
+      <div pc-keys="control,shift,r" data-keys="command,shift,r"><kbd class="abletonmac">&#x2318; &#x21E7; R</kbd><kbd class="abletonpc">&#x2303; &#x21E7; R</kbd>Export Audio&#x2F;Video</div>
+      <div pc-keys="control,shift,e" data-keys="command,shift,e"><kbd class="abletonmac">&#x2318; &#x21E7; E</kbd><kbd class="abletonpc">&#x2303; &#x21E7; E</kbd>Export MIDI File</div>
+    </section>
+    <section class="thesection" id="working-with-plugins-and-devices">
+      <h3 class="text-center"><i class="icon-chevron-sign-right icon-large pull-left"></i>Working with Plug-Ins and Devices</h3>
+      <div pc-keys="control,alt,p" data-keys="command,option,p"><kbd class="abletonmac">&#x2318; &#x2325; P</kbd><kbd class="abletonpc">&#x2303; Alt P</kbd>Show&#x2F;Hide Plug-In Windows</div>
+      <div pc-keys="control" data-keys="command"><kbd class="abletonmac">&#x2318;</kbd><kbd class="abletonpc">&#x2303;</kbd>Open Second&#x2F;Multiple Windows with Ctrl Plug-In Edit Button</div>
+      <div pc-keys="shift" data-keys="shift"><kbd class="abletonmac">&#x21E7;</kbd><kbd class="abletonpc">&#x21E7;</kbd>Open Mac Keystroke Plug-In Window with Plug-In Edit Button</div>
+      <div pc-keys="control,g" data-keys="command,g"><kbd class="abletonmac">&#x2318; G</kbd><kbd class="abletonpc">&#x2303; G</kbd>Group&#x2F;Ungroup Devices</div>
+      <div class="tooltip-demo" pc-keys="alt" data-keys="option"><a class="abletonmac" href="#" data-toggle="tooltip" title data-original-title="Option + Device Activator">Activate&#x2F;Deactivate All Devices in Group</a><a class="abletonpc" href="#" data-toggle="tooltip" title data-original-title="Alt + Device Activator">Activate&#x2F;Deactivate All Devices in Group</a><kbd class="abletonmac">&#x2325;</kbd><kbd class="abletonpc">Alt</kbd>
+      </div>
+      <div pc-keys="shift" data-keys="shift"><kbd class="abletonmac">&#x21E7;</kbd><kbd class="abletonpc">&#x21E7;</kbd>Click to Append Devices to a Selected Device</div>
+      <div pc-keys="return" data-keys="return"><kbd class="abletonmac">&#x21A9;</kbd><kbd class="abletonpc">&#x21A9;</kbd>Load Selected Device From Browser</div>
+  </div>
+
+	</div> <!-- / span9 -->
+	</div> <!-- / row-fluid -->
+
+<div class="row-fluid">
+
+</div> <!-- / row-fluid -->
+<!-- Footer ================================================== -->
+
+<div id="footer">
+<!-- <a href="/☰" onclick="clickCard()"><span style="font-size:11px;position:relative;top:-0.7px">&#9776;</span> circuitous cards</a> -->
+    <a><span id="tailcard" onclick="clickCuts()">☰</span> <span onclick="clickCard()"> circuitous cards </span></a>
+   
+</div>
+
+
+</div> <!-- / wrapper -->
+
+<!-- javascript ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.smooth-scroll.min.js"></script>
+<script src="js/maincopy.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/typeahead.min.js"></script>
+<script src="js/hogan.min.js"></script>
+<script src="js/svg.min.js"></script>
+<script src="js/mykeyboard.js"></script>
+<script src="js/jquery.livequery.js"></script>
+<script src="js/custom.js"></script>
+<script type="text/javascript" src="js/plusone.js" gapi_processed="true"></script></script>
+
+<script>
+localStorage.clear();
+$('#input_search').typeahead({name: 'searchresults',prefetch: "json/al9.json",ttl: 1000,valueKey: 'english',limit: 6,template: ['<div id="myresult" pc-keys="{{windata}}" data-keys="{{macdata}}"><h5>{{english}}</h5><p class="macdescr">{{mackey}}</p><p class="windescr">{{winkey}}</p></div>'].join(''),engine: Hogan
+});
+</script>
+
+</body>
+</html>
