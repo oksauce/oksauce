@@ -1,0 +1,477 @@
+/*
+Theme Name: WP Bootstrap
+*/
+
+@import url('bootstrap/css/bootstrap.min.css');
+@import url('bootstrap/css/bootstrap-responsive.min.css');
+/*@import url('/bootstrap/font-awesome/css/font-awesome.min.css');*/
+@import url('bootstrap/css/typeahead.css');
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {padding-right: 0px;padding-left: 0px;overflow-y: hidden;}
+#wrap {padding-right: 20px;padding-left: 20px;}
+
+#header {color: white;}
+
+.get-social {height: 25px;}
+
+.row-fluid [class*="span"] {
+
+    min-height: 0px;
+}
+
+[class^="icon-search"], [class*=" icon-search"] {
+
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    /* margin-right: .3em; */
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("../img/src/glyphicons-halflings.png");
+    /* background-position: 14px 14px */
+    background-repeat: no-repeat;
+    margin-top:3px;
+}
+
+
+.icon-chevron-sign-right {
+	margin-top:	4px;
+}
+
+.tooltip {
+  font-size: 14px;
+}
+
+.page-header {
+	border-bottom: none;
+}
+
+.btn-group + .btn-group {
+
+    margin-left: 0px;
+
+}
+
+
+/* Ads 
+-------------------------------------------------- */
+
+.affiliates {
+	max-width: 75%;
+	padding: 10px 20px;
+}
+
+/* Social 
+-------------------------------------------------- */
+
+.navbar {
+	margin-bottom: 0px;
+
+}
+
+.get-social {
+	padding: 2px 0;
+	text-align: center;
+	/*background-color: #f5f5f5;*/
+	/*border-top: 1px solid #fff;*/
+	/*border-bottom: 1px solid #ddd;*/
+}
+
+.social-buttons {
+	margin-left: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.social-buttons li {
+	display: inline-block;
+	padding: 5px 8px;
+	line-height: 1;
+	margin-left: 10%;
+}
+
+.reddit-button img {
+	vertical-align: bottom;
+}
+
+.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+background-color:#000;
+}
+
+a {
+  color: #000;
+
+}
+
+.nav-list > li > a, .nav-list .nav-header {
+    margin-right: -15px;
+
+    text-shadow: 0 1px 0 
+    rgba(255,255,255,0.8);
+}
+
+
+/* Search 
+-------------------------------------------------- */
+
+.twitter-typeahead, .tt-hint, #input_search {
+	width: 149px;
+	margin-right: 20px;
+  margin-top: 2px;
+}
+
+.input-prepend .add-on, .input-prepend .btn {
+margin-top: 4px;
+}
+
+.btn-group > .btn-small {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: #000;
+}
+
+#header {
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
+    position: fixed;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    width: 100%;
+    top: 8px;
+    left: 6px;
+}
+
+
+.navbar-inner {
+
+    min-height: 33px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-radius: 0px;
+
+}
+
+
+.btn-group > .btn:first-child {
+
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-left-radius: 3px;
+  margin-top:10px;
+  margin-right: 10px;
+
+}
+
+
+.tt-suggestion {
+padding: 1px 5px;
+}
+
+#myresult p {
+	font-size: 12px;
+}
+
+/* Footer
+-------------------------------------------------- */
+
+
+#footer {
+  background-color:black;
+  text-decoration:none; 
+  cursor:pointer;
+  position: fixed;
+  text-align: right;
+  bottom: 0px;
+  width: 100%;
+  font-size: 15px;
+  font-stretch: ultra-condensed;
+  height:38px;
+  right: 0px;
+
+}
+
+#footer a {
+  font-family: Helvetica, sans-serif;
+  text-decoration:none; 
+  color:white;
+  border-bottom: none;
+  cursor:pointer;
+  position: fixed;
+  text-align: right;
+  bottom: 8px;
+  font-size: 15px;
+  font-stretch: ultra-condensed;
+  right: 6px;
+
+}
+
+/* Sticky footer styles
+      -------------------------------------------------- */
+
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      
+      #wrap {
+      	min-height: 100%;
+      	/* Negative indent footer by it's height */
+  		/*margin-bottom: -62px;*/
+      	/*
+        height: auto !important;
+        height: 100%;
+        */
+        /*margin: 0 auto -60px;*/
+
+      }
+
+      /* Set the fixed height of the footer here */
+      /*
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+*/
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+
+/* The macbook on the index page */
+
+.laptop {
+	padding: 0; 
+	background: 0; 
+	position: relative; 
+	width: 100%; 
+	clear: left; 
+	-webkit-transform: translateZ(0);
+}
+
+.interaction {
+	left: 10.1%; 
+	top: 5.8%; 
+	width: 80.2%; 
+	height: 76.6%;
+}
+
+.skinned {
+	position: relative; 
+	top: 0; 
+	left: 0; 
+	z-index: 0;
+}
+
+#myCarousel {
+	position: absolute; 
+	left: 10.1%; 
+	top: 5.8%; 
+	width: 80.2%; 
+	height: 76.6%;
+}
+
+.carousel-caption {
+	padding: 7px;
+}
+
+img {
+  width: 100%;
+}
+
+#laptop {
+	max-width: 72%;
+}
+
+/* Toolbar */
+
+#thetoolbar {
+	margin: 0px 15px;
+  border-radius: 3px !important;
+}
+/* Sections */
+
+.thesection {
+	float: left;
+	width: 100%;
+}
+
+/* Combos - taken from Bynens file */
+
+#combos h3 {
+	/*background-color: lightgrey;*/
+  /*background-color: #333;*/
+  background-color: #000;
+  color: #fff;
+	font-size: 18px;
+}
+
+#combos {
+	margin-top: 15px;
+  margin-right:15px;
+  margin-left:15px;
+  margin-bottom: 15px;
+	border: 1px solid; 
+	border-radius: 3px; 
+	border-color: lightgrey;
+	position: relative;
+	/*height: auto;*/
+	/*max-height: 35vh;*/
+	 max-height: 300px;
+	/* padding: 15px; */
+	overflow-y: scroll;
+	font-size: 15px;
+}
+
+#combos, #combos li {
+	list-style: none;
+	/*padding: 12px 0px 0px 0px;*/
+}
+
+#combos div[data-keys] {
+	width: 199px;
+	float: left;
+	position: relative;
+	padding-left: 100px;
+	margin-bottom: 0.8em;
+}
+
+#combos div[data-keys] {
+	background: white;
+	-webkit-transition: background 0.2s ease;
+	-moz-transition: background 0.2s ease;
+	-ms-transition: background 0.2s ease;
+	-o-transition: background 0.2s ease;
+	transition: background 0.2s ease;
+	}
+
+#combos div[data-keys]:hover {
+	background: lightgrey;
+	}
+
+#combos kbd {
+	position: absolute;
+	left: 0;
+	width: 90px;
+	text-align: right;
+}
+
+/* Sidenav 
+-------------------------------------------------- */
+
+.shortcuts-sidenav > li {
+	line-height:7px;
+	font-size: 15px;
+}
+
+.shortcuts-sidenav {
+  width: 100%;
+  /* margin: 30px 0 0; */
+  /* padding: 0; */
+  background-color: #fff;
+  /*
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+  */
+}
+.shortcuts-sidenav > li > a {
+  display: block;
+  width: 190px \9;
+  /*margin: 0 0 -1px;*/
+  padding: 8px 14px;
+  border: 1px solid #fff;
+}
+/*
+.shortcuts-sidenav > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+*/
+.shortcuts-sidenav > li:last-child > a {
+/*
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+*/
+  -webkit-border-radius: 0 0 0px 0px;
+     -moz-border-radius: 0 0 0px 0px;
+          border-radius: 0 0 0px 0px;
+}
+
+.shortcuts-sidenav > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 10px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+/* Chevrons */
+.shortcuts-sidenav .icon-chevron-right {
+  float: right;
+  margin-top: -4px;
+  margin-right: -6px;
+  opacity: .25;
+}
+.shortcuts-sidenav > li > a:hover {
+  background-color: #f5f5f5;
+}
+.shortcuts-sidenav a:hover .icon-chevron-right {
+  opacity: .5;
+}
+.shortcuts-sidenav .active .icon-chevron-right,
+.shortcuts-sidenav .active a:hover .icon-chevron-right {
+  background-image: url(../img/glyphicons-halflings-white.png);
+  opacity: 1;
+}
+.shortcuts-sidenav.affix {
+  top: 40px;
+}
+.shortcuts-sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}
+
+.navbar .btn, .navbar .btn-group {
+  display:inline;
+  margin-top: 5px;
+ 
+}
+
+@media only screen and (max-width: 650px) {
+  .get-social {height: 15px;}
+}
+
+@media only screen and (max-width: 600px) {
+  .get-social {height: 8px;}
+}
+
+@media only screen and (max-width: 550px) {
+  .get-social {height: 0px;}
+  #layoutbutton {margin-bottom: 10px;}
+}
