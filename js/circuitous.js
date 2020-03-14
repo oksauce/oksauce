@@ -297,7 +297,7 @@ function onlineJson() {
   	if (isMobile == true) {$("#circuitous").removeAttr('onclick')}
   });
 
-  $.getJSON('/☰/circuitousinfo.json').done(function(data){
+  $.getJSON('/☰/json/circuitousinfo.json').done(function(data){
     window.circuitousinfo = data;
     var infocount = Object.keys(data).length;
     //console.log(infocount);
