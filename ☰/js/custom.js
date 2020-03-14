@@ -1,3 +1,12 @@
+
+function cardColor(backcolor){
+	window.location.href = '/';
+}
+
+function clickCard(){
+	window.location.href = '/';
+}
+
 // toolbar functionality
 $('.tooltip-demo').tooltip({ selector: "a" });
 /* smoothscroll */
